@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Cybersecurity Acronyms Pro</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; padding: 20px; background: #eceff4; color: #4c566a; }
+        .container { max-width: 1000px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        
+        /* Ricerca */
+        .search-container { margin-bottom: 30px; }
+        #search-input { width: 100%; padding: 15px; font-size: 1.1em; border: 2px solid #d8dee9; border-radius: 8px; outline: none; transition: border-color 0.3s; }
+        #search-input:focus { border-color: #81a1c1; }
+
+        /* Tabella */
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #e5e9f0; }
+        th { background-color: #4c566a; color: white; text-transform: uppercase; letter-spacing: 1px; }
+        tr:hover { background-color: #f8f9fb; cursor: pointer; }
+
+        /* Dettaglio */
+        .detail-view { display: none; animation: fadeIn 0.4s; }
+        .back-btn { background: #5e81ac; color: white; border: none; padding: 12px 20px; border-radius: 6px; cursor: pointer; font-weight: bold; margin-bottom: 25px; }
+        .badge { background: #bf616a; color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.85em; }
+        
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="home-view">
+        <h1 style="text-align:center; color: #2e3440;">Cybersecurity Acronyms</h1>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Cerca un acronimo o una macro-area (es. 'AES' o 'Cloud')..." onkeyup="filterTable()">
+        </div>
+        <table id="acronym-table">
+            <thead>
+                <tr>
+                    <th>Acronimo</th>
+                    <th>Macro-Area</th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+    </div>
+
+    <div id="detail-view" class="detail-view">
+        <button class="back-btn" onclick="showHome()">← Torna alla lista</button>
+        <h2 id="det-title" style="font-size: 2.5em; margin-bottom: 10px; color: #2e3440;"></h2>
+        <p><strong>Categoria:</strong> <span id="det-area" class="badge"></span></p>
+        <hr style="border: 0; border-top: 2px solid #eceff4; margin: 25px 0;">
+        <div id="det-description" style="font-size: 1.3em; color: #3b4252;"></div>
+    </div>
+</div>
+
+<script>
+    let acronymsData = [];
+
+    // 1. Caricamento dati da JSON esterno
+    async function loadData() {
+        try {
+            const response = await fetch('dati.json');
+            acronymsData = await response.json();
+            renderTable(acronymsData);
+        } catch (error) {
+            console.error("Errore nel caricamento dei dati:", error);
+            document.getElementById('table-body').innerHTML = "<tr><td colspan='2'>Errore nel caricamento dei dati JSON.</td></tr>";
+        }
+    }
+
+    // 2. Rendering della tabella
+    function renderTable(dataList) {
+        const tableBody = document.getElementById('table-body');
+        tableBody.innerHTML = '';
+        dataList.forEach(item => {
+            const row = document.createElement('tr');
+            row.onclick = () => showDetail(item.a);
+            row.innerHTML = `<td><strong>${item.a}</strong></td><td>${item.cat}</td>`;
+            tableBody.appendChild(row);
+        });
+    }
+
+    // 3. Funzione di ricerca (Filtro)
+    function filterTable() {
+        const query = document.getElementById('search-input').value.toLowerCase();
+        const filtered = acronymsData.filter(item => 
+            item.a.toLowerCase().includes(query) || 
+            item.cat.toLowerCase().includes(query)
+        );
+        renderTable(filtered);
+    }
+
+    function showDetail(acronym) {
+        const item = acronymsData.find(d => d.a === acronym);
+        document.getElementById('det-title').innerText = item.a;
+        document.getElementById('det-area').innerText = item.cat;
+        document.getElementById('det-description').innerText = item.desc;
+        document.getElementById('home-view').style.display = 'none';
+        document.getElementById('detail-view').style.display = 'block';
+    }
+
+    function showHome() {
+        document.getElementById('home-view').style.display = 'block';
+        document.getElementById('detail-view').style.display = 'none';
+    }
+
+    loadData();
+</script>
+</body>
+</html>

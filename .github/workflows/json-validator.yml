@@ -1,18 +1,41 @@
-name: JSON Validator
+name: JSON Validator & Duplicate Check
 
 on:
   pull_request:
     paths:
-      - '**.json' # Si attiva solo se vengono toccati file JSON
+      - '**.json'
 
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3 # Scarica il codice sul server temporaneo
-      - name: Validate JSON syntax
+      - uses: actions/checkout@v3
+
+      - name: Check JSON Syntax
         run: |
-          # Questo comando Python verifica se il file è un JSON valido
           for file in $(find . -name "*.json"); do
+            echo "Validando sintassi di $file..."
             python3 -m json.tool "$file" > /dev/null
           done
+
+      - name: Check for Duplicate Acronyms
+        run: |
+          python3 -c "
+          import json
+          import sys
+
+          try:
+              with open('acronyms.json', 'r') as f:
+                  data = json.load(f)
+              
+              acronyms = [item['acronym'].upper() for item in data]
+              duplicates = set([x for x in acronyms if acronyms.count(x) > 1])
+              
+              if duplicates:
+                  print(f'ERRORE: Acronimi duplicati trovati: {duplicates}')
+                  sys.exit(1)
+              else:
+                  print('Nessun duplicato trovato. Ottimo!')
+          except FileNotFoundError:
+              print('File acronyms.json non trovato, salto il controllo duplicati.')
+          "

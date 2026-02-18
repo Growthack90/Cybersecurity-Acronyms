@@ -1,0 +1,18 @@
+name: JSON Validator
+
+on:
+  pull_request:
+    paths:
+      - '**.json' # Si attiva solo se vengono toccati file JSON
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3 # Scarica il codice sul server temporaneo
+      - name: Validate JSON syntax
+        run: |
+          # Questo comando Python verifica se il file è un JSON valido
+          for file in $(find . -name "*.json"); do
+            python3 -m json.tool "$file" > /dev/null
+          done

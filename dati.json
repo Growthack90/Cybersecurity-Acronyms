@@ -1,883 +1,1743 @@
-[
-  {
-    "a": "3DES",
-    "cat": "Crittografia & Dati",
-    "desc": "Triple DES: Algoritmo che applica il DES tre volte. Ormai deprecato a favore di AES[cite: 10]."
-  },
-  {
-    "a": "AES",
-    "cat": "Crittografia & Dati",
-    "desc": "Advanced Encryption Standard: Lo standard attuale di cifratura a blocchi simmetrica, estremamente sicuro e veloce[cite: 11]."
-  },
-  {
-    "a": "AES256",
-    "cat": "Crittografia & Dati",
-    "desc": "Versione di AES con chiave a 256 bit (massimo livello di sicurezza)[cite: 12]."
-  },
-  {
-    "a": "CBC",
-    "cat": "Crittografia & Dati",
-    "desc": "Cipher Block Chaining: Modalità di cifratura dove ogni blocco dipende dal precedente. Correlato alla IV[cite: 13]."
-  },
-  {
-    "a": "CFB",
-    "cat": "Crittografia & Dati",
-    "desc": "Cipher Feedback: Trasforma una cifratura a blocchi in una a flussi[cite: 14]."
-  },
-  {
-    "a": "DES",
-    "cat": "Crittografia & Dati",
-    "desc": "Digital Encryption Standard: Vecchio algoritmo simmetrico, oggi considerato insicuro perché la chiave è troppo corta[cite: 15]."
-  },
-  {
-    "a": "DH / DHE",
-    "cat": "Crittografia & Dati",
-    "desc": "Diffie-Hellman / Ephemeral: Protocollo per scambiare chiavi crittografiche su canali insicuri. DHE garantisce la PFS (Perfect Forward Secrecy)[cite: 16, 17]."
-  },
-  {
-    "a": "DSA",
-    "cat": "Crittografia & Dati",
-    "desc": "Digital Signature Algorithm: Standard per la creazione di firme digitali, basato su chiavi pubbliche[cite: 17]."
-  },
-  {
-    "a": "ECC",
-    "cat": "Crittografia & Dati",
-    "desc": "Elliptic Curve Cryptography: Crittografia a chiave pubblica che offre alta sicurezza con chiavi molto corte, ideale per dispositivi mobili[cite: 18]."
-  },
-  {
-    "a": "ECDHE",
-    "cat": "Crittografia & Dati",
-    "desc": "Elliptic Curve DHE: Unione di ECC e DHE per scambio di chiavi sicuri ed efficienti[cite: 20]."
-  },
-  {
-    "a": "ECB",
-    "cat": "Crittografia & Dati",
-    "desc": "Electronic Code Book: Modalità più semplice di cifratura; blocchi identici producono testi cifrati identici (poco sicuri)[cite: 22]."
-  },
-  {
-    "a": "EFS",
-    "cat": "Crittografia & Dati",
-    "desc": "Encrypted File System: Funzionalità di Windows per cifrare singoli file o cartelle[cite: 23]."
-  },
-  {
-    "a": "FDE",
-    "cat": "Crittografia & Dati",
-    "desc": "Full Disk Encryption: Cifratura dell'intero disco rigido (es. BitLocker). Correlato al modulo TPM[cite: 24]."
-  },
-  {
-    "a": "GCM",
-    "cat": "Crittografia & Dati",
-    "desc": "Galois/Counter Mode: Modalità di cifratura moderna che fornisce sia riservatezza che integrità dei dati[cite: 25]."
-  },
-  {
-    "a": "HMAC",
-    "cat": "Crittografia & Dati",
-    "desc": "Hash-based Message Authentication Code: Codice che usa una funzione di Hash e una chiave segreta per verificare l'integrità del messaggio[cite: 26]."
-  },
-  {
-    "a": "IDEA",
-    "cat": "Crittografia & Dati",
-    "desc": "Algoritmo simmetrico a blocchi usato in passato, ad esempio in versioni datate di PGP[cite: 27]."
-  },
-  {
-    "a": "IV",
-    "cat": "Crittografia & Dati",
-    "desc": "Initialization Vector: Numero casuale usato per avviare il processo di cifratura (evita che messaggi uguali abbiano lo stesso hash). Correlato a CBC[cite: 28, 29]."
-  },
-  {
-    "a": "KEK",
-    "cat": "Crittografia & Dati",
-    "desc": "Key Encryption Key: Chiave utilizzata esclusivamente per cifrare altre chiavi crittografiche[cite: 30]."
-  },
-  {
-    "a": "MD5",
-    "cat": "Crittografia & Dati",
-    "desc": "Funzione di hash oggi considerata insicura per via delle collisioni; usata solo per integrità non critica[cite: 31]."
-  },
-  {
-    "a": "PBKDF2",
-    "cat": "Crittografia & Dati",
-    "desc": "Metodo per derivare chiavi sicure da password, rendendo difficili gli attacchi a forza bruta[cite: 32]."
-  },
-  {
-    "a": "PGP",
-    "cat": "Crittografia & Dati",
-    "desc": "Pretty Good Privacy: Programma per cifrare email e file usando crittografia asimmetrica[cite: 33]."
-  },
-  {
-    "a": "PKCS",
-    "cat": "Crittografia & Dati",
-    "desc": "Public-Key Cryptography Standards: Insieme di standard tecnici per l'uso della crittografia a chiave pubblica[cite: 34]."
-  },
-  {
-    "a": "PKI",
-    "cat": "Crittografia & Dati",
-    "desc": "Public Key Infrastructure: Sistema di hardware, software e procedure per gestire certificati digitali (CA, CRL, CSR)[cite: 35]."
-  },
-  {
-    "a": "RC4",
-    "cat": "Crittografia & Dati",
-    "desc": "Algoritmo a flussi un tempo usato in WEP e SSL, oggi considerato vulnerabile[cite: 36]."
-  },
-  {
-    "a": "RIPEMD",
-    "cat": "Crittografia & Dati",
-    "desc": "Famiglia di funzioni di hash sviluppate in Europa, alternativa a SHA[cite: 37]."
-  },
-  {
-    "a": "RSA",
-    "cat": "Crittografia & Dati",
-    "desc": "L'algoritmo a chiave pubblica più famoso per cifratura e firme digitali[cite: 38]."
-  },
-  {
-    "a": "SHA",
-    "cat": "Crittografia & Dati",
-    "desc": "Secure Hash Algorithm: Famiglia di funzioni hash. SHA-256 è lo standard attuale per l'integrità[cite: 39]."
-  },
-  {
-    "a": "S/MIME",
-    "cat": "Crittografia & Dati",
-    "desc": "Protocollo per firmare e cifrare email via PKI[cite: 40]."
-  },
-  {
-    "a": "IP",
-    "cat": "Networking & Protocolli",
-    "desc": "Internet Protocol: Il protocollo fondamentale per l'indirizzamento dei pacchetti in rete[cite: 44]."
-  },
-  {
-    "a": "TCP/IP",
-    "cat": "Networking & Protocolli",
-    "desc": "Suite di protocolli su cui si basa Internet; il TCP garantisce che i dati arrivino integri e in ordine[cite: 45, 46]."
-  },
-  {
-    "a": "UDP",
-    "cat": "Networking & Protocolli",
-    "desc": "User Datagram Protocol: Alternativa al TCP, più veloce ma senza controllo d'errore; usato per streaming e gaming[cite: 47]."
-  },
-  {
-    "a": "ARP",
-    "cat": "Networking & Protocolli",
-    "desc": "Address Resolution Protocol: Associa un indirizzo IP a un indirizzo fisico (MAC). Vulnerabile all'ARP Poisoning[cite: 48]."
-  },
-  {
-    "a": "BGP",
-    "cat": "Networking & Protocolli",
-    "desc": "Border Gateway Protocol: Il 'postino' di Internet; gestisce l'instradamento tra grandi reti (Sistemi Autonomi)[cite: 49]."
-  },
-  {
-    "a": "OSPF",
-    "cat": "Networking & Protocolli",
-    "desc": "Open Shortest Path First: Protocollo di routing interno che calcola il percorso più breve per i dati[cite: 50]."
-  },
-  {
-    "a": "ICMP",
-    "cat": "Networking & Protocolli",
-    "desc": "Internet Control Message Protocol: Usato per messaggi di errore e diagnostica (es. il comando ping)[cite: 51]."
-  },
-  {
-    "a": "IPsec",
-    "cat": "Networking & Protocolli",
-    "desc": "IP Security: Suite di protocolli per rendere sicure le comunicazioni IP. Include AH (autenticazione) ed ESP (cifratura)[cite: 54]."
-  },
-  {
-    "a": "VPN",
-    "cat": "Networking & Protocolli",
-    "desc": "Virtual Private Network: Crea un 'tunnel' sicuro su una rete pubblica. Spesso usa IPsec o SSL/TLS[cite: 55]."
-  },
-  {
-    "a": "TLS",
-    "cat": "Networking & Protocolli",
-    "desc": "Transport Layer Security: Erede dell'ormai insicuro SSL; cifra le comunicazioni web, email e altro[cite: 56]."
-  },
-  {
-    "a": "IKE",
-    "cat": "Networking & Protocolli",
-    "desc": "Internet Key Exchange: Parte di IPsec, serve a negoziare in sicurezza le chiavi crittografiche[cite: 57]."
-  },
-  {
-    "a": "SSH",
-    "cat": "Networking & Protocolli",
-    "desc": "Secure Shell: Accesso remoto sicuro a riga di comando. Sostituisce il vecchio Telnet[cite: 58]."
-  },
-  {
-    "a": "L2TP",
-    "cat": "Networking & Protocolli",
-    "desc": "Layer 2 Tunneling Protocol: Protocollo di tunneling spesso abbinato a IPsec per creare VPN[cite: 59]."
-  },
-  {
-    "a": "GRE",
-    "cat": "Networking & Protocolli",
-    "desc": "Generic Routing Encapsulation: Protocollo di incapsulamento semplice; non è sicuro di per sé, va usato con IPsec[cite: 60]."
-  },
-  {
-    "a": "DNS",
-    "cat": "Networking & Protocolli",
-    "desc": "Domain Name Service: Traduce i nomi (es. google.com) in indirizzi IP. Correlato a DNSSEC[cite: 62, 63]."
-  },
-  {
-    "a": "DNSSEC",
-    "cat": "Networking & Protocolli",
-    "desc": "Aggiunge firme digitali al DNS per evitare attacchi come il DNS Spoofing[cite: 65]."
-  },
-  {
-    "a": "DHCP",
-    "cat": "Networking & Protocolli",
-    "desc": "Assegna automaticamente indirizzi IP ai dispositivi in rete[cite: 66]."
-  },
-  {
-    "a": "HTTP/HTTPS",
-    "cat": "Networking & Protocolli",
-    "desc": "Il protocollo web; la versione S (Secure) usa TLS per la cifratura[cite: 67]."
-  },
-  {
-    "a": "FTP/FTPS/SFTP",
-    "cat": "Networking & Protocolli",
-    "desc": "Trasferimento file. FTPS usa TLS; SFTP usa il protocollo SSH[cite: 68]."
-  },
-  {
-    "a": "SMTP/SMTPS",
-    "cat": "Networking & Protocolli",
-    "desc": "Invio email. La versione S è protetta da TLS[cite: 69]."
-  },
-  {
-    "a": "POP/IMAP4",
-    "cat": "Networking & Protocolli",
-    "desc": "Protocolli per la ricezione delle email; IMAP4 mantiene i messaggi sul server[cite: 70]."
-  },
-  {
-    "a": "SNMP",
-    "cat": "Networking & Protocolli",
-    "desc": "Simple Network Management Protocol: Monitoraggio dei dispositivi di rete. La versione v3 è l'unica sicura[cite: 71]."
-  },
-  {
-    "a": "NTP",
-    "cat": "Networking & Protocolli",
-    "desc": "Network Time Protocol: Sincronizza l'orario tra i dispositivi; fondamentale per certificati e log[cite: 72]."
-  },
-  {
-    "a": "LAN/MAN/WAN",
-    "cat": "Networking & Protocolli",
-    "desc": "Reti locali, cittadine o geografiche (di grandi dimensioni)[cite: 74]."
-  },
-  {
-    "a": "VLAN",
-    "cat": "Networking & Protocolli",
-    "desc": "Virtual LAN: Suddivide logicamente una rete fisica in sottoreti isolate per aumentare la sicurezza[cite: 74]."
-  },
-  {
-    "a": "NAT",
-    "cat": "Networking & Protocolli",
-    "desc": "Network Address Translation: Nasconde gli IP privati dietro un unico IP pubblico[cite: 75]."
-  },
-  {
-    "a": "DMZ",
-    "cat": "Networking & Protocolli",
-    "desc": "Demilitarized Zone: Segmento di rete isolato che ospita servizi esposti all'esterno[cite: 76]."
-  },
-  {
-    "a": "STP",
-    "cat": "Networking & Protocolli",
-    "desc": "Spanning Tree Protocol: Impedisce la creazione di loop infiniti nei collegamenti tra switch[cite: 77]."
-  },
-  {
-    "a": "OSI",
-    "cat": "Networking & Protocolli",
-    "desc": "Modello a 7 livelli che standardizza le funzioni di rete[cite: 79]."
-  },
-  {
-    "a": "MPLS",
-    "cat": "Networking & Protocolli",
-    "desc": "Multi-Protocol Label Switching: Tecnica per velocizzare e gestire il traffico di rete tramite 'etichette'[cite: 80]."
-  },
-  {
-    "a": "RTBH",
-    "cat": "Networking & Protocolli",
-    "desc": "Remotely Triggered Black Hole: Tecnica per mitigare attacchi DDoS scartando il traffico malevolo a monte[cite: 81]."
-  },
-  {
-    "a": "AAA",
-    "cat": "Gestione Identità (IAM)",
-    "desc": "Authentication, Authorization, Accounting: Il framework pilastro. Identifica chi sei (Authentication), cosa puoi fare (Authorization) e traccia cosa hai fatto (Accounting)."
-  },
-  {
-    "a": "IAM",
-    "cat": "Gestione Identità (IAM)",
-    "desc": "Identity and Access Management: L'insieme di processi e tecnologie per gestire le identità digitali in modo centralizzato."
-  },
-  {
-    "a": "ABAC",
-    "cat": "Gestione Identità (IAM)",
-    "desc": "Attribute-Based Access Control: Concede l'accesso in base ad attributi (es. ora, posizione, reparto). Molto flessibile."
-  },
-  {
-    "a": "DAC",
-    "cat": "Gestione Identità (IAM)",
-    "desc": "Discretionary Access Control: Il proprietario del dato decide chi può accedervi. Usato nei sistemi operativi comuni."
-  },
-  {
-    "a": "MAC",
-    "cat": "Gestione Identità (IAM)",
-    "desc": "Mandatory Access Control: L'accesso è basato su livelli di sicurezza (es. 'Segreto', 'Top Secret'). Tipico dell'ambito militare."
-  },
-  {
-    "a": "RBAC",
-    "cat": "Gestione Identità (IAM)",
-    "desc": "Role-Based Access Control: L'accesso è basato sul ruolo aziendale (es. 'Manager', 'Analista'). Semplifica la gestione."
-  },
-  {
-    "a": "MFA",
-    "cat": "Gestione Identità (IAM)",
-    "desc": "Multi-Factor Authentication: Richiede almeno due prove di identità diverse (qualcosa che sai, che hai o che sei)."
-  },
-  {
-    "a": "SSO",
-    "cat": "Gestione Identità (IAM)",
-    "desc": "Single Sign-on: Permette di accedere a più sistemi con un'unica credenziale. Correlato a SAML e OAuth."
-  },
-  {
-    "a": "SAML",
-    "cat": "Gestione Identità (IAM)",
-    "desc": "Security Assertions Markup Language: Protocollo basato su XML per scambiare dati di autenticazione tra un IdP (Identity Provider) e un servizio."
-  },
-  {
-    "a": "OAuth",
-    "cat": "Gestione Identità (IAM)",
-    "desc": "Open Authorization: Standard che permette a un'app di accedere ai dati di un utente su un'altra app senza condividere la password (es. 'Accedi con Google')."
-  },
-  {
-    "a": "RADIUS",
-    "cat": "Gestione Identità (IAM)",
-    "desc": "Protocollo per l'autenticazione centralizzata di utenti remoti (es. VPN o Wi-Fi aziendale)."
-  },
-  {
-    "a": "TACACS+",
-    "cat": "Gestione Identità (IAM)",
-    "desc": "Versione di Cisco del protocollo AAA, più sicuro di RADIUS perché cifra l'intero pacchetto."
-  },
-  {
-    "a": "LDAP",
-    "cat": "Gestione Identità (IAM)",
-    "desc": "Lightweight Directory Access Protocol: Usato per interrogare e gestire database di identità (come Active Directory)."
-  },
-  {
-    "a": "MSCHAP / CHAP",
-    "cat": "Gestione Identità (IAM)",
-    "desc": "Protocolli di autenticazione a sfida/risposta che evitano l'invio della password in chiaro."
-  },
-  {
-    "a": "TOTP / HOTP",
-    "cat": "Gestione Identità (IAM)",
-    "desc": "Password temporanee (OTP). Il primo basato sul tempo, il secondo su un contatore."
-  },
-  {
-    "a": "PSK",
-    "cat": "Gestione Identità (IAM)",
-    "desc": "Pre-Shared Key: Chiave condivisa usata solitamente per l'autenticazione Wi-Fi domestica."
-  },
-  {
-    "a": "PIN/PIV/CAC",
-    "cat": "Gestione Identità (IAM)",
-    "desc": "Metodi fisici o numerici di identificazione (Smart Card o codici personali)."
-  },
-  {
-    "a": "CA",
-    "cat": "Gestione Identità (IAM)",
-    "desc": "Certificate Authority: L'ente fidato che emette i certificati digitali."
-  },
-  {
-    "a": "CSR",
-    "cat": "Gestione Identità (IAM)",
-    "desc": "Certificate Signing Request: La richiesta inviata alla CA per ottenere un certificato."
-  },
-  {
-    "a": "CRL",
-    "cat": "Gestione Identità (IAM)",
-    "desc": "Certificate Revocation List: Lista di certificati che non sono più validi prima della loro scadenza."
-  },
-  {
-    "a": "OCSP",
-    "cat": "Gestione Identità (IAM)",
-    "desc": "Online Certificate Status Protocol: Metodo più veloce della CRL per verificare se un certificato è ancora valido."
-  },
-  {
-    "a": "APT",
-    "cat": "OpSec & Incident Response",
-    "desc": "Advanced Persistent Threat: Attacco mirato e prolungato nel tempo, solitamente condotto da gruppi organizzati (state-sponsored)."
-  },
-  {
-    "a": "DDoS",
-    "cat": "OpSec & Incident Response",
-    "desc": "Distributed Denial of Service: Attacco coordinato da più fonti per mandare offline un servizio sovraccaricandolo."
-  },
-  {
-    "a": "DoS",
-    "cat": "OpSec & Incident Response",
-    "desc": "Denial of Service: Simile al DDoS, ma proveniente da una singola sorgente."
-  },
-  {
-    "a": "MITM",
-    "cat": "OpSec & Incident Response",
-    "desc": "Man-in-the-Middle: L'attaccante si interpone segretamente tra due parti che comunicano per intercettare o alterare i dati."
-  },
-  {
-    "a": "RAT",
-    "cat": "OpSec & Incident Response",
-    "desc": "Remote Access Trojan: Malware che fornisce all'attaccante il controllo remoto completo del sistema infetto."
-  },
-  {
-    "a": "SQLI",
-    "cat": "OpSec & Incident Response",
-    "desc": "SQL Injection: Inserimento di codice SQL malevolo nei campi di input per manipolare il database dell'applicazione."
-  },
-  {
-    "a": "XSS",
-    "cat": "OpSec & Incident Response",
-    "desc": "Cross-Site Scripting: Iniezione di script malevoli in pagine web visualizzate da altri utenti."
-  },
-  {
-    "a": "IDS",
-    "cat": "OpSec & Incident Response",
-    "desc": "Intrusion Detection System: Monitora il traffico e invia avvisi in caso di attività sospette. Si divide in HIDS (host-based) e NIDS (network-based)."
-  },
-  {
-    "a": "IPS",
-    "cat": "OpSec & Incident Response",
-    "desc": "Intrusion Prevention System: Come l'IDS, ma interviene attivamente per bloccare la minaccia rilevata. Esistono versioni HIPS e NIPS."
-  },
-  {
-    "a": "SIEM",
-    "cat": "OpSec & Incident Response",
-    "desc": "Security Information and Event Management: Piattaforma che raccoglie e analizza i log di tutta l'infrastruttura per identificare anomalie in tempo reale."
-  },
-  {
-    "a": "SOAR",
-    "cat": "OpSec & Incident Response",
-    "desc": "Security Orchestration, Automation, and Response: Evoluzione del SIEM; automatizza la risposta agli incidenti tramite 'playbook'."
-  },
-  {
-    "a": "SOC",
-    "cat": "OpSec & Incident Response",
-    "desc": "Security Operations Center: Il team e la struttura dedicata al monitoraggio costante della sicurezza aziendale."
-  },
-  {
-    "a": "WAF",
-    "cat": "OpSec & Incident Response",
-    "desc": "Web Application Firewall: Firewall specializzato nel proteggere le applicazioni web da attacchi come SQLI e XSS."
-  },
-  {
-    "a": "IR",
-    "cat": "OpSec & Incident Response",
-    "desc": "Incident Response: Il processo generale di gestione di una violazione della sicurezza."
-  },
-  {
-    "a": "IRP",
-    "cat": "OpSec & Incident Response",
-    "desc": "Incident Response Plan: Il piano documentato che stabilisce le procedure da seguire durante un incidente."
-  },
-  {
-    "a": "CERT/CIRT/CSIRT",
-    "cat": "OpSec & Incident Response",
-    "desc": "Gruppi di esperti incaricati di rispondere alle emergenze informatiche."
-  },
-  {
-    "a": "OSINT",
-    "cat": "OpSec & Incident Response",
-    "desc": "Open Source Intelligence: Raccolta di informazioni da fonti pubbliche per analisi di sicurezza."
-  },
-  {
-    "a": "ATT&CK",
-    "cat": "OpSec & Incident Response",
-    "desc": "Adversarial Tactics, Techniques, and Common Knowledge: Framework di MITRE che cataloga i comportamenti e le tattiche degli attaccanti."
-  },
-  {
-    "a": "CVE",
-    "cat": "OpSec & Incident Response",
-    "desc": "Common Vulnerabilities and Exposures: Dizionario pubblico di vulnerabilità note."
-  },
-  {
-    "a": "CVSS",
-    "cat": "OpSec & Incident Response",
-    "desc": "Common Vulnerability Scoring System: Sistema numerico (0-10) per valutare la gravità di una vulnerabilità."
-  },
-  {
-    "a": "STIX / TAXII",
-    "cat": "OpSec & Incident Response",
-    "desc": "Standard per lo scambio di informazioni sulle minacce (Threat Intelligence). STIX definisce il formato, TAXII il protocollo di trasporto."
-  },
-  {
-    "a": "AV",
-    "cat": "Governance & Rischio (GRC)",
-    "desc": "Asset Value: Il valore economico di una risorsa (hardware, software o dati)."
-  },
-  {
-    "a": "SLE",
-    "cat": "Governance & Rischio (GRC)",
-    "desc": "Single Loss Expectancy: La perdita economica prevista per un singolo evento negativo. Si calcola come AV x EF (Exposure Factor)."
-  },
-  {
-    "a": "ARO",
-    "cat": "Governance & Rischio (GRC)",
-    "desc": "Annualized Rate of Occurrence: Quante volte l'anno si prevede che accada un determinato incidente."
-  },
-  {
-    "a": "ALE",
-    "cat": "Governance & Rischio (GRC)",
-    "desc": "Annualized Loss Expectancy: La perdita annuale prevista per un rischio specifico (SLE x ARO)."
-  },
-  {
-    "a": "RMF",
-    "cat": "Governance & Rischio (GRC)",
-    "desc": "Risk Management Framework: Un insieme di linee guida (spesso NIST) per gestire il rischio in modo strutturato."
-  },
-  {
-    "a": "ROI",
-    "cat": "Governance & Rischio (GRC)",
-    "desc": "Return on Investment: Valutazione del beneficio economico ottenuto rispetto al costo di una misura di sicurezza."
-  },
-  {
-    "a": "BIA",
-    "cat": "Governance & Rischio (GRC)",
-    "desc": "Business Impact Analysis: Analisi per determinare quali processi aziendali sono critici e l'impatto della loro interruzione."
-  },
-  {
-    "a": "BCP",
-    "cat": "Governance & Rischio (GRC)",
-    "desc": "Business Continuity Planning: Il piano per mantenere le funzioni aziendali attive durante e dopo un disastro."
-  },
-  {
-    "a": "DRP",
-    "cat": "Governance & Rischio (GRC)",
-    "desc": "Disaster Recovery Plan: Parte del BCP focalizzata sul ripristino tecnico dell'infrastruttura IT dopo un evento catastrofico."
-  },
-  {
-    "a": "RPO",
-    "cat": "Governance & Rischio (GRC)",
-    "desc": "Recovery Point Objective: La quantità massima di dati che l'azienda può permettersi di perdere (misurata in tempo)."
-  },
-  {
-    "a": "RTO",
-    "cat": "Governance & Rischio (GRC)",
-    "desc": "Recovery Time Objective: Il tempo massimo entro il quale un servizio deve essere ripristinato dopo un guasto."
-  },
-  {
-    "a": "COOP",
-    "cat": "Governance & Rischio (GRC)",
-    "desc": "Continuity of Operations Plan: Piano specifico per garantire che le missioni essenziali continuino a funzionare."
-  },
-  {
-    "a": "SPOF",
-    "cat": "Governance & Rischio (GRC)",
-    "desc": "Single Point of Failure: Un elemento del sistema che, se si guasta, interrompe l'intero servizio. L'obiettivo è eliminarli tramite la ridondanza."
-  },
-  {
-    "a": "AUP",
-    "cat": "Governance & Rischio (GRC)",
-    "desc": "Acceptable Use Policy: Regolamento che stabilisce come i dipendenti possono usare i sistemi aziendali."
-  },
-  {
-    "a": "NDA",
-    "cat": "Governance & Rischio (GRC)",
-    "desc": "Non-Disclosure Agreement: Contratto di riservatezza per proteggere informazioni sensibili."
-  },
-  {
-    "a": "SLA",
-    "cat": "Governance & Rischio (GRC)",
-    "desc": "Service Level Agreement: Contratto tra fornitore e cliente che definisce i livelli di servizio garantiti (es. 99.9% di uptime)."
-  },
-  {
-    "a": "MOU / MOA",
-    "cat": "Governance & Rischio (GRC)",
-    "desc": "Memorandum of Understanding/Agreement: Documenti che definiscono i termini di una collaborazione prima di un contratto formale."
-  },
-  {
-    "a": "BPA",
-    "cat": "Governance & Rischio (GRC)",
-    "desc": "Business Partners Agreement: Accordo che definisce la relazione tra partner commerciali."
-  },
-  {
-    "a": "ISA",
-    "cat": "Governance & Rischio (GRC)",
-    "desc": "Interconnection Security Agreement: Documento tecnico che stabilisce i requisiti di sicurezza per connettere due reti diverse."
-  },
-  {
-    "a": "ISO",
-    "cat": "Governance & Rischio (GRC)",
-    "desc": "Organizzazione internazionale che definisce standard globali (es. ISO 27001)."
-  },
-  {
-    "a": "GDPR",
-    "cat": "Governance & Rischio (GRC)",
-    "desc": "Regolamento europeo per la protezione dei dati personali e la privacy."
-  },
-  {
-    "a": "CIO/CTO/CSO",
-    "cat": "Governance & Rischio (GRC)",
-    "desc": "I vertici aziendali responsabili rispettivamente di Informazione, Tecnologia e Sicurezza."
-  },
-  {
-    "a": "DPO",
-    "cat": "Governance & Rischio (GRC)",
-    "desc": "Data Protection Officer: Responsabile della protezione dei dati e della conformità al GDPR."
-  },
-  {
-    "a": "ISSO",
-    "cat": "Governance & Rischio (GRC)",
-    "desc": "Information System Security Officer: Figura operativa che implementa le politiche di sicurezza sui sistemi."
-  },
-
-  {
-    "a": "SaaS",
-    "cat": "Cloud & Sviluppo",
-    "desc": "Software-as-a-Service: L'utente usa l'app (es. Office 365). La sicurezza è quasi tutta del fornitore."
-  },
-  {
-    "a": "PaaS",
-    "cat": "Cloud & Sviluppo",
-    "desc": "Platform-as-a-Service: L'utente sviluppa app su una piattaforma gestita. La sicurezza del codice è dell'utente."
-  },
-  {
-    "a": "laaS",
-    "cat": "Cloud & Sviluppo",
-    "desc": "Infrastructure-as-a-Service: L'utente gestisce VM, reti e OS. L'utente ha la massima responsabilità di sicurezza."
-  },
-  {
-    "a": "XaaS",
-    "cat": "Cloud & Sviluppo",
-    "desc": "Anything-as-a-Service: Concetto generale che include ogni risorsa fornita via cloud."
-  },
-  {
-    "a": "MaaS",
-    "cat": "Cloud & Sviluppo",
-    "desc": "Monitoring-as-a-Service: Monitoraggio della sicurezza e delle performance gestito in cloud."
-  },
-  {
-    "a": "CSP",
-    "cat": "Cloud & Sviluppo",
-    "desc": "Cloud Service Provider: L'azienda che offre i servizi cloud (es. AWS, Azure, Google Cloud)."
-  },
-  {
-    "a": "CASB",
-    "cat": "Cloud & Sviluppo",
-    "desc": "Cloud Access Security Broker: Software che si interpone tra utenti e servizi cloud per applicare policy di sicurezza."
-  },
-  {
-    "a": "VPC",
-    "cat": "Cloud & Sviluppo",
-    "desc": "Virtual Private Cloud: Una rete privata isolata all'interno di un cloud pubblico."
-  },
-  {
-    "a": "VM",
-    "cat": "Cloud & Sviluppo",
-    "desc": "Virtual Machine: Un computer software che esegue un sistema operativo completo sopra un hardware fisico."
-  },
-  {
-    "a": "VDI",
-    "cat": "Cloud & Sviluppo",
-    "desc": "Virtual Desktop Infrastructure: Permette agli utenti di accedere a desktop virtuali centralizzati da qualsiasi dispositivo."
-  },
-  {
-    "a": "VDE",
-    "cat": "Cloud & Sviluppo",
-    "desc": "Virtual Desktop Environment: L'ambiente desktop specifico fornito tramite VDI."
-  },
-  {
-    "a": "SDN",
-    "cat": "Cloud & Sviluppo",
-    "desc": "Software-Defined Network: Gestione della rete tramite software, separando il controllo dal traffico dati."
-  },
-  {
-    "a": "SDP",
-    "cat": "Cloud & Sviluppo",
-    "desc": "Software-Defined Perimeter: Approccio 'Zero Trust' che rende l'infrastruttura invisibile finché l'utente non è autenticato."
-  },
-  {
-    "a": "SDLC",
-    "cat": "Cloud & Sviluppo",
-    "desc": "Software Development Life Cycle: Il processo strutturato per creare software, dalla pianificazione al rilascio."
-  },
-  {
-    "a": "SDLM",
-    "cat": "Cloud & Sviluppo",
-    "desc": "Software Development Lifecycle Methodology: La metodologia specifica usata (es. Agile, Waterfall) per gestire l'SDLC."
-  },
-  {
-    "a": "SDK",
-    "cat": "Cloud & Sviluppo",
-    "desc": "Software Development Kit: Insieme di strumenti per sviluppatori per creare app su piattaforme specifiche."
-  },
-  {
-    "a": "XML",
-    "cat": "Cloud & Sviluppo",
-    "desc": "Extensible Markup Language: Linguaggio usato per strutturare dati; deve essere protetto da attacchi come 'XML Injection'."
-  },
-  {
-    "a": "AP",
-    "cat": "Hardware & Endpoint",
-    "desc": "Access Point: Dispositivo che permette ai client wireless di connettersi a una rete cablata."
-  },
-  {
-    "a": "BIOS",
-    "cat": "Hardware & Endpoint",
-    "desc": "Basic Input/Output System: Il primo software eseguito all'avvio; deve essere protetto per evitare modifiche hardware non autorizzate."
-  },
-  {
-    "a": "CCTV",
-    "cat": "Hardware & Endpoint",
-    "desc": "Closed-Circuit Television: Sistemi di videosorveglianza a circuito chiuso per la sicurezza fisica."
-  },
-  {
-    "a": "FPGA",
-    "cat": "Hardware & Endpoint",
-    "desc": "Field-Programmable Gate Array: Hardware programmabile dopo la produzione; richiede firmware sicuro per evitare manomissioni."
-  },
-  {
-    "a": "GPU",
-    "cat": "Hardware & Endpoint",
-    "desc": "Graphics Processing Unit: Usata per il calcolo grafico e dagli attaccanti per accelerare il cracking delle password."
-  },
-  {
-    "a": "HDD/SSD",
-    "cat": "Hardware & Endpoint",
-    "desc": "Hard Disk Drive / Solid State Drive: Dispositivi di memorizzazione; gli SSD richiedono metodi di cancellazione sicura differenti."
-  },
-  {
-    "a": "HSM",
-    "cat": "Hardware & Endpoint",
-    "desc": "Hardware Security Module: Dispositivo fisico dedicato alla gestione sicura delle chiavi crittografiche."
-  },
-  {
-    "a": "OT",
-    "cat": "Hardware & Endpoint",
-    "desc": "Operational Technology: Hardware e software che controllano dispositivi fisici industriali come valvole e motori."
-  },
-  {
-    "a": "PLC",
-    "cat": "Hardware & Endpoint",
-    "desc": "Programmable Logic Controller: Computer industriale robusto usato nei sistemi SCADA."
-  },
-  {
-    "a": "SCADA",
-    "cat": "Hardware & Endpoint",
-    "desc": "Supervisory Control and Data Acquisition: Architettura di controllo per processi industriali su larga scala."
-  },
-  {
-    "a": "TPM",
-    "cat": "Hardware & Endpoint",
-    "desc": "Trusted Platform Module: Chip sulla scheda madre che memorizza chiavi crittografiche e verifica l'integrità del boot."
-  },
-  {
-    "a": "UPS",
-    "cat": "Hardware & Endpoint",
-    "desc": "Uninterruptible Power Supply: Batteria di emergenza che garantisce continuità elettrica in caso di blackout."
-  },
-  {
-    "a": "BYOD",
-    "cat": "Hardware & Endpoint",
-    "desc": "Bring Your Own Device: Politica che permette ai dipendenti di usare i propri dispositivi per lavoro."
-  },
-  {
-    "a": "CYOD",
-    "cat": "Hardware & Endpoint",
-    "desc": "Choose Your Own Device: L'azienda offre una lista di dispositivi approvati tra cui il dipendente può scegliere."
-  },
-  {
-    "a": "COPE",
-    "cat": "Hardware & Endpoint",
-    "desc": "Corporate Owned, Personally Enabled: Dispositivi aziendali che i dipendenti possono usare anche per scopi personali."
-  },
-  {
-    "a": "MDM",
-    "cat": "Hardware & Endpoint",
-    "desc": "Mobile Device Management: Software per gestire e mettere in sicurezza i dispositivi mobili aziendali da remoto."
-  },
-  {
-    "a": "MAM",
-    "cat": "Hardware & Endpoint",
-    "desc": "Mobile Application Management: Si concentra sulla sicurezza delle singole app anziché dell'intero dispositivo."
-  },
-  {
-    "a": "USB OTG",
-    "cat": "Hardware & Endpoint",
-    "desc": "On-The-Go: Standard che permette a un dispositivo USB di agire come host per altri dispositivi."
-  },
-  {
-    "a": "BSSID",
-    "cat": "Hardware & Endpoint",
-    "desc": "Basic Service Set Identifier: L'indirizzo MAC della radio dell'Access Point."
-  },
-  {
-    "a": "NFC",
-    "cat": "Hardware & Endpoint",
-    "desc": "Near Field Communication: Comunicazione wireless a brevissima distanza (es. pagamenti contactless)."
-  },
-  {
-    "a": "RFID",
-    "cat": "Hardware & Endpoint",
-    "desc": "Radio Frequency Identification: Tecnologia per l'identificazione automatica tramite tag a radiofrequenza."
-  },
-  {
-    "a": "RAM",
-    "cat": "Hardware & Endpoint",
-    "desc": "Random Access Memory: Memoria volatile che può contenere dati sensibili in chiaro durante l'uso."
-  },
-  {
-    "a": "NAS",
-    "cat": "Hardware & Endpoint",
-    "desc": "Network-Attached Storage: Dispositivo di memoria connesso alla rete per la condivisione di file."
-  },
-  {
-    "a": "NAC",
-    "cat": "Hardware & Endpoint",
-    "desc": "Network Access Control: Controlla i dispositivi che tentano di connettersi verificando i requisiti di sicurezza."
-  },
-  {
-    "a": "SED",
-    "cat": "Hardware & Endpoint",
-    "desc": "Self-Encrypting Drive: Disco rigido che cifra automaticamente i dati al volo senza caricare la CPU."
-  },
-  {
-    "a": "WAP",
-    "cat": "Wireless Security",
-    "desc": "Wireless Access Point: Il punto di accesso fisico che trasmette il segnale Wi-Fi."
-  },
-  {
-    "a": "WEP",
-    "cat": "Wireless Security",
-    "desc": "Wired Equivalent Privacy: Il primo standard di sicurezza wireless. Oggi è totalmente insicuro e facile da hackerare."
-  },
-  {
-    "a": "WPA",
-    "cat": "Wireless Security",
-    "desc": "Wi-Fi Protected Access: Sostituto temporaneo del WEP, ha introdotto il protocollo TKIP per migliorare la sicurezza."
-  },
-  {
-    "a": "WPA2",
-    "cat": "Wireless Security",
-    "desc": "Lo standard più diffuso per anni; usa AES e il protocollo CCMP per la cifratura."
-  },
-  {
-    "a": "WPA3",
-    "cat": "Wireless Security",
-    "desc": "Lo standard più recente e sicuro; introduce il protocollo SAE per proteggere dai tentativi di indovinare le password (brute-force)."
-  },
-  {
-    "a": "WPS",
-    "cat": "Wireless Security",
-    "desc": "Wi-Fi Protected Setup: Metodo semplificato per connettere dispositivi (spesso tramite un tasto o PIN), ma molto vulnerabile ad attacchi."
-  },
-  {
-    "a": "WIDS",
-    "cat": "Wireless Security",
-    "desc": "Wireless Intrusion Detection System: Sistema che monitora le frequenze radio per rilevare attività sospette o access point non autorizzati (Rogue AP)."
-  },
-  {
-    "a": "WIPS",
-    "cat": "Wireless Security",
-    "desc": "Wireless Intrusion Prevention System: Come il WIDS, ma può intervenire attivamente (ad esempio disconnettendo i client abusivi)."
-  },
-  {
-    "a": "WTLS",
-    "cat": "Wireless Security",
-    "desc": "Wireless Transport Layer Security: La versione del protocollo TLS ottimizzata per i dispositivi wireless con scarse risorse (usata soprattutto nel vecchio protocollo WAP mobile)."
-  }
+﻿[
+    {
+        "a":  "3DES",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Triple DES: Algoritmo che applica il DES tre volte. Ormai deprecato a favore di AES. \nCorrelato a DES."
+    },
+    {
+        "a":  "AAA",
+        "cat":  "Gestione Identità (IAM)",
+        "desc":  "Authentication, Authorization, Accounting: Il framework pilastro. Identifica chi sei (Authentication), cosa puoi fare (Authorization) e traccia cosa hai fatto (Accounting)."
+    },
+    {
+        "a":  "ABAC",
+        "cat":  "Gestione Identità (IAM)",
+        "desc":  "Attribute-Based Access Control: Concede l\u0027accesso in base ad attributi (es. ora, posizione, reparto). Molto flessibile."
+    },
+    {
+        "cat":  "Gestione Identità (IAM)",
+        "a":  "ACL",
+        "desc":  "Lista di regole che definisce i permessi di accesso a risorse o reti."
+    },
+    {
+        "cat":  "Gestione Identità (IAM)",
+        "a":  "AD",
+        "desc":  "Servizio di directory Microsoft per la gestione centralizzata di utenti e risorse."
+    },
+    {
+        "a":  "AES",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Advanced Encryption Standard: Lo standard attuale di cifratura a blocchi simmetrica, estremamente sicuro e veloce[cite: 11]."
+    },
+    {
+        "a":  "AES256",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Versione di AES con chiave a 256 bit (massimo livello di sicurezza)[cite: 12]."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "AH",
+        "desc":  "Protocollo IPsec che fornisce autenticazione e integrità senza cifratura."
+    },
+    {
+        "cat":  "Sviluppo",
+        "a":  "AI",
+        "desc":  "Sistemi informatici che simulano processi di intelligenza umana."
+    },
+    {
+        "cat":  "OpSec \u0026 Incident Response",
+        "a":  "AIS",
+        "desc":  "Scambio automatizzato di indicatori di minacce tra organizzazioni."
+    },
+    {
+        "a":  "ALE",
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Annualized Loss Expectancy: La perdita annuale prevista per un rischio specifico (SLE x ARO)."
+    },
+    {
+        "a":  "AP",
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Access Point: Dispositivo che permette ai client wireless di connettersi a una rete cablata."
+    },
+    {
+        "cat":  "Sviluppo",
+        "a":  "API",
+        "desc":  "Insieme di definizioni che permettono a diversi software di comunicare."
+    },
+    {
+        "a":  "APT",
+        "cat":  "OpSec \u0026 Incident Response",
+        "desc":  "Advanced Persistent Threat: Attacco mirato e prolungato nel tempo, solitamente condotto da gruppi organizzati (state-sponsored)."
+    },
+    {
+        "a":  "ARO",
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Annualized Rate of Occurrence: Quante volte l\u0027anno si prevede che accada un determinato incidente."
+    },
+    {
+        "a":  "ARP",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Address Resolution Protocol: Associa un indirizzo IP a un indirizzo fisico (MAC). Vulnerabile all\u0027ARP Poisoning[cite: 48]."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "ASLR",
+        "desc":  "Protezione che sposta casualmente le posizioni dei dati in memoria."
+    },
+    {
+        "cat":  "Cloud \u0026 Sviluppo",
+        "a":  "ASP",
+        "desc":  "Fornitore che distribuisce applicazioni software tramite rete."
+    },
+    {
+        "a":  "ATT\u0026CK",
+        "cat":  "OpSec \u0026 Incident Response",
+        "desc":  "Adversarial Tactics, Techniques, and Common Knowledge: Framework di MITRE che cataloga i comportamenti e le tattiche degli attaccanti."
+    },
+    {
+        "a":  "AUP",
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Acceptable Use Policy: Regolamento che stabilisce come i dipendenti possono usare i sistemi aziendali."
+    },
+    {
+        "a":  "AV",
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Asset Value: Il valore economico di una risorsa (hardware, software o dati)."
+    },
+    {
+        "cat":  "Sviluppo",
+        "a":  "BASH",
+        "desc":  "Interfaccia a riga di comando e linguaggio di scripting per sistemi Unix/Linux."
+    },
+    {
+        "a":  "BCP",
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Business Continuity Planning: Il piano per mantenere le funzioni aziendali attive durante e dopo un disastro."
+    },
+    {
+        "a":  "BGP",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Border Gateway Protocol: Il \u0027postino\u0027 di Internet; gestisce l\u0027instradamento tra grandi reti (Sistemi Autonomi)[cite: 49]."
+    },
+    {
+        "a":  "BIA",
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Business Impact Analysis: Analisi per determinare quali processi aziendali sono critici e l\u0027impatto della loro interruzione."
+    },
+    {
+        "a":  "BIOS",
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Basic Input/Output System: Il primo software eseguito all\u0027avvio; deve essere protetto per evitare modifiche hardware non autorizzate."
+    },
+    {
+        "a":  "BPA",
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Business Partners Agreement: Accordo che definisce la relazione tra partner commerciali."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "BPDU",
+        "desc":  "Frame scambiati dagli switch per prevenire loop tramite il protocollo STP."
+    },
+    {
+        "a":  "BSSID",
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Basic Service Set Identifier: L\u0027indirizzo MAC della radio dell\u0027Access Point."
+    },
+    {
+        "a":  "BYOD",
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Bring Your Own Device: Politica che permette ai dipendenti di usare i propri dispositivi per lavoro."
+    },
+    {
+        "a":  "CA",
+        "cat":  "Gestione Identità (IAM)",
+        "desc":  "Certificate Authority: L\u0027ente fidato che emette i certificati digitali."
+    },
+    {
+        "cat":  "Gestione Identità (IAM)",
+        "a":  "CAC",
+        "desc":  "Smart card di identificazione per personale militare o governativo."
+    },
+    {
+        "cat":  "Gestione Identità (IAM)",
+        "a":  "CAPTCHA",
+        "desc":  "Test per determinare se l\u0027utente Ã¨ un umano o un bot."
+    },
+    {
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "a":  "CAR",
+        "desc":  "Documento che descrive un problema e le azioni intraprese per risolverlo."
+    },
+    {
+        "a":  "CASB",
+        "cat":  "Cloud \u0026 Sviluppo",
+        "desc":  "Cloud Access Security Broker: Software che si interpone tra utenti e servizi cloud per applicare policy di sicurezza."
+    },
+    {
+        "a":  "CBC",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Cipher Block Chaining: ModalitÃ  di cifratura dove ogni blocco dipende dal precedente. Correlato alla IV[cite: 13]."
+    },
+    {
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "a":  "CBT",
+        "desc":  "Formazione erogata tramite l\u0027ausilio di personal computer."
+    },
+    {
+        "cat":  "Wireless Security",
+        "a":  "CCMP",
+        "desc":  "Protocollo di cifratura sicuro basato su AES per reti WPA2."
+    },
+    {
+        "a":  "CCTV",
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Closed-Circuit Television: Sistemi di videosorveglianza a circuito chiuso per la sicurezza fisica."
+    },
+    {
+        "a":  "CERT/CIRT/CSIRT",
+        "cat":  "OpSec \u0026 Incident Response",
+        "desc":  "Gruppi di esperti incaricati di rispondere alle emergenze informatiche."
+    },
+    {
+        "a":  "CFB",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Cipher Feedback: Trasforma una cifratura a blocchi in una a flussi[cite: 14]."
+    },
+    {
+        "a":  "CIO/CTO/CSO",
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "I vertici aziendali responsabili rispettivamente di Informazione, Tecnologia e Sicurezza."
+    },
+    {
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "a":  "CIS",
+        "desc":  "Ente che fornisce benchmark e best practice per la sicurezza informatica."
+    },
+    {
+        "cat":  "Sviluppo",
+        "a":  "CMS",
+        "desc":  "Software per la creazione e gestione di contenuti digitali."
+    },
+    {
+        "cat":  "Crittografia \u0026 Dati",
+        "a":  "CN",
+        "desc":  "Componente di un certificato digitale che identifica il server o l\u0027entitÃ ."
+    },
+    {
+        "a":  "COOP",
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Continuity of Operations Plan: Piano specifico per garantire che le missioni essenziali continuino a funzionare."
+    },
+    {
+        "a":  "COPE",
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Corporate Owned, Personally Enabled: Dispositivi aziendali che i dipendenti possono usare anche per scopi personali."
+    },
+    {
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "a":  "CP",
+        "desc":  "Sviluppo di strategie per rispondere a eventi avversi o emergenze."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "CRC",
+        "desc":  "Metodo per verificare l\u0027integrità dei dati trasmessi rilevando errori."
+    },
+    {
+        "a":  "CRL",
+        "cat":  "Gestione Identità (IAM)",
+        "desc":  "Certificate Revocation List: Lista di certificati che non sono piÃ¹ validi prima della loro scadenza."
+    },
+    {
+        "cat":  "Cloud \u0026 Sviluppo",
+        "a":  "CSA",
+        "desc":  "Organizzazione dedicata alla definizione di standard di sicurezza cloud."
+    },
+    {
+        "a":  "CSP",
+        "cat":  "Cloud \u0026 Sviluppo",
+        "desc":  "Cloud Service Provider: L\u0027azienda che offre i servizi cloud (es. AWS, Azure, Google Cloud)."
+    },
+    {
+        "cat":  "Cloud \u0026 Sviluppo",
+        "a":  "CSP",
+        "desc":  "Azienda che offre servizi di calcolo, storage o applicazioni nel cloud."
+    },
+    {
+        "a":  "CSR",
+        "cat":  "Gestione Identità (IAM)",
+        "desc":  "Certificate Signing Request: La richiesta inviata alla CA per ottenere un certificato."
+    },
+    {
+        "cat":  "OpSec \u0026 Incident Response",
+        "a":  "CSRF",
+        "desc":  "Attacco che forza l\u0027utente a eseguire azioni indesiderate su un sito web."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "CSU",
+        "desc":  "Dispositivo che collega un terminale a una linea digitale."
+    },
+    {
+        "cat":  "Crittografia \u0026 Dati",
+        "a":  "CTM",
+        "desc":  "ModalitÃ  di funzionamento per cifrari a blocchi che li trasforma in cifrari a flusso."
+    },
+    {
+        "a":  "CVE",
+        "cat":  "OpSec \u0026 Incident Response",
+        "desc":  "Common Vulnerabilities and Exposures: Dizionario pubblico di vulnerabilitÃ  note."
+    },
+    {
+        "a":  "CVSS",
+        "cat":  "OpSec \u0026 Incident Response",
+        "desc":  "Common Vulnerability Scoring System: Sistema numerico (0-10) per valutare la gravitÃ  di una vulnerabilitÃ ."
+    },
+    {
+        "a":  "CYOD",
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Choose Your Own Device: L\u0027azienda offre una lista di dispositivi approvati tra cui il dipendente puÃ² scegliere."
+    },
+    {
+        "a":  "DAC",
+        "cat":  "Gestione Identità (IAM)",
+        "desc":  "Discretionary Access Control: Il proprietario del dato decide chi puÃ² accedervi. Usato nei sistemi operativi comuni."
+    },
+    {
+        "cat":  "Gestione Identità (IAM)",
+        "a":  "DBA",
+        "desc":  "Responsabile della gestione, manutenzione e sicurezza di un database."
+    },
+    {
+        "a":  "DDoS",
+        "cat":  "OpSec \u0026 Incident Response",
+        "desc":  "Distributed Denial of Service: Attacco coordinato da piÃ¹ fonti per mandare offline un servizio sovraccaricandolo."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "DEP",
+        "desc":  "Protezione che impedisce l\u0027esecuzione di codice in zone di memoria non sicure."
+    },
+    {
+        "cat":  "Crittografia \u0026 Dati",
+        "a":  "DER",
+        "desc":  "Formato binario per la memorizzazione e trasmissione di certificati digitali."
+    },
+    {
+        "a":  "DES",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Digital Encryption Standard: Vecchio algoritmo simmetrico, oggi considerato insicuro perchÃ© la chiave Ã¨ troppo corta[cite: 15]."
+    },
+    {
+        "cat":  "Crittografia \u0026 Dati",
+        "a":  "DH",
+        "desc":  "Algoritmo per lo scambio sicuro di chiavi crittografiche."
+    },
+    {
+        "a":  "DH / DHE",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Diffie-Hellman / Ephemeral: Protocollo per scambiare chiavi crittografiche su canali insicuri. DHE garantisce la PFS (Perfect Forward Secrecy)[cite: 16, 17]."
+    },
+    {
+        "a":  "DHCP",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Assegna automaticamente indirizzi IP ai dispositivi in rete[cite: 66]."
+    },
+    {
+        "cat":  "Crittografia \u0026 Dati",
+        "a":  "DHE",
+        "desc":  "Versione di DH che utilizza chiavi temporanee per ogni sessione."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "DKIM",
+        "desc":  "Metodo di autenticazione email basato su firme crittografiche."
+    },
+    {
+        "cat":  "Sviluppo",
+        "a":  "DLL",
+        "desc":  "Libreria caricata a runtime dalle applicazioni Windows."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "DLP",
+        "desc":  "Sistemi per prevenire la fuga di dati sensibili all\u0027esterno dell\u0027azienda."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "DMARC",
+        "desc":  "Framework di protezione email che integra SPF e DKIM."
+    },
+    {
+        "a":  "DMZ",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Demilitarized Zone: Segmento di rete isolato che ospita servizi esposti all\u0027esterno[cite: 76]."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "DMZ",
+        "desc":  "Segmento di rete isolato che espone servizi pubblici verso internet."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "DNAT",
+        "desc":  "Tecnica per cambiare l\u0027indirizzo IP di destinazione di un pacchetto."
+    },
+    {
+        "a":  "DNS",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Domain Name Service: Traduce i nomi (es. google.com) in indirizzi IP. Correlato a DNSSEC[cite: 62, 63]."
+    },
+    {
+        "a":  "DNSSEC",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Aggiunge firme digitali al DNS per evitare attacchi come il DNS Spoofing[cite: 65]."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "DNZ",
+        "desc":  "Concetto di segmentazione dinamica della rete."
+    },
+    {
+        "cat":  "OpSec \u0026 Incident Response",
+        "a":  "DoS",
+        "desc":  "Attacco volto a rendere un servizio non disponibile agli utenti."
+    },
+    {
+        "a":  "DoS",
+        "cat":  "OpSec \u0026 Incident Response",
+        "desc":  "Denial of Service: Simile al DDoS, ma proveniente da una singola sorgente."
+    },
+    {
+        "a":  "DPO",
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Data Protection Officer: Responsabile della protezione dei dati e della conformitÃ  al GDPR."
+    },
+    {
+        "a":  "DRP",
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Disaster Recovery Plan: Parte del BCP focalizzata sul ripristino tecnico dell\u0027infrastruttura IT dopo un evento catastrofico."
+    },
+    {
+        "a":  "DSA",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Digital Signature Algorithm: Standard per la creazione di firme digitali, basato su chiavi pubbliche[cite: 17]."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "DSL",
+        "desc":  "Tecnologia per la trasmissione dati digitale su doppino telefonico."
+    },
+    {
+        "cat":  "Gestione Identità (IAM)",
+        "a":  "EAP",
+        "desc":  "Framework di autenticazione usato spesso nelle reti Wi-Fi e VPN."
+    },
+    {
+        "a":  "ECB",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Electronic Code Book: ModalitÃ  piÃ¹ semplice di cifratura; blocchi identici producono testi cifrati identici (poco sicuri)[cite: 22]."
+    },
+    {
+        "a":  "ECC",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Elliptic Curve Cryptography: Crittografia a chiave pubblica che offre alta sicurezza con chiavi molto corte, ideale per dispositivi mobili[cite: 18]."
+    },
+    {
+        "a":  "ECDHE",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Elliptic Curve DHE: Unione di ECC e DHE per scambio di chiavi sicuri ed efficienti[cite: 20]."
+    },
+    {
+        "a":  "EFS",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Encrypted File System: FunzionalitÃ  di Windows per cifrare singoli file o cartelle[cite: 23]."
+    },
+    {
+        "cat":  "Sviluppo",
+        "a":  "EIP",
+        "desc":  "Piattaforma che aggrega informazioni e applicazioni aziendali."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "EMI",
+        "desc":  "Disturbo elettromagnetico che puÃ² degradare le prestazioni di un circuito."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "EMP",
+        "desc":  "Breve scoppio di energia elettromagnetica che puÃ² danneggiare l\u0027elettronica."
+    },
+    {
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "a":  "EOL",
+        "desc":  "Data in cui un prodotto non viene piÃ¹ prodotto o venduto."
+    },
+    {
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "a":  "EOS",
+        "desc":  "Data in cui cessa il supporto tecnico e gli aggiornamenti per un prodotto."
+    },
+    {
+        "cat":  "Sviluppo",
+        "a":  "ERP",
+        "desc":  "Software di gestione dei processi aziendali integrati."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "ESN",
+        "desc":  "Codice univoco che identifica un dispositivo mobile."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "ESP",
+        "desc":  "Protocollo IPsec che fornisce riservatezza, autenticazione e integrità ."
+    },
+    {
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "a":  "EULA",
+        "desc":  "Contratto tra il fornitore di software e l\u0027utente finale."
+    },
+    {
+        "cat":  "Gestione Identità (IAM)",
+        "a":  "FACL",
+        "desc":  "Controllo accessi granulare applicato a file e cartelle."
+    },
+    {
+        "cat":  "Gestione Identità (IAM)",
+        "a":  "FAR",
+        "desc":  "Percentuale di utenti non autorizzati accettati da un sistema biometrico."
+    },
+    {
+        "a":  "FDE",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Full Disk Encryption: Cifratura dell\u0027intero disco rigido (es. BitLocker). Correlato al modulo TPM[cite: 24]."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "FIM",
+        "desc":  "Processo di verifica dell\u0027integrità dei file di sistema e applicativi."
+    },
+    {
+        "a":  "FPGA",
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Field-Programmable Gate Array: Hardware programmabile dopo la produzione; richiede firmware sicuro per evitare manomissioni."
+    },
+    {
+        "cat":  "Gestione Identità (IAM)",
+        "a":  "FRR",
+        "desc":  "Percentuale di utenti legittimi respinti da un sistema biometrico."
+    },
+    {
+        "a":  "FTP/FTPS/SFTP",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Trasferimento file. FTPS usa TLS; SFTP usa il protocollo SSH[cite: 68]."
+    },
+    {
+        "a":  "GCM",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Galois/Counter Mode: ModalitÃ  di cifratura moderna che fornisce sia riservatezza che integrità dei dati[cite: 25]."
+    },
+    {
+        "a":  "GDPR",
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Regolamento europeo per la protezione dei dati personali e la privacy."
+    },
+    {
+        "cat":  "Crittografia \u0026 Dati",
+        "a":  "GPG",
+        "desc":  "Strumento per la cifratura e firma digitale, alternativa libera a PGP."
+    },
+    {
+        "cat":  "Gestione Identità (IAM)",
+        "a":  "GPO",
+        "desc":  "Insieme di regole di Active Directory per gestire utenti e computer."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "GPS",
+        "desc":  "Sistema di posizionamento satellitare globale."
+    },
+    {
+        "a":  "GPU",
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Graphics Processing Unit: Usata per il calcolo grafico e dagli attaccanti per accelerare il cracking delle password."
+    },
+    {
+        "a":  "GRE",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Generic Routing Encapsulation: Protocollo di incapsulamento semplice; non Ã¨ sicuro di per sÃ©, va usato con IPsec[cite: 60]."
+    },
+    {
+        "cat":  "OpSec \u0026 Incident Response",
+        "a":  "HA",
+        "desc":  "Sistemi progettati per operare senza interruzioni per lunghi periodi."
+    },
+    {
+        "a":  "HDD/SSD",
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Hard Disk Drive / Solid State Drive: Dispositivi di memorizzazione; gli SSD richiedono metodi di cancellazione sicura differenti."
+    },
+    {
+        "cat":  "OpSec \u0026 Incident Response",
+        "a":  "HIDS",
+        "desc":  "Sistema di rilevamento intrusioni installato su un singolo host."
+    },
+    {
+        "cat":  "OpSec \u0026 Incident Response",
+        "a":  "HIPS",
+        "desc":  "Sistema di prevenzione intrusioni installato su un singolo host."
+    },
+    {
+        "a":  "HMAC",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Hash-based Message Authentication Code: Codice che usa una funzione di Hash e una chiave segreta per verificare l\u0027integrità del messaggio[cite: 26]."
+    },
+    {
+        "a":  "HSM",
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Hardware Security Module: Dispositivo fisico dedicato alla gestione sicura delle chiavi crittografiche."
+    },
+    {
+        "a":  "HTTP/HTTPS",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Il protocollo web; la versione S (Secure) usa TLS per la cifratura[cite: 67]."
+    },
+    {
+        "a":  "IAM",
+        "cat":  "Gestione Identità (IAM)",
+        "desc":  "Identity and Access Management: L\u0027insieme di processi e tecnologie per gestire le Identità digitali in modo centralizzato."
+    },
+    {
+        "a":  "ICMP",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Internet Control Message Protocol: Usato per messaggi di errore e diagnostica (es. il comando ping)[cite: 51]."
+    },
+    {
+        "a":  "IDEA",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Algoritmo simmetrico a blocchi usato in passato, ad esempio in versioni datate di PGP[cite: 27]."
+    },
+    {
+        "cat":  "Gestione Identità (IAM)",
+        "a":  "IdP",
+        "desc":  "Servizio che crea, mantiene e gestisce le informazioni sull\u0027Identità ."
+    },
+    {
+        "a":  "IDS",
+        "cat":  "OpSec \u0026 Incident Response",
+        "desc":  "Intrusion Detection System: Monitora il traffico e invia avvisi in caso di attivitÃ  sospette. Si divide in HIDS (host-based) e NIDS (network-based)."
+    },
+    {
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "a":  "IEEE",
+        "desc":  "Organizzazione professionale che definisce standard tecnici."
+    },
+    {
+        "a":  "IKE",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Internet Key Exchange: Parte di IPsec, serve a negoziare in sicurezza le chiavi crittografiche[cite: 57]."
+    },
+    {
+        "cat":  "Sviluppo",
+        "a":  "IM",
+        "desc":  "Servizi di comunicazione testuale in tempo reale."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "IoT",
+        "desc":  "Oggetti fisici connessi a internet dotati di sensori e software."
+    },
+    {
+        "a":  "IP",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Internet Protocol: Il protocollo fondamentale per l\u0027indirizzamento dei pacchetti in rete[cite: 44]."
+    },
+    {
+        "a":  "IPS",
+        "cat":  "OpSec \u0026 Incident Response",
+        "desc":  "Intrusion Prevention System: Come l\u0027IDS, ma interviene attivamente per bloccare la minaccia rilevata. Esistono versioni HIPS e NIPS."
+    },
+    {
+        "a":  "IPsec",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "IP Security: Suite di protocolli per rendere sicure le comunicazioni IP. Include AH (autenticazione) ed ESP (cifratura)[cite: 54]."
+    },
+    {
+        "a":  "IR",
+        "cat":  "OpSec \u0026 Incident Response",
+        "desc":  "Incident Response: Il processo generale di gestione di una violazione della sicurezza."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "IRC",
+        "desc":  "Protocollo di messaggistica istantanea basato su testo."
+    },
+    {
+        "a":  "IRP",
+        "cat":  "OpSec \u0026 Incident Response",
+        "desc":  "Incident Response Plan: Il piano documentato che stabilisce le procedure da seguire durante un incidente."
+    },
+    {
+        "a":  "ISA",
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Interconnection Security Agreement: Documento tecnico che stabilisce i requisiti di sicurezza per connettere due reti diverse."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "ISFW",
+        "desc":  "Firewall interno usato per segmentare zone diverse della rete aziendale."
+    },
+    {
+        "a":  "ISO",
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Organizzazione internazionale che definisce standard globali (es. ISO 27001)."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "ISP",
+        "desc":  "Azienda che fornisce l\u0027accesso a Internet."
+    },
+    {
+        "a":  "ISSO",
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Information System Security Officer: Figura operativa che implementa le politiche di sicurezza sui sistemi."
+    },
+    {
+        "a":  "IV",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Initialization Vector: Numero casuale usato per avviare il processo di cifratura (evita che messaggi uguali abbiano lo stesso hash). Correlato a CBC[cite: 28, 29]."
+    },
+    {
+        "cat":  "Gestione Identità (IAM)",
+        "a":  "KDC",
+        "desc":  "Sistema che distribuisce ticket in un\u0027architettura Kerberos."
+    },
+    {
+        "a":  "KEK",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Key Encryption Key: Chiave utilizzata esclusivamente per cifrare altre chiavi crittografiche[cite: 30]."
+    },
+    {
+        "a":  "L2TP",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Layer 2 Tunneling Protocol: Protocollo di tunneling spesso abbinato a IPsec per creare VPN[cite: 59]."
+    },
+    {
+        "a":  "laaS",
+        "cat":  "Cloud \u0026 Sviluppo",
+        "desc":  "Infrastructure-as-a-Service: L\u0027utente gestisce VM, reti e OS. L\u0027utente ha la massima responsabilitÃ  di sicurezza."
+    },
+    {
+        "a":  "LAN/MAN/WAN",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Reti locali, cittadine o geografiche (di grandi dimensioni)[cite: 74]."
+    },
+    {
+        "a":  "LDAP",
+        "cat":  "Gestione Identità (IAM)",
+        "desc":  "Lightweight Directory Access Protocol: Usato per interrogare e gestire database di Identità (come Active Directory)."
+    },
+    {
+        "cat":  "Wireless Security",
+        "a":  "LEAP",
+        "desc":  "Protocollo di autenticazione wireless proprietario Cisco."
+    },
+    {
+        "a":  "MaaS",
+        "cat":  "Cloud \u0026 Sviluppo",
+        "desc":  "Monitoring-as-a-Service: Monitoraggio della sicurezza e delle performance gestito in cloud."
+    },
+    {
+        "a":  "MAC",
+        "cat":  "Gestione Identità (IAM)",
+        "desc":  "Mandatory Access Control: L\u0027accesso Ã¨ basato su livelli di sicurezza (es. \u0027Segreto\u0027, \u0027Top Secret\u0027). Tipico dell\u0027ambito militare."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "MAC",
+        "desc":  "Indirizzo hardware univoco o modello di controllo accessi rigido."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "MAM",
+        "desc":  "Software per gestire e proteggere le app sui dispositivi mobili aziendali."
+    },
+    {
+        "a":  "MAM",
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Mobile Application Management: Si concentra sulla sicurezza delle singole app anzichÃ© dell\u0027intero dispositivo."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "MBR",
+        "desc":  "Primo settore del disco rigido che contiene le info di avvio del sistema."
+    },
+    {
+        "a":  "MD5",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Funzione di hash oggi considerata insicura per via delle collisioni; usata solo per integrità non critica[cite: 31]."
+    },
+    {
+        "a":  "MDM",
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Mobile Device Management: Software per gestire e mettere in sicurezza i dispositivi mobili aziendali da remoto."
+    },
+    {
+        "cat":  "OpSec \u0026 Incident Response",
+        "a":  "MDR",
+        "desc":  "Servizio esterno di monitoraggio e risposta agli incidenti."
+    },
+    {
+        "a":  "MFA",
+        "cat":  "Gestione Identità (IAM)",
+        "desc":  "Multi-Factor Authentication: Richiede almeno due prove di Identità diverse (qualcosa che sai, che hai o che sei)."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "MFD",
+        "desc":  "Dispositivo che integra stampante, scanner e fax."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "MFP",
+        "desc":  "Sinonimo di MFD, riferito specificamente alle stampanti multifunzione."
+    },
+    {
+        "a":  "MITM",
+        "cat":  "OpSec \u0026 Incident Response",
+        "desc":  "Man-in-the-Middle: L\u0027attaccante si interpone segretamente tra due parti che comunicano per intercettare o alterare i dati."
+    },
+    {
+        "cat":  "Sviluppo",
+        "a":  "ML",
+        "desc":  "Sottocampo dell\u0027AI che permette ai sistemi di imparare dai dati."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "MMS",
+        "desc":  "Standard per inviare messaggi multimediali via rete cellulare."
+    },
+    {
+        "a":  "MOU / MOA",
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Memorandum of Understanding/Agreement: Documenti che definiscono i termini di una collaborazione prima di un contratto formale."
+    },
+    {
+        "a":  "MPLS",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Multi-Protocol Label Switching: Tecnica per velocizzare e gestire il traffico di rete tramite \u0027etichette\u0027[cite: 80]."
+    },
+    {
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "a":  "MSA",
+        "desc":  "Contratto quadro che regola i rapporti futuri tra due parti."
+    },
+    {
+        "a":  "MSCHAP / CHAP",
+        "cat":  "Gestione Identità (IAM)",
+        "desc":  "Protocolli di autenticazione a sfida/risposta che evitano l\u0027invio della password in chiaro."
+    },
+    {
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "a":  "MSP",
+        "desc":  "Azienda che gestisce i servizi IT di un cliente da remoto."
+    },
+    {
+        "cat":  "OpSec \u0026 Incident Response",
+        "a":  "MSSP",
+        "desc":  "MSP focalizzato specificamente sui servizi di sicurezza."
+    },
+    {
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "a":  "MTBF",
+        "desc":  "Tempo medio stimato tra un guasto e il successivo."
+    },
+    {
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "a":  "MTTF",
+        "desc":  "Tempo medio di funzionamento prima di un guasto irreparabile."
+    },
+    {
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "a":  "MTTR",
+        "desc":  "Tempo medio necessario per riparare un sistema dopo un guasto."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "MTU",
+        "desc":  "Dimensione massima in byte del pacchetto dati in rete."
+    },
+    {
+        "a":  "NAC",
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Network Access Control: Controlla i dispositivi che tentano di connettersi verificando i requisiti di sicurezza."
+    },
+    {
+        "a":  "NAS",
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Network-Attached Storage: Dispositivo di memoria connesso alla rete per la condivisione di file."
+    },
+    {
+        "a":  "NAT",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Network Address Translation: Nasconde gli IP privati dietro un unico IP pubblico[cite: 75]."
+    },
+    {
+        "a":  "NDA",
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Non-Disclosure Agreement: Contratto di riservatezza per proteggere informazioni sensibili."
+    },
+    {
+        "a":  "NFC",
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Near Field Communication: Comunicazione wireless a brevissima distanza (es. pagamenti contactless)."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "NFV",
+        "desc":  "Virtualizzazione delle funzioni di rete (firewall, load balancer, ecc.)."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "NGFW",
+        "desc":  "Firewall avanzato con ispezione dei pacchetti a livello applicativo."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "NG-SWG",
+        "desc":  "Gateway web sicuro evoluto con protezione cloud."
+    },
+    {
+        "cat":  "OpSec \u0026 Incident Response",
+        "a":  "NIDS",
+        "desc":  "Sistema di rilevamento intrusioni che analizza il traffico di rete."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "NTFS",
+        "desc":  "File system standard per sistemi Windows con supporto ai permessi."
+    },
+    {
+        "cat":  "Gestione Identità (IAM)",
+        "a":  "NTLM",
+        "desc":  "Protocollo di autenticazione Microsoft (considerato legacy)."
+    },
+    {
+        "a":  "NTP",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Network Time Protocol: Sincronizza l\u0027orario tra i dispositivi; fondamentale per certificati e log[cite: 72]."
+    },
+    {
+        "a":  "OAuth",
+        "cat":  "Gestione Identità (IAM)",
+        "desc":  "Open Authorization: Standard che permette a un\u0027app di accedere ai dati di un utente su un\u0027altra app senza condividere la password (es. \u0027Accedi con Google\u0027)."
+    },
+    {
+        "a":  "OCSP",
+        "cat":  "Gestione Identità (IAM)",
+        "desc":  "Online Certificate Status Protocol: Metodo piÃ¹ veloce della CRL per verificare se un certificato Ã¨ ancora valido."
+    },
+    {
+        "cat":  "Sviluppo",
+        "a":  "OID",
+        "desc":  "Identificatore univoco globale utilizzato in SNMP e certificati."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "OS",
+        "desc":  "Software che gestisce le risorse hardware e software del computer."
+    },
+    {
+        "a":  "OSI",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Modello a 7 livelli che standardizza le funzioni di rete[cite: 79]."
+    },
+    {
+        "a":  "OSINT",
+        "cat":  "OpSec \u0026 Incident Response",
+        "desc":  "Open Source Intelligence: Raccolta di informazioni da fonti pubbliche per analisi di sicurezza."
+    },
+    {
+        "a":  "OSPF",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Open Shortest Path First: Protocollo di routing interno che calcola il percorso piÃ¹ breve per i dati[cite: 50]."
+    },
+    {
+        "a":  "OT",
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Operational Technology: Hardware e software che controllano dispositivi fisici industriali come valvole e motori."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "OTA",
+        "desc":  "Metodo di distribuzione software o aggiornamenti via wireless."
+    },
+    {
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "a":  "OVAL",
+        "desc":  "Standard per comunicare dettagli tecnici sulle vulnerabilitÃ ."
+    },
+    {
+        "cat":  "Crittografia \u0026 Dati",
+        "a":  "P12",
+        "desc":  "Formato di archivio per certificati e chiavi private protetto da password."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "P2P",
+        "desc":  "Modello di rete dove ogni nodo ha le stesse funzionalitÃ ."
+    },
+    {
+        "a":  "PaaS",
+        "cat":  "Cloud \u0026 Sviluppo",
+        "desc":  "Platform-as-a-Service: L\u0027utente sviluppa app su una piattaforma gestita. La sicurezza del codice Ã¨ dell\u0027utente."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "PAC",
+        "desc":  "File di config per proxy o attributo di privilegio in Kerberos."
+    },
+    {
+        "cat":  "Gestione Identità (IAM)",
+        "a":  "PAM",
+        "desc":  "Gestione e monitoraggio degli accessi per utenti privilegiati."
+    },
+    {
+        "cat":  "Gestione Identità (IAM)",
+        "a":  "PAP",
+        "desc":  "Protocollo di autenticazione semplice che invia password in chiaro."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "PAT",
+        "desc":  "Estensione del NAT che permette a piÃ¹ host di usare un solo IP pubblico tramite porte."
+    },
+    {
+        "a":  "PBKDF2",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Metodo per derivare chiavi sicure da password, rendendo difficili gli attacchi a forza bruta[cite: 32]."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "PCAP",
+        "desc":  "Interfaccia e formato file per catturare e analizzare il traffico di rete."
+    },
+    {
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "a":  "PCI DSS",
+        "desc":  "Standard di sicurezza per organizzazioni che gestiscono carte di credito."
+    },
+    {
+        "cat":  "Sviluppo",
+        "a":  "PE",
+        "desc":  "Formato file per eseguibili e librerie sui sistemi Windows."
+    },
+    {
+        "cat":  "Wireless Security",
+        "a":  "PEAP",
+        "desc":  "Protocollo che incapsula EAP dentro un tunnel TLS sicuro."
+    },
+    {
+        "cat":  "Crittografia \u0026 Dati",
+        "a":  "PEM",
+        "desc":  "Formato file Base64 per certificati e chiavi crittografiche."
+    },
+    {
+        "cat":  "Crittografia \u0026 Dati",
+        "a":  "PFS",
+        "desc":  "ProprietÃ  che impedisce la decifrazione di sessioni passate se la chiave privata viene rubata."
+    },
+    {
+        "cat":  "Crittografia \u0026 Dati",
+        "a":  "PFX",
+        "desc":  "Precursore del formato P12 usato per certificati Windows."
+    },
+    {
+        "a":  "PGP",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Pretty Good Privacy: Programma per cifrare email e file usando crittografia asimmetrica[cite: 33]."
+    },
+    {
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "a":  "PHI",
+        "desc":  "Informazioni sanitarie protette relative allo stato di salute di un individuo."
+    },
+    {
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "a":  "PII",
+        "desc":  "Qualsiasi dato che possa identificare univocamente una persona."
+    },
+    {
+        "a":  "PIN/PIV/CAC",
+        "cat":  "Gestione Identità (IAM)",
+        "desc":  "Metodi fisici o numerici di identificazione (Smart Card o codici personali)."
+    },
+    {
+        "a":  "PKCS",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Public-Key Cryptography Standards: Insieme di standard tecnici per l\u0027uso della crittografia a chiave pubblica[cite: 34]."
+    },
+    {
+        "a":  "PKI",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Public Key Infrastructure: Sistema di hardware, software e procedure per gestire certificati digitali (CA, CRL, CSR)[cite: 35]."
+    },
+    {
+        "a":  "PLC",
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Programmable Logic Controller: Computer industriale robusto usato nei sistemi SCADA."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "PoE",
+        "desc":  "Tecnologia che invia alimentazione elettrica tramite cavo di rete."
+    },
+    {
+        "cat":  "OpSec \u0026 Incident Response",
+        "a":  "POODLE",
+        "desc":  "VulnerabilitÃ  che colpisce il protocollo SSL 3.0."
+    },
+    {
+        "a":  "POP/IMAP4",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Protocolli per la ricezione delle email; IMAP4 mantiene i messaggi sul server[cite: 70]."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "POTS",
+        "desc":  "Rete telefonica analogica tradizionale."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "PPP",
+        "desc":  "Protocollo per stabilire una connessione diretta tra due nodi."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "PPTP",
+        "desc":  "Protocollo VPN datato e considerato insicuro."
+    },
+    {
+        "a":  "PSK",
+        "cat":  "Gestione Identità (IAM)",
+        "desc":  "Pre-Shared Key: Chiave condivisa usata solitamente per l\u0027autenticazione Wi-Fi domestica."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "PTZ",
+        "desc":  "Telecamere che possono essere controllate da remoto in movimento e zoom."
+    },
+    {
+        "cat":  "OpSec \u0026 Incident Response",
+        "a":  "PUP",
+        "desc":  "Software non necessariamente malware ma spesso fastidioso o invasivo."
+    },
+    {
+        "cat":  "Sviluppo",
+        "a":  "QA",
+        "desc":  "Insieme di attivitÃ  per garantire la qualitÃ  del software prodotto."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "QoS",
+        "desc":  "Gestione delle prioritÃ  del traffico per garantire prestazioni stabili."
+    },
+    {
+        "cat":  "Crittografia \u0026 Dati",
+        "a":  "RA",
+        "desc":  "EntitÃ  che verifica le Identità per una CA o processo di valutazione rischi."
+    },
+    {
+        "cat":  "Sviluppo",
+        "a":  "RAD",
+        "desc":  "Metodologia di sviluppo software che enfatizza la prototipazione rapida."
+    },
+    {
+        "a":  "RADIUS",
+        "cat":  "Gestione Identità (IAM)",
+        "desc":  "Protocollo per l\u0027autenticazione centralizzata di utenti remoti (es. VPN o Wi-Fi aziendale)."
+    },
+    {
+        "cat":  "Gestione Identità (IAM)",
+        "a":  "RADIUS",
+        "desc":  "Protocollo AAA per la gestione centralizzata degli accessi."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "RAID",
+        "desc":  "Sistema di ridondanza dati su piÃ¹ dischi rigidi."
+    },
+    {
+        "a":  "RAM",
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Random Access Memory: Memoria volatile che puÃ² contenere dati sensibili in chiaro durante l\u0027uso."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "RAM",
+        "desc":  "Memoria di lavoro volatile del computer."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "RAS",
+        "desc":  "Servizio che permette agli utenti di accedere a una rete da remoto."
+    },
+    {
+        "a":  "RAT",
+        "cat":  "OpSec \u0026 Incident Response",
+        "desc":  "Remote Access Trojan: Malware che fornisce all\u0027attaccante il controllo remoto completo del sistema infetto."
+    },
+    {
+        "a":  "RBAC",
+        "cat":  "Gestione Identità (IAM)",
+        "desc":  "Role-Based Access Control: L\u0027accesso Ã¨ basato sul ruolo aziendale (es. \u0027Manager\u0027, \u0027Analista\u0027). Semplifica la gestione."
+    },
+    {
+        "a":  "RC4",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Algoritmo a flussi un tempo usato in WEP e SSL, oggi considerato vulnerabile[cite: 36]."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "RCS",
+        "desc":  "Protocollo di messaggistica avanzato per cellulari (erede degli SMS)."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "RDP",
+        "desc":  "Protocollo Microsoft per il controllo remoto grafico di un PC."
+    },
+    {
+        "cat":  "Sviluppo",
+        "a":  "REST",
+        "desc":  "Stile architetturale per lo sviluppo di servizi web API."
+    },
+    {
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "a":  "RFC",
+        "desc":  "Documenti tecnici che definiscono gli standard di Internet."
+    },
+    {
+        "a":  "RFID",
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Radio Frequency Identification: Tecnologia per l\u0027identificazione automatica tramite tag a radiofrequenza."
+    },
+    {
+        "a":  "RIPEMD",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Famiglia di funzioni di hash sviluppate in Europa, alternativa a SHA[cite: 37]."
+    },
+    {
+        "a":  "RMF",
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Risk Management Framework: Un insieme di linee guida (spesso NIST) per gestire il rischio in modo strutturato."
+    },
+    {
+        "a":  "ROI",
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Return on Investment: Valutazione del beneficio economico ottenuto rispetto al costo di una misura di sicurezza."
+    },
+    {
+        "a":  "RPO",
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Recovery Point Objective: La quantitÃ  massima di dati che l\u0027azienda puÃ² permettersi di perdere (misurata in tempo)."
+    },
+    {
+        "a":  "RSA",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "L\u0027algoritmo a chiave pubblica piÃ¹ famoso per cifratura e firme digitali[cite: 38]."
+    },
+    {
+        "a":  "RTBH",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Remotely Triggered Black Hole: Tecnica per mitigare attacchi DDoS scartando il traffico malevolo a monte[cite: 81]."
+    },
+    {
+        "a":  "RTO",
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Recovery Time Objective: Il tempo massimo entro il quale un servizio deve essere ripristinato dopo un guasto."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "RTOS",
+        "desc":  "Sistema operativo progettato per elaborare dati senza ritardi di buffering."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "RTP",
+        "desc":  "Protocollo per la trasmissione di audio e video su reti IP."
+    },
+    {
+        "a":  "S/MIME",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Protocollo per firmare e cifrare email via PKI[cite: 40]."
+    },
+    {
+        "a":  "SaaS",
+        "cat":  "Cloud \u0026 Sviluppo",
+        "desc":  "Software-as-a-Service: L\u0027utente usa l\u0027app (es. Office 365). La sicurezza Ã¨ quasi tutta del fornitore."
+    },
+    {
+        "cat":  "Wireless Security",
+        "a":  "SAE",
+        "desc":  "Metodo di autenticazione sicuro usato in WPA3."
+    },
+    {
+        "a":  "SAML",
+        "cat":  "Gestione Identità (IAM)",
+        "desc":  "Security Assertions Markup Language: Protocollo basato su XML per scambiare dati di autenticazione tra un IdP (Identity Provider) e un servizio."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "SAN",
+        "desc":  "Rete dedicata allo storage o campo in un certificato SSL."
+    },
+    {
+        "a":  "SCADA",
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Supervisory Control and Data Acquisition: Architettura di controllo per processi industriali su larga scala."
+    },
+    {
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "a":  "SCAP",
+        "desc":  "Insieme di standard per automatizzare la gestione delle vulnerabilitÃ ."
+    },
+    {
+        "cat":  "Crittografia \u0026 Dati",
+        "a":  "SCEP",
+        "desc":  "Protocollo per il rilascio scalabile di certificati digitali."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "SCP",
+        "desc":  "Metodo per trasferire file in modo sicuro tramite SSH."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "SCSI",
+        "desc":  "Standard di interfaccia per il collegamento di periferiche (dischi)."
+    },
+    {
+        "a":  "SDK",
+        "cat":  "Cloud \u0026 Sviluppo",
+        "desc":  "Software Development Kit: Insieme di strumenti per sviluppatori per creare app su piattaforme specifiche."
+    },
+    {
+        "a":  "SDLC",
+        "cat":  "Cloud \u0026 Sviluppo",
+        "desc":  "Software Development Life Cycle: Il processo strutturato per creare software, dalla pianificazione al rilascio."
+    },
+    {
+        "a":  "SDLM",
+        "cat":  "Cloud \u0026 Sviluppo",
+        "desc":  "Software Development Lifecycle Methodology: La metodologia specifica usata (es. Agile, Waterfall) per gestire l\u0027SDLC."
+    },
+    {
+        "a":  "SDN",
+        "cat":  "Cloud \u0026 Sviluppo",
+        "desc":  "Software-Defined Network: Gestione della rete tramite software, separando il controllo dal traffico dati."
+    },
+    {
+        "a":  "SDP",
+        "cat":  "Cloud \u0026 Sviluppo",
+        "desc":  "Software-Defined Perimeter: Approccio \u0027Zero Trust\u0027 che rende l\u0027infrastruttura invisibile finchÃ© l\u0027utente non Ã¨ autenticato."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "SDV",
+        "desc":  "Veicolo le cui funzionalitÃ  sono abilitate principalmente dal software."
+    },
+    {
+        "a":  "SED",
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Self-Encrypting Drive: Disco rigido che cifra automaticamente i dati al volo senza caricare la CPU."
+    },
+    {
+        "cat":  "Sviluppo",
+        "a":  "SEH",
+        "desc":  "Meccanismo Windows per la gestione degli errori software."
+    },
+    {
+        "a":  "SHA",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Secure Hash Algorithm: Famiglia di funzioni hash. SHA-256 Ã¨ lo standard attuale per l\u0027integrità [cite: 39]."
+    },
+    {
+        "a":  "SIEM",
+        "cat":  "OpSec \u0026 Incident Response",
+        "desc":  "Security Information and Event Management: Piattaforma che raccoglie e analizza i log di tutta l\u0027infrastruttura per identificare anomalie in tempo reale."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "SIM",
+        "desc":  "Scheda rimovibile per l\u0027identificazione dell\u0027abbonato in rete mobile."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "SIP",
+        "desc":  "Protocollo per avviare e terminare sessioni multimediali (VoIP)."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "SIPS",
+        "desc":  "Versione sicura e cifrata del protocollo SIP."
+    },
+    {
+        "a":  "SLA",
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Service Level Agreement: Contratto tra fornitore e cliente che definisce i livelli di servizio garantiti (es. 99.9% di uptime)."
+    },
+    {
+        "a":  "SLE",
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Single Loss Expectancy: La perdita economica prevista per un singolo evento negativo. Si calcola come AV x EF (Exposure Factor)."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "SMB",
+        "desc":  "Protocollo per la condivisione di file e stampanti in rete Windows."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "SMS",
+        "desc":  "Servizio di messaggistica testuale breve per cellulari."
+    },
+    {
+        "a":  "SMTP/SMTPS",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Invio email. La versione S Ã¨ protetta da TLS[cite: 69]."
+    },
+    {
+        "a":  "SNMP",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Simple Network Management Protocol: Monitoraggio dei dispositivi di rete. La versione v3 Ã¨ l\u0027unica sicura[cite: 71]."
+    },
+    {
+        "cat":  "Sviluppo",
+        "a":  "SOAP",
+        "desc":  "Protocollo basato su XML per lo scambio di messaggi tra web service."
+    },
+    {
+        "a":  "SOAR",
+        "cat":  "OpSec \u0026 Incident Response",
+        "desc":  "Security Orchestration, Automation, and Response: Evoluzione del SIEM; automatizza la risposta agli incidenti tramite \u0027playbook\u0027."
+    },
+    {
+        "a":  "SOC",
+        "cat":  "OpSec \u0026 Incident Response",
+        "desc":  "Security Operations Center: Il team e la struttura dedicata al monitoraggio costante della sicurezza aziendale."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "SoC",
+        "desc":  "Circuito integrato che racchiude tutti i componenti di un computer."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "SPF",
+        "desc":  "Record DNS usato per validare i server autorizzati a inviare email."
+    },
+    {
+        "cat":  "OpSec \u0026 Incident Response",
+        "a":  "SPIM",
+        "desc":  "Messaggi pubblicitari indesiderati inviati tramite chat istantanee."
+    },
+    {
+        "a":  "SPOF",
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Single Point of Failure: Un elemento del sistema che, se si guasta, interrompe l\u0027intero servizio. L\u0027obiettivo Ã¨ eliminarli tramite la ridondanza."
+    },
+    {
+        "cat":  "Sviluppo",
+        "a":  "SQL",
+        "desc":  "Linguaggio standard per la gestione di database relazionali."
+    },
+    {
+        "a":  "SQLI",
+        "cat":  "OpSec \u0026 Incident Response",
+        "desc":  "SQL Injection: Inserimento di codice SQL malevolo nei campi di input per manipolare il database dell\u0027applicazione."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "SRTP",
+        "desc":  "Versione cifrata e sicura del protocollo RTP."
+    },
+    {
+        "a":  "SSH",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Secure Shell: Accesso remoto sicuro a riga di comando. Sostituisce il vecchio Telnet[cite: 58]."
+    },
+    {
+        "cat":  "Wireless Security",
+        "a":  "SSID",
+        "desc":  "Il nome che identifica univocamente una rete Wi-Fi."
+    },
+    {
+        "cat":  "Crittografia \u0026 Dati",
+        "a":  "SSL",
+        "desc":  "Protocollo di sicurezza per proteggere le comunicazioni web (oggi TLS)."
+    },
+    {
+        "a":  "SSO",
+        "cat":  "Gestione Identità (IAM)",
+        "desc":  "Single Sign-on: Permette di accedere a piÃ¹ sistemi con un\u0027unica credenziale. Correlato a SAML e OAuth."
+    },
+    {
+        "a":  "STIX / TAXII",
+        "cat":  "OpSec \u0026 Incident Response",
+        "desc":  "Standard per lo scambio di informazioni sulle minacce (Threat Intelligence). STIX definisce il formato, TAXII il protocollo di trasporto."
+    },
+    {
+        "a":  "STP",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Spanning Tree Protocol: Impedisce la creazione di loop infiniti nei collegamenti tra switch[cite: 77]."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "SWG",
+        "desc":  "Soluzione di sicurezza che filtra il traffico web dannoso."
+    },
+    {
+        "a":  "TACACS+",
+        "cat":  "Gestione Identità (IAM)",
+        "desc":  "Versione di Cisco del protocollo AAA, piÃ¹ sicuro di RADIUS perchÃ© cifra l\u0027intero pacchetto."
+    },
+    {
+        "a":  "TCP/IP",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Suite di protocolli su cui si basa Internet; il TCP garantisce che i dati arrivino integri e in ordine[cite: 45, 46]."
+    },
+    {
+        "cat":  "Gestione Identità (IAM)",
+        "a":  "TGT",
+        "desc":  "Ticket emesso dal KDC in Kerberos per richiedere altri ticket di servizio."
+    },
+    {
+        "cat":  "Wireless Security",
+        "a":  "TKIP",
+        "desc":  "Protocollo di sicurezza Wi-Fi legacy usato in WPA (insicuro oggi)."
+    },
+    {
+        "a":  "TLS",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Transport Layer Security: Erede dell\u0027ormai insicuro SSL; cifra le comunicazioni web, email e altro[cite: 56]."
+    },
+    {
+        "a":  "TOTP / HOTP",
+        "cat":  "Gestione Identità (IAM)",
+        "desc":  "Password temporanee (OTP). Il primo basato sul tempo, il secondo su un contatore."
+    },
+    {
+        "a":  "TPM",
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Trusted Platform Module: Chip sulla scheda madre che memorizza chiavi crittografiche e verifica l\u0027integrità del boot."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "TSIG",
+        "desc":  "Meccanismo per autenticare gli aggiornamenti DNS."
+    },
+    {
+        "cat":  "OpSec \u0026 Incident Response",
+        "a":  "TTP",
+        "desc":  "Analisi dei metodi utilizzati dai criminali informatici."
+    },
+    {
+        "cat":  "Sviluppo",
+        "a":  "UAT",
+        "desc":  "Fase finale del test software eseguita dagli utenti reali."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "UAV",
+        "desc":  "Veicolo aereo a pilotaggio remoto (drone)."
+    },
+    {
+        "a":  "UDP",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "User Datagram Protocol: Alternativa al TCP, piÃ¹ veloce ma senza controllo d\u0027errore; usato per streaming e gaming[cite: 47]."
+    },
+    {
+        "cat":  "OpSec \u0026 Incident Response",
+        "a":  "UEBA",
+        "desc":  "Analisi del comportamento di utenti e dispositivi per rilevare anomalie."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "UEFI",
+        "desc":  "Interfaccia firmware moderna che sostituisce il vecchio BIOS."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "UEM",
+        "desc":  "Gestione centralizzata di tutti i dispositivi (PC e mobili)."
+    },
+    {
+        "a":  "UPS",
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Uninterruptible Power Supply: Batteria di emergenza che garantisce continuitÃ  elettrica in caso di blackout."
+    },
+    {
+        "cat":  "Sviluppo",
+        "a":  "URI",
+        "desc":  "Stringa di caratteri che identifica univocamente una risorsa."
+    },
+    {
+        "cat":  "Sviluppo",
+        "a":  "URL",
+        "desc":  "Tipo specifico di URI che indica dove si trova una risorsa web."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "USB",
+        "desc":  "Standard di comunicazione per il collegamento di periferiche."
+    },
+    {
+        "a":  "USB OTG",
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "On-The-Go: Standard che permette a un dispositivo USB di agire come host per altri dispositivi."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "UTM",
+        "desc":  "Dispositivo che integra piÃ¹ funzioni di sicurezza in una sola appliance."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "UTP",
+        "desc":  "Cavo di rete in rame a coppie intrecciate non schermato."
+    },
+    {
+        "cat":  "Sviluppo",
+        "a":  "VBA",
+        "desc":  "Linguaggio macro per le applicazioni Microsoft Office."
+    },
+    {
+        "a":  "VDE",
+        "cat":  "Cloud \u0026 Sviluppo",
+        "desc":  "Virtual Desktop Environment: L\u0027ambiente desktop specifico fornito tramite VDI."
+    },
+    {
+        "a":  "VDI",
+        "cat":  "Cloud \u0026 Sviluppo",
+        "desc":  "Virtual Desktop Infrastructure: Permette agli utenti di accedere a desktop virtuali centralizzati da qualsiasi dispositivo."
+    },
+    {
+        "a":  "VLAN",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Virtual LAN: Suddivide logicamente una rete fisica in sottoreti isolate per aumentare la sicurezza[cite: 74]."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "VLSM",
+        "desc":  "Tecnica per suddividere una rete in sottoreti di dimensioni diverse."
+    },
+    {
+        "a":  "VM",
+        "cat":  "Cloud \u0026 Sviluppo",
+        "desc":  "Virtual Machine: Un computer software che esegue un sistema operativo completo sopra un hardware fisico."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "VoIP",
+        "desc":  "Tecnologia per effettuare chiamate vocali tramite rete internet."
+    },
+    {
+        "a":  "VPC",
+        "cat":  "Cloud \u0026 Sviluppo",
+        "desc":  "Virtual Private Cloud: Una rete privata isolata all\u0027interno di un cloud pubblico."
+    },
+    {
+        "a":  "VPN",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Virtual Private Network: Crea un \u0027tunnel\u0027 sicuro su una rete pubblica. Spesso usa IPsec o SSL/TLS[cite: 55]."
+    },
+    {
+        "cat":  "Networking \u0026 Protocolli",
+        "a":  "VTC",
+        "desc":  "Tecnologia per la comunicazione audio e video a distanza."
+    },
+    {
+        "a":  "WAF",
+        "cat":  "OpSec \u0026 Incident Response",
+        "desc":  "Web Application Firewall: Firewall specializzato nel proteggere le applicazioni web da attacchi come SQLI e XSS."
+    },
+    {
+        "a":  "WAP",
+        "cat":  "Wireless Security",
+        "desc":  "Wireless Access Point: Il punto di accesso fisico che trasmette il segnale Wi-Fi."
+    },
+    {
+        "a":  "WEP",
+        "cat":  "Wireless Security",
+        "desc":  "Wired Equivalent Privacy: Il primo standard di sicurezza wireless. Oggi Ã¨ totalmente insicuro e facile da hackerare."
+    },
+    {
+        "a":  "WIDS",
+        "cat":  "Wireless Security",
+        "desc":  "Wireless Intrusion Detection System: Sistema che monitora le frequenze radio per rilevare attivitÃ  sospette o access point non autorizzati (Rogue AP)."
+    },
+    {
+        "a":  "WIPS",
+        "cat":  "Wireless Security",
+        "desc":  "Wireless Intrusion Prevention System: Come il WIDS, ma puÃ² intervenire attivamente (ad esempio disconnettendo i client abusivi)."
+    },
+    {
+        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "WORM",
+        "desc":  "Supporto di memoria che puÃ² essere scritto una volta sola."
+    },
+    {
+        "a":  "WPA",
+        "cat":  "Wireless Security",
+        "desc":  "Wi-Fi Protected Access: Sostituto temporaneo del WEP, ha introdotto il protocollo TKIP per migliorare la sicurezza."
+    },
+    {
+        "a":  "WPA2",
+        "cat":  "Wireless Security",
+        "desc":  "Lo standard piÃ¹ diffuso per anni; usa AES e il protocollo CCMP per la cifratura."
+    },
+    {
+        "a":  "WPA3",
+        "cat":  "Wireless Security",
+        "desc":  "Lo standard piÃ¹ recente e sicuro; introduce il protocollo SAE per proteggere dai tentativi di indovinare le password (brute-force)."
+    },
+    {
+        "a":  "WPS",
+        "cat":  "Wireless Security",
+        "desc":  "Wi-Fi Protected Setup: Metodo semplificato per connettere dispositivi (spesso tramite un tasto o PIN), ma molto vulnerabile ad attacchi."
+    },
+    {
+        "a":  "WTLS",
+        "cat":  "Wireless Security",
+        "desc":  "Wireless Transport Layer Security: La versione del protocollo TLS ottimizzata per i dispositivi wireless con scarse risorse (usata soprattutto nel vecchio protocollo WAP mobile)."
+    },
+    {
+        "a":  "XaaS",
+        "cat":  "Cloud \u0026 Sviluppo",
+        "desc":  "Anything-as-a-Service: Concetto generale che include ogni risorsa fornita via cloud."
+    },
+    {
+        "a":  "XML",
+        "cat":  "Cloud \u0026 Sviluppo",
+        "desc":  "Extensible Markup Language: Linguaggio usato per strutturare dati; deve essere protetto da attacchi come \u0027XML Injection\u0027."
+    },
+    {
+        "cat":  "Sviluppo",
+        "a":  "XOR",
+        "desc":  "Operazione logica binaria usata spesso in crittografia."
+    },
+    {
+        "cat":  "OpSec \u0026 Incident Response",
+        "a":  "XSRF",
+        "desc":  "Acronimo alternativo per CSRF; un attacco che forza un utente autenticato a compiere azioni indesiderate."
+    },
+    {
+        "a":  "XSS",
+        "cat":  "OpSec \u0026 Incident Response",
+        "desc":  "Cross-Site Scripting: Iniezione di script malevoli in pagine web visualizzate da altri utenti."
+    }
 ]
+

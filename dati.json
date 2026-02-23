@@ -17,12 +17,12 @@
     {
         "cat":  "Gestione Identità (IAM)",
         "a":  "ACL",
-        "desc":  "Lista di regole che definisce i permessi di accesso a risorse o reti."
+        "desc":  "Access Control List: Lista di regole che definisce i permessi di accesso a risorse o reti."
     },
     {
         "cat":  "Gestione Identità (IAM)",
         "a":  "AD",
-        "desc":  "Servizio di directory Microsoft per la gestione centralizzata di utenti e risorse."
+        "desc":  "Active Directory: Servizio di directory Microsoft per la gestione centralizzata di utenti e risorse."
     },
     {
         "a":  "AES",
@@ -32,22 +32,22 @@
     {
         "a":  "AES256",
         "cat":  "Crittografia \u0026 Dati",
-        "desc":  "Versione di AES con chiave a 256 bit (massimo livello di sicurezza)[cite: 12]."
+        "desc":  "AES-256: Versione di AES con chiave a 256 bit (massimo livello di sicurezza)."
     },
     {
         "cat":  "Networking \u0026 Protocolli",
         "a":  "AH",
-        "desc":  "Protocollo IPsec che fornisce autenticazione e integrità senza cifratura."
+        "desc":  "Authentication Header: Protocollo IPsec che fornisce autenticazione e integrità senza cifratura."
     },
     {
         "cat":  "Sviluppo",
         "a":  "AI",
-        "desc":  "Sistemi informatici che simulano processi di intelligenza umana."
+        "desc":  "Artificial Intelligence: Sistemi informatici che simulano processi di intelligenza umana."
     },
     {
         "cat":  "OpSec \u0026 Incident Response",
         "a":  "AIS",
-        "desc":  "Scambio automatizzato di indicatori di minacce tra organizzazioni."
+        "desc":  "Automated Indicator Sharing: Scambio automatizzato di indicatori di minacce tra organizzazioni."
     },
     {
         "a":  "ALE",
@@ -62,7 +62,7 @@
     {
         "cat":  "Sviluppo",
         "a":  "API",
-        "desc":  "Insieme di definizioni che permettono a diversi software di comunicare."
+        "desc":  "Application Programming Interface: Insieme di definizioni che permettono a diversi software di comunicare."
     },
     {
         "a":  "APT",
@@ -82,12 +82,17 @@
     {
         "cat":  "Hardware \u0026 Endpoint",
         "a":  "ASLR",
-        "desc":  "Protezione che sposta casualmente le posizioni dei dati in memoria."
+        "desc":  "Address Space Layout Randomization: Protezione che sposta casualmente le posizioni dei dati in memoria."
     },
     {
         "cat":  "Cloud \u0026 Sviluppo",
         "a":  "ASP",
-        "desc":  "Fornitore che distribuisce applicazioni software tramite rete."
+        "desc":  "Application Service Provider: Fornitore che distribuisce applicazioni software tramite rete."
+    },
+    {
+        "cat":  "Cloud \u0026 Sviluppo",
+        "a":  "ASP",
+        "desc":  "Active Server Pages: Tecnologia Microsoft per creare pagine web dinamiche."
     },
     {
         "a":  "ATT\u0026CK",
@@ -107,7 +112,7 @@
     {
         "cat":  "Sviluppo",
         "a":  "BASH",
-        "desc":  "Interfaccia a riga di comando e linguaggio di scripting per sistemi Unix/Linux."
+        "desc":  "Bourne Again Shell: Interfaccia a riga di comando e linguaggio di scripting per sistemi Unix/Linux."
     },
     {
         "a":  "BCP",
@@ -137,7 +142,7 @@
     {
         "cat":  "Networking \u0026 Protocolli",
         "a":  "BPDU",
-        "desc":  "Frame scambiati dagli switch per prevenire loop tramite il protocollo STP."
+        "desc":  "Bridge Protocol Data Unit: Frame scambiati dagli switch per prevenire loop tramite il protocollo STP."
     },
     {
         "a":  "BSSID",
@@ -157,17 +162,17 @@
     {
         "cat":  "Gestione Identità (IAM)",
         "a":  "CAC",
-        "desc":  "Smart card di identificazione per personale militare o governativo."
+        "desc":  "Common Access Card: Smart card di identificazione per personale militare o governativo."
     },
     {
         "cat":  "Gestione Identità (IAM)",
         "a":  "CAPTCHA",
-        "desc":  "Test per determinare se l\u0027utente Ã¨ un umano o un bot."
+        "desc":  "Completely Automated Public Turing test to tell Computers and Humans Apart: Test per determinare se l\u0027utente Ã¨ un umano o un bot."
     },
     {
         "cat":  "Governance \u0026 Rischio (GRC)",
         "a":  "CAR",
-        "desc":  "Documento che descrive un problema e le azioni intraprese per risolverlo."
+        "desc":  "Corrective Action Report: Documento che descrive un problema e le azioni intraprese per risolverlo."
     },
     {
         "a":  "CASB",
@@ -182,22 +187,32 @@
     {
         "cat":  "Governance \u0026 Rischio (GRC)",
         "a":  "CBT",
-        "desc":  "Formazione erogata tramite l\u0027ausilio di personal computer."
+        "desc":  "Computer-Based Training: Formazione erogata tramite l\u0027ausilio di personal computer."
     },
     {
         "cat":  "Wireless Security",
         "a":  "CCMP",
-        "desc":  "Protocollo di cifratura sicuro basato su AES per reti WPA2."
+        "desc":  "Counter Mode with Cipher Block Chaining Message Authentication Code Protocol: Protocollo di cifratura sicuro basato su AES per reti WPA2."
     },
     {
         "a":  "CCTV",
         "cat":  "Hardware \u0026 Endpoint",
         "desc":  "Closed-Circuit Television: Sistemi di videosorveglianza a circuito chiuso per la sicurezza fisica."
     },
+        {
+        "a":  "CER",
+        "cat":  "Gestione Identità (IAM)",
+        "desc":  "Cross Over Error Rate: Punto in cui il tasso di falsi positivi e falsi negativi è uguale in un sistema biometrico."
+    },
+        {
+        "a":  "CER",
+        "cat":  "Gestione Identità (IAM)",
+        "desc":  "Certificate Enrollment Request: Processo per richiedere un certificato digitale a una CA."
+    },
     {
         "a":  "CERT/CIRT/CSIRT",
         "cat":  "OpSec \u0026 Incident Response",
-        "desc":  "Gruppi di esperti incaricati di rispondere alle emergenze informatiche."
+        "desc":  "Computer Emergency Response Team / Computer Incident Response Team / Computer Security Incident Response Team: Gruppi di esperti incaricati di rispondere alle emergenze informatiche."
     },
     {
         "a":  "CFB",
@@ -207,22 +222,22 @@
     {
         "a":  "CIO/CTO/CSO",
         "cat":  "Governance \u0026 Rischio (GRC)",
-        "desc":  "I vertici aziendali responsabili rispettivamente di Informazione, Tecnologia e Sicurezza."
+        "desc":  "Chief Information Officer / Chief Technology Officer / Chief Security Officer: I vertici aziendali responsabili rispettivamente di Informazione, Tecnologia e Sicurezza."
     },
     {
         "cat":  "Governance \u0026 Rischio (GRC)",
         "a":  "CIS",
-        "desc":  "Ente che fornisce benchmark e best practice per la sicurezza informatica."
+        "desc":  "Center for Internet Security: Ente che fornisce benchmark e best practice per la sicurezza informatica."
     },
     {
         "cat":  "Sviluppo",
         "a":  "CMS",
-        "desc":  "Software per la creazione e gestione di contenuti digitali."
+        "desc":  "Content Management System: Software per la creazione e gestione di contenuti digitali."
     },
     {
         "cat":  "Crittografia \u0026 Dati",
         "a":  "CN",
-        "desc":  "Componente di un certificato digitale che identifica il server o l\u0027entitÃ ."
+        "desc":  "Common Name: Componente di un certificato digitale che identifica il server o l\u0027entitÃ ."
     },
     {
         "a":  "COOP",
@@ -237,12 +252,12 @@
     {
         "cat":  "Governance \u0026 Rischio (GRC)",
         "a":  "CP",
-        "desc":  "Sviluppo di strategie per rispondere a eventi avversi o emergenze."
+        "desc":  "Continuity Planning: Sviluppo di strategie per rispondere a eventi avversi o emergenze."
     },
     {
         "cat":  "Networking \u0026 Protocolli",
         "a":  "CRC",
-        "desc":  "Metodo per verificare l\u0027integrità dei dati trasmessi rilevando errori."
+        "desc":  "Cyclic Redundancy Check: Metodo per verificare l\u0027integrità dei dati trasmessi rilevando errori."
     },
     {
         "a":  "CRL",
@@ -252,7 +267,7 @@
     {
         "cat":  "Cloud \u0026 Sviluppo",
         "a":  "CSA",
-        "desc":  "Organizzazione dedicata alla definizione di standard di sicurezza cloud."
+        "desc":  "Cloud Security Alliance: Organizzazione dedicata alla definizione di standard di sicurezza cloud."
     },
     {
         "a":  "CSP",
@@ -262,7 +277,7 @@
     {
         "cat":  "Cloud \u0026 Sviluppo",
         "a":  "CSP",
-        "desc":  "Azienda che offre servizi di calcolo, storage o applicazioni nel cloud."
+        "desc":  "Cloud Service Provider: Azienda che offre servizi di calcolo, storage o applicazioni nel cloud."
     },
     {
         "a":  "CSR",
@@ -272,17 +287,17 @@
     {
         "cat":  "OpSec \u0026 Incident Response",
         "a":  "CSRF",
-        "desc":  "Attacco che forza l\u0027utente a eseguire azioni indesiderate su un sito web."
+        "desc":  "Cross-Site Request Forgery: Attacco che forza l\u0027utente a eseguire azioni indesiderate su un sito web."
     },
     {
         "cat":  "Hardware \u0026 Endpoint",
         "a":  "CSU",
-        "desc":  "Dispositivo che collega un terminale a una linea digitale."
+        "desc":  "Channel Service Unit: Dispositivo che collega un terminale a una linea digitale."
     },
     {
         "cat":  "Crittografia \u0026 Dati",
         "a":  "CTM",
-        "desc":  "ModalitÃ  di funzionamento per cifrari a blocchi che li trasforma in cifrari a flusso."
+        "desc":  "Cipher Text Manipulation/Chipher Text Mode: ModalitÃ  di funzionamento per cifrari a blocchi che li trasforma in cifrari a flusso."
     },
     {
         "a":  "CVE",

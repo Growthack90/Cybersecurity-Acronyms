@@ -322,7 +322,7 @@
     {
         "cat":  "Gestione Identità (IAM)",
         "a":  "DBA",
-        "desc":  "Responsabile della gestione, manutenzione e sicurezza di un database."
+        "desc":  "Database Administrator: Responsabile della gestione, manutenzione e sicurezza di un database."
     },
     {
         "a":  "DDoS",
@@ -332,12 +332,12 @@
     {
         "cat":  "Hardware \u0026 Endpoint",
         "a":  "DEP",
-        "desc":  "Protezione che impedisce l\u0027esecuzione di codice in zone di memoria non sicure."
+        "desc":  "Data Execution Prevention: Protezione che impedisce l\u0027esecuzione di codice in zone di memoria non sicure."
     },
     {
         "cat":  "Crittografia \u0026 Dati",
         "a":  "DER",
-        "desc":  "Formato binario per la memorizzazione e trasmissione di certificati digitali."
+        "desc":  "Distinguished Encoding Rules: Formato binario per la memorizzazione e trasmissione di certificati digitali."
     },
     {
         "a":  "DES",
@@ -347,7 +347,7 @@
     {
         "cat":  "Crittografia \u0026 Dati",
         "a":  "DH",
-        "desc":  "Algoritmo per lo scambio sicuro di chiavi crittografiche."
+        "desc":  "Diffie-Hellman: Algoritmo per lo scambio sicuro di chiavi crittografiche."
     },
     {
         "a":  "DH / DHE",
@@ -357,47 +357,42 @@
     {
         "a":  "DHCP",
         "cat":  "Networking \u0026 Protocolli",
-        "desc":  "Assegna automaticamente indirizzi IP ai dispositivi in rete[cite: 66]."
+        "desc":  "Dynamic Host Configuration Protocol: Assegna automaticamente indirizzi IP ai dispositivi in rete[cite: 66]."
     },
     {
         "cat":  "Crittografia \u0026 Dati",
         "a":  "DHE",
-        "desc":  "Versione di DH che utilizza chiavi temporanee per ogni sessione."
+        "desc":  "Diffie-Hellman Ephemeral: Versione di DH che utilizza chiavi temporanee per ogni sessione."
     },
     {
         "cat":  "Networking \u0026 Protocolli",
         "a":  "DKIM",
-        "desc":  "Metodo di autenticazione email basato su firme crittografiche."
+        "desc":  "DomainKeys Identified Mail: Metodo di autenticazione email basato su firme crittografiche."
     },
     {
         "cat":  "Sviluppo",
         "a":  "DLL",
-        "desc":  "Libreria caricata a runtime dalle applicazioni Windows."
+        "desc":  "Dynamic Link Library: Libreria caricata a runtime dalle applicazioni Windows."
     },
     {
         "cat":  "Hardware \u0026 Endpoint",
         "a":  "DLP",
-        "desc":  "Sistemi per prevenire la fuga di dati sensibili all\u0027esterno dell\u0027azienda."
+        "desc":  "Data Loss Prevention: Sistemi per prevenire la fuga di dati sensibili all\u0027esterno dell\u0027azienda."
     },
     {
         "cat":  "Networking \u0026 Protocolli",
         "a":  "DMARC",
-        "desc":  "Framework di protezione email che integra SPF e DKIM."
-    },
-    {
-        "a":  "DMZ",
-        "cat":  "Networking \u0026 Protocolli",
-        "desc":  "Demilitarized Zone: Segmento di rete isolato che ospita servizi esposti all\u0027esterno[cite: 76]."
+        "desc":  "Domain-based Message Authentication, Reporting & Conformance: Framework di protezione email che integra SPF e DKIM."
     },
     {
         "cat":  "Networking \u0026 Protocolli",
         "a":  "DMZ",
-        "desc":  "Segmento di rete isolato che espone servizi pubblici verso internet."
+        "desc":  "Demilitarized Zone: Segmento di rete isolato che espone servizi pubblici verso internet."
     },
     {
         "cat":  "Networking \u0026 Protocolli",
         "a":  "DNAT",
-        "desc":  "Tecnica per cambiare l\u0027indirizzo IP di destinazione di un pacchetto."
+        "desc":  "Destination Network Address Translation: Tecnica per cambiare l\u0027indirizzo IP di destinazione di un pacchetto."
     },
     {
         "a":  "DNS",
@@ -407,7 +402,7 @@
     {
         "a":  "DNSSEC",
         "cat":  "Networking \u0026 Protocolli",
-        "desc":  "Aggiunge firme digitali al DNS per evitare attacchi come il DNS Spoofing[cite: 65]."
+        "desc":  "Domain Name System Security Extensions: Aggiunge firme digitali al DNS per evitare attacchi come il DNS Spoofing[cite: 65]."
     },
     {
         "cat":  "Networking \u0026 Protocolli",
@@ -415,14 +410,9 @@
         "desc":  "Concetto di segmentazione dinamica della rete."
     },
     {
-        "cat":  "OpSec \u0026 Incident Response",
-        "a":  "DoS",
-        "desc":  "Attacco volto a rendere un servizio non disponibile agli utenti."
-    },
-    {
         "a":  "DoS",
         "cat":  "OpSec \u0026 Incident Response",
-        "desc":  "Denial of Service: Simile al DDoS, ma proveniente da una singola sorgente."
+        "desc":  "Denial of Service: Attacco volto a rendere un servizio non disponibile agli utenti. Simile al DDoS, ma proveniente da una singola sorgente."
     },
     {
         "a":  "DPO",
@@ -442,12 +432,12 @@
     {
         "cat":  "Networking \u0026 Protocolli",
         "a":  "DSL",
-        "desc":  "Tecnologia per la trasmissione dati digitale su doppino telefonico."
+        "desc":  "Digital Subscriber Line: Tecnologia per la trasmissione dati digitale su doppino telefonico."
     },
     {
         "cat":  "Gestione Identità (IAM)",
         "a":  "EAP",
-        "desc":  "Framework di autenticazione usato spesso nelle reti Wi-Fi e VPN."
+        "desc":  "Extensible Authentication Protocol: Framework di autenticazione usato spesso nelle reti Wi-Fi e VPN."
     },
     {
         "a":  "ECB",
@@ -462,7 +452,7 @@
     {
         "a":  "ECDHE",
         "cat":  "Crittografia \u0026 Dati",
-        "desc":  "Elliptic Curve DHE: Unione di ECC e DHE per scambio di chiavi sicuri ed efficienti[cite: 20]."
+        "desc":  "Elliptic Curve Diffie-Hellman Ephemeral: Unione di ECC e DHE per scambio di chiavi sicuri ed efficienti[cite: 20]."
     },
     {
         "a":  "EFS",
@@ -472,47 +462,52 @@
     {
         "cat":  "Sviluppo",
         "a":  "EIP",
-        "desc":  "Piattaforma che aggrega informazioni e applicazioni aziendali."
+        "desc":  "Enterprise Integration Platform: Piattaforma che aggrega informazioni e applicazioni aziendali."
+    },
+    {
+        "cat":  "Sviluppo",
+        "a":  "EIP",
+        "desc":  "Elastic IP: Indirizzo IP statico assegnato da un provider cloud (es. AWS) che puÃ² essere riassegnato a diverse istanze."
     },
     {
         "cat":  "Hardware \u0026 Endpoint",
         "a":  "EMI",
-        "desc":  "Disturbo elettromagnetico che puÃ² degradare le prestazioni di un circuito."
+        "desc":  "Electromagnetic Interference: Disturbo elettromagnetico che puÃ² degradare le prestazioni di un circuito."
     },
     {
         "cat":  "Hardware \u0026 Endpoint",
         "a":  "EMP",
-        "desc":  "Breve scoppio di energia elettromagnetica che puÃ² danneggiare l\u0027elettronica."
+        "desc":  "Electromagnetic Pulse: Breve scoppio di energia elettromagnetica che puÃ² danneggiare l\u0027elettronica."
     },
     {
         "cat":  "Governance \u0026 Rischio (GRC)",
         "a":  "EOL",
-        "desc":  "Data in cui un prodotto non viene piÃ¹ prodotto o venduto."
+        "desc":  "End of Life: Data in cui un prodotto non viene piÃ¹ prodotto o venduto."
     },
     {
         "cat":  "Governance \u0026 Rischio (GRC)",
         "a":  "EOS",
-        "desc":  "Data in cui cessa il supporto tecnico e gli aggiornamenti per un prodotto."
+        "desc":  "End of Support: Data in cui cessa il supporto tecnico e gli aggiornamenti per un prodotto."
     },
     {
         "cat":  "Sviluppo",
         "a":  "ERP",
-        "desc":  "Software di gestione dei processi aziendali integrati."
+        "desc":  "Enterprise Resource Planning: Software di gestione dei processi aziendali integrati."
     },
     {
         "cat":  "Hardware \u0026 Endpoint",
         "a":  "ESN",
-        "desc":  "Codice univoco che identifica un dispositivo mobile."
+        "desc":  "Electronic Serial Number: Codice univoco che identifica un dispositivo mobile."
     },
     {
         "cat":  "Networking \u0026 Protocolli",
         "a":  "ESP",
-        "desc":  "Protocollo IPsec che fornisce riservatezza, autenticazione e integrità ."
+        "desc":  "Encapsulating Security Payload: Protocollo IPsec che fornisce riservatezza, autenticazione e integrità ."
     },
     {
         "cat":  "Governance \u0026 Rischio (GRC)",
         "a":  "EULA",
-        "desc":  "Contratto tra il fornitore di software e l\u0027utente finale."
+        "desc":  "End User License Agreement: Contratto tra il fornitore di software e l\u0027utente finale."
     },
     {
         "cat":  "Gestione Identità (IAM)",

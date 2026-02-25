@@ -512,12 +512,12 @@
     {
         "cat":  "Gestione Identità (IAM)",
         "a":  "FACL",
-        "desc":  "Controllo accessi granulare applicato a file e cartelle."
+        "desc":  "File (System) Access Control List: Controllo accessi granulare applicato a file e cartelle."
     },
     {
         "cat":  "Gestione Identità (IAM)",
         "a":  "FAR",
-        "desc":  "Percentuale di utenti non autorizzati accettati da un sistema biometrico."
+        "desc":  "False Acceptance Rate: Percentuale di utenti non autorizzati accettati da un sistema biometrico."
     },
     {
         "a":  "FDE",
@@ -527,7 +527,7 @@
     {
         "cat":  "Hardware \u0026 Endpoint",
         "a":  "FIM",
-        "desc":  "Processo di verifica dell\u0027integrità dei file di sistema e applicativi."
+        "desc":  "File Integrity Monitoring: Processo di verifica dell\u0027integrità dei file di sistema e applicativi."
     },
     {
         "a":  "FPGA",
@@ -537,12 +537,12 @@
     {
         "cat":  "Gestione Identità (IAM)",
         "a":  "FRR",
-        "desc":  "Percentuale di utenti legittimi respinti da un sistema biometrico."
+        "desc":  "False Rejection Rate: Percentuale di utenti legittimi respinti da un sistema biometrico."
     },
     {
         "a":  "FTP/FTPS/SFTP",
         "cat":  "Networking \u0026 Protocolli",
-        "desc":  "Trasferimento file. FTPS usa TLS; SFTP usa il protocollo SSH[cite: 68]."
+        "desc":  "File Transfer Protocol / Secure FTP / SSH File Transfer Protocol: Trasferimento file. FTPS usa TLS; SFTP usa il protocollo SSH[cite: 68]."
     },
     {
         "a":  "GCM",
@@ -552,22 +552,22 @@
     {
         "a":  "GDPR",
         "cat":  "Governance \u0026 Rischio (GRC)",
-        "desc":  "Regolamento europeo per la protezione dei dati personali e la privacy."
+        "desc":  "General Data Protection Regulation: Regolamento europeo per la protezione dei dati personali e la privacy."
     },
     {
         "cat":  "Crittografia \u0026 Dati",
         "a":  "GPG",
-        "desc":  "Strumento per la cifratura e firma digitale, alternativa libera a PGP."
+        "desc":  "GNU Privacy Guard: Strumento per la cifratura e firma digitale, alternativa libera a PGP."
     },
     {
         "cat":  "Gestione Identità (IAM)",
         "a":  "GPO",
-        "desc":  "Insieme di regole di Active Directory per gestire utenti e computer."
+        "desc":  "Group Policy Object: Insieme di regole di Active Directory per gestire utenti e computer."
     },
     {
         "cat":  "Hardware \u0026 Endpoint",
         "a":  "GPS",
-        "desc":  "Sistema di posizionamento satellitare globale."
+        "desc":  "Global Positioning System: Sistema di posizionamento satellitare globale."
     },
     {
         "a":  "GPU",
@@ -582,7 +582,7 @@
     {
         "cat":  "OpSec \u0026 Incident Response",
         "a":  "HA",
-        "desc":  "Sistemi progettati per operare senza interruzioni per lunghi periodi."
+        "desc":  "High Availability: Sistemi progettati per operare senza interruzioni per lunghi periodi."
     },
     {
         "a":  "HDD/SSD",
@@ -592,17 +592,22 @@
     {
         "cat":  "OpSec \u0026 Incident Response",
         "a":  "HIDS",
-        "desc":  "Sistema di rilevamento intrusioni installato su un singolo host."
+        "desc":  "Host-based Intrusion Detection System: Sistema di rilevamento intrusioni installato su un singolo host."
     },
     {
         "cat":  "OpSec \u0026 Incident Response",
         "a":  "HIPS",
-        "desc":  "Sistema di prevenzione intrusioni installato su un singolo host."
+        "desc":  "Host-based Intrusion Prevention System: Sistema di prevenzione intrusioni installato su un singolo host."
     },
     {
         "a":  "HMAC",
         "cat":  "Crittografia \u0026 Dati",
-        "desc":  "Hash-based Message Authentication Code: Codice che usa una funzione di Hash e una chiave segreta per verificare l\u0027integrità del messaggio[cite: 26]."
+        "desc":  "Hash-based (Hashed) Message Authentication Code: Codice che usa una funzione di Hash e una chiave segreta per verificare l\u0027integrità del messaggio[cite: 26]."
+    },
+    {
+        "a":  "HOTP",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "HMAC-based One-Time Password: Algoritmo per generare password monouso basate su HMAC."
     },
     {
         "a":  "HSM",
@@ -612,7 +617,7 @@
     {
         "a":  "HTTP/HTTPS",
         "cat":  "Networking \u0026 Protocolli",
-        "desc":  "Il protocollo web; la versione S (Secure) usa TLS per la cifratura[cite: 67]."
+        "desc":  "HyperText Transfer Protocol / HyperText Transfer Protocol Secure: Il protocollo web; la versione S (Secure) usa TLS per la cifratura[cite: 67]."
     },
     {
         "a":  "IAM",
@@ -627,12 +632,12 @@
     {
         "a":  "IDEA",
         "cat":  "Crittografia \u0026 Dati",
-        "desc":  "Algoritmo simmetrico a blocchi usato in passato, ad esempio in versioni datate di PGP[cite: 27]."
+        "desc":  "International Data Encryption Algorithm: Algoritmo simmetrico a blocchi usato in passato, ad esempio in versioni datate di PGP[cite: 27]."
     },
     {
         "cat":  "Gestione Identità (IAM)",
         "a":  "IdP",
-        "desc":  "Servizio che crea, mantiene e gestisce le informazioni sull\u0027Identità ."
+        "desc":  "Identity Provider: Servizio che crea, mantiene e gestisce le informazioni sull\u0027Identità ."
     },
     {
         "a":  "IDS",
@@ -642,7 +647,7 @@
     {
         "cat":  "Governance \u0026 Rischio (GRC)",
         "a":  "IEEE",
-        "desc":  "Organizzazione professionale che definisce standard tecnici."
+        "desc":  "Institute of Electrical and Electronics Engineers: Organizzazione professionale che definisce standard tecnici."
     },
     {
         "a":  "IKE",
@@ -652,17 +657,42 @@
     {
         "cat":  "Sviluppo",
         "a":  "IM",
-        "desc":  "Servizi di comunicazione testuale in tempo reale."
+        "desc":  "Instant Messaging: Servizi di comunicazione testuale in tempo reale."
     },
     {
         "cat":  "Hardware \u0026 Endpoint",
         "a":  "IoT",
-        "desc":  "Oggetti fisici connessi a internet dotati di sensori e software."
+        "desc":  "Internet of Things: Oggetti fisici connessi a internet dotati di sensori e software."
     },
     {
         "a":  "IP",
         "cat":  "Networking \u0026 Protocolli",
         "desc":  "Internet Protocol: Il protocollo fondamentale per l\u0027indirizzamento dei pacchetti in rete[cite: 44]."
+    },
+    {
+        "a":  "IPAM",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "IP Address Management: Gestione centralizzata degli indirizzi IP in una rete."
+    },
+    {
+        "a":  "HOTP",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "HMAC-based One-Time Password: Algoritmo per generare password monouso basate su HMAC."
+    },
+    {
+        "a":  "IaaS",
+        "cat":  "Cloud \u0026 Sviluppo",
+        "desc":  "Infrastructure-as-a-Service: L\u0027utente gestisce VM, reti e OS. L\u0027utente ha la massima responsabilitÃ  di sicurezza."
+    },
+    {
+        "a":  "ICMP",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Internet Control Message Protocol: Usato per messaggi di errore e diagnostica (es. il comando ping)[cite: 51]."
+    },
+    {
+        "a":  "IIS",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Internet Information Services: Server web sviluppato da Microsoft."
     },
     {
         "a":  "IPS",
@@ -672,7 +702,7 @@
     {
         "a":  "IPsec",
         "cat":  "Networking \u0026 Protocolli",
-        "desc":  "IP Security: Suite di protocolli per rendere sicure le comunicazioni IP. Include AH (autenticazione) ed ESP (cifratura)[cite: 54]."
+        "desc":  "Internet Protocol Security: Suite di protocolli per rendere sicure le comunicazioni IP. Include AH (autenticazione) ed ESP (cifratura)[cite: 54]."
     },
     {
         "a":  "IR",
@@ -682,7 +712,7 @@
     {
         "cat":  "Networking \u0026 Protocolli",
         "a":  "IRC",
-        "desc":  "Protocollo di messaggistica istantanea basato su testo."
+        "desc":  "Internet Relay Chat: Protocollo di messaggistica istantanea basato su testo."
     },
     {
         "a":  "IRP",
@@ -697,17 +727,17 @@
     {
         "cat":  "Networking \u0026 Protocolli",
         "a":  "ISFW",
-        "desc":  "Firewall interno usato per segmentare zone diverse della rete aziendale."
+        "desc":  "Internal Segmentation Firewall: Firewall interno usato per segmentare zone diverse della rete aziendale."
     },
     {
         "a":  "ISO",
         "cat":  "Governance \u0026 Rischio (GRC)",
-        "desc":  "Organizzazione internazionale che definisce standard globali (es. ISO 27001)."
+        "desc":  "International Organization for Standardization: Organizzazione internazionale che definisce standard globali (es. ISO 27001)."
     },
     {
         "cat":  "Networking \u0026 Protocolli",
         "a":  "ISP",
-        "desc":  "Azienda che fornisce l\u0027accesso a Internet."
+        "desc":  "Internet Service Provider: Azienda che fornisce l\u0027accesso a Internet."
     },
     {
         "a":  "ISSO",
@@ -722,7 +752,7 @@
     {
         "cat":  "Gestione Identità (IAM)",
         "a":  "KDC",
-        "desc":  "Sistema che distribuisce ticket in un\u0027architettura Kerberos."
+        "desc":  "Key Distribution Center: Sistema che distribuisce ticket in un\u0027architettura Kerberos."
     },
     {
         "a":  "KEK",
@@ -742,7 +772,7 @@
     {
         "a":  "LAN/MAN/WAN",
         "cat":  "Networking \u0026 Protocolli",
-        "desc":  "Reti locali, cittadine o geografiche (di grandi dimensioni)[cite: 74]."
+        "desc":  "Local Area Network / Metropolitan Area Network / Wide Area Network: Reti locali, cittadine o geografiche (di grandi dimensioni)[cite: 74]."
     },
     {
         "a":  "LDAP",
@@ -752,7 +782,7 @@
     {
         "cat":  "Wireless Security",
         "a":  "LEAP",
-        "desc":  "Protocollo di autenticazione wireless proprietario Cisco."
+        "desc":  "Lightweight Extensible Authentication Protocol: Protocollo di autenticazione wireless proprietario Cisco."
     },
     {
         "a":  "MaaS",
@@ -767,27 +797,27 @@
     {
         "cat":  "Networking \u0026 Protocolli",
         "a":  "MAC",
-        "desc":  "Indirizzo hardware univoco o modello di controllo accessi rigido."
+        "desc":  "Media Access Control: Indirizzo hardware univoco o modello di controllo accessi rigido."
     },
     {
         "cat":  "Hardware \u0026 Endpoint",
         "a":  "MAM",
-        "desc":  "Software per gestire e proteggere le app sui dispositivi mobili aziendali."
-    },
-    {
-        "a":  "MAM",
-        "cat":  "Hardware \u0026 Endpoint",
-        "desc":  "Mobile Application Management: Si concentra sulla sicurezza delle singole app anzichÃ© dell\u0027intero dispositivo."
+        "desc":  "Mobile Application Management: Software per gestire e proteggere le app sui dispositivi mobili aziendali. Si concentra sulla sicurezza delle singole app anzichÃ© dell\u0027intero dispositivo."
     },
     {
         "cat":  "Hardware \u0026 Endpoint",
         "a":  "MBR",
-        "desc":  "Primo settore del disco rigido che contiene le info di avvio del sistema."
+        "desc":  "Master Boot Record: Primo settore del disco rigido che contiene le info di avvio del sistema."
     },
     {
         "a":  "MD5",
         "cat":  "Crittografia \u0026 Dati",
-        "desc":  "Funzione di hash oggi considerata insicura per via delle collisioni; usata solo per integrità non critica[cite: 31]."
+        "desc":  "Message Digest 5: Funzione di hash oggi considerata insicura per via delle collisioni; usata solo per integrità non critica[cite: 31]."
+    },
+    {
+        "a":  "MDF",
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Multi-Function Device: Dispositivo che integra stampante, scanner e fax."
     },
     {
         "a":  "MDM",
@@ -797,7 +827,7 @@
     {
         "cat":  "OpSec \u0026 Incident Response",
         "a":  "MDR",
-        "desc":  "Servizio esterno di monitoraggio e risposta agli incidenti."
+        "desc":  "Managed Detection and Response: Servizio esterno di monitoraggio e risposta agli incidenti."
     },
     {
         "a":  "MFA",
@@ -807,12 +837,12 @@
     {
         "cat":  "Hardware \u0026 Endpoint",
         "a":  "MFD",
-        "desc":  "Dispositivo che integra stampante, scanner e fax."
+        "desc":  "Multi-Function Device: Dispositivo che integra stampante, scanner e fax."
     },
     {
         "cat":  "Hardware \u0026 Endpoint",
         "a":  "MFP",
-        "desc":  "Sinonimo di MFD, riferito specificamente alle stampanti multifunzione."
+        "desc":  "Multi-Function Printer: Sinonimo di MFD, riferito specificamente alle stampanti multifunzione."
     },
     {
         "a":  "MITM",
@@ -820,14 +850,14 @@
         "desc":  "Man-in-the-Middle: L\u0027attaccante si interpone segretamente tra due parti che comunicano per intercettare o alterare i dati."
     },
     {
-        "cat":  "Sviluppo",
         "a":  "ML",
-        "desc":  "Sottocampo dell\u0027AI che permette ai sistemi di imparare dai dati."
+        "cat":  "Sviluppo",
+        "desc":  "Machine Learning: Sottocampo dell\u0027AI che permette ai sistemi di imparare dai dati."
     },
     {
-        "cat":  "Hardware \u0026 Endpoint",
         "a":  "MMS",
-        "desc":  "Standard per inviare messaggi multimediali via rete cellulare."
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Multimedia Messaging Service: Standard per inviare messaggi multimediali via rete cellulare."
     },
     {
         "a":  "MOU / MOA",
@@ -840,44 +870,59 @@
         "desc":  "Multi-Protocol Label Switching: Tecnica per velocizzare e gestire il traffico di rete tramite \u0027etichette\u0027[cite: 80]."
     },
     {
-        "cat":  "Governance \u0026 Rischio (GRC)",
+        "a":  "MIME",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Multipurpose Internet Mail Extensions: Standard per il formato dei messaggi di posta elettronica che supporta testo, immagini, audio e video."
+    },
+    {
+        "a":  "S/MIME",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Secure/Multipurpose Internet Mail Extensions: Estensione di MIME che fornisce crittografia e firme digitali per la posta elettronica."
+    },
+    {
         "a":  "MSA",
-        "desc":  "Contratto quadro che regola i rapporti futuri tra due parti."
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Master Service Agreement: Contratto quadro che regola i rapporti futuri tra due parti."
+    },
+    {
+        "a":  "MTBF",
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Mean Time Between Failures: Tempo medio stimato tra un guasto e il successivo."
     },
     {
         "a":  "MSCHAP / CHAP",
         "cat":  "Gestione Identità (IAM)",
-        "desc":  "Protocolli di autenticazione a sfida/risposta che evitano l\u0027invio della password in chiaro."
+        "desc":  "Microsoft Challenge Handshake Authentication Protocol / Challenge Handshake Authentication Protocol: Protocolli di autenticazione a sfida/risposta che evitano l\u0027invio della password in chiaro."
     },
     {
-        "cat":  "Governance \u0026 Rischio (GRC)",
         "a":  "MSP",
-        "desc":  "Azienda che gestisce i servizi IT di un cliente da remoto."
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Managed Service Provider: Azienda che gestisce i servizi IT di un cliente da remoto."
     },
     {
-        "cat":  "OpSec \u0026 Incident Response",
         "a":  "MSSP",
-        "desc":  "MSP focalizzato specificamente sui servizi di sicurezza."
+        "cat":  "OpSec \u0026 Incident Response",
+        "desc":  "Managed Security Service Provider: MSP focalizzato specificamente sui servizi di sicurezza."
     },
     {
-        "cat":  "Governance \u0026 Rischio (GRC)",
         "a":  "MTBF",
-        "desc":  "Tempo medio stimato tra un guasto e il successivo."
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Mean Time Between Failures: Tempo medio stimato tra un guasto e il successivo."
     },
     {
-        "cat":  "Governance \u0026 Rischio (GRC)",
         "a":  "MTTF",
-        "desc":  "Tempo medio di funzionamento prima di un guasto irreparabile."
-    },
-    {
         "cat":  "Governance \u0026 Rischio (GRC)",
-        "a":  "MTTR",
-        "desc":  "Tempo medio necessario per riparare un sistema dopo un guasto."
+        "desc":  "Mean Time To Failure: Tempo medio di funzionamento prima di un guasto irreparabile."
     },
     {
-        "cat":  "Networking \u0026 Protocolli",
+        "a":  "MTTR",
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Mean Time To Repair: Tempo medio necessario per riparare un sistema dopo un guasto."
+    },
+    {
         "a":  "MTU",
-        "desc":  "Dimensione massima in byte del pacchetto dati in rete."
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Maximum Transmission Unit: Dimensione massima in byte del pacchetto dati in rete."
     },
     {
         "a":  "NAC",
@@ -905,39 +950,44 @@
         "desc":  "Near Field Communication: Comunicazione wireless a brevissima distanza (es. pagamenti contactless)."
     },
     {
-        "cat":  "Networking \u0026 Protocolli",
         "a":  "NFV",
-        "desc":  "Virtualizzazione delle funzioni di rete (firewall, load balancer, ecc.)."
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Network Functions Virtualization: Virtualizzazione delle funzioni di rete (firewall, load balancer, ecc.)."
     },
     {
-        "cat":  "Networking \u0026 Protocolli",
         "a":  "NGFW",
-        "desc":  "Firewall avanzato con ispezione dei pacchetti a livello applicativo."
-    },
-    {
         "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Next-Generation Firewall: Firewall avanzato con ispezione dei pacchetti a livello applicativo."
+    },
+    {
         "a":  "NG-SWG",
-        "desc":  "Gateway web sicuro evoluto con protezione cloud."
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Next-Generation Secure Web Gateway: Gateway web sicuro evoluto con protezione cloud."
     },
     {
-        "cat":  "OpSec \u0026 Incident Response",
         "a":  "NIDS",
-        "desc":  "Sistema di rilevamento intrusioni che analizza il traffico di rete."
+        "cat":  "OpSec \u0026 Incident Response",
+        "desc":  "Network-based Intrusion Detection System: Sistema di rilevamento intrusioni che analizza il traffico di rete."
     },
     {
-        "cat":  "Hardware \u0026 Endpoint",
         "a":  "NTFS",
-        "desc":  "File system standard per sistemi Windows con supporto ai permessi."
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "New Technology File System: File system standard per sistemi Windows con supporto ai permessi."
     },
     {
         "cat":  "Gestione Identità (IAM)",
         "a":  "NTLM",
-        "desc":  "Protocollo di autenticazione Microsoft (considerato legacy)."
+        "desc":  "New Technology LAN Manager: Protocollo di autenticazione Microsoft (considerato legacy)."
     },
     {
         "a":  "NTP",
         "cat":  "Networking \u0026 Protocolli",
         "desc":  "Network Time Protocol: Sincronizza l\u0027orario tra i dispositivi; fondamentale per certificati e log[cite: 72]."
+    },
+    {
+        "a":  "NIPS",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Network-based Intrusion Prevention System: Sistema di prevenzione intrusioni che analizza il traffico di rete."
     },
     {
         "a":  "OAuth",
@@ -947,22 +997,22 @@
     {
         "a":  "OCSP",
         "cat":  "Gestione Identità (IAM)",
-        "desc":  "Online Certificate Status Protocol: Metodo piÃ¹ veloce della CRL per verificare se un certificato Ã¨ ancora valido."
+        "desc":  "Online Certificate Status Protocol: Metodo più veloce della CRL per verificare se un certificato è ancora valido."
     },
     {
-        "cat":  "Sviluppo",
         "a":  "OID",
-        "desc":  "Identificatore univoco globale utilizzato in SNMP e certificati."
+        "cat":  "Sviluppo",
+        "desc":  "Object Identifier: Identificatore univoco globale utilizzato in SNMP e certificati."
     },
     {
-        "cat":  "Hardware \u0026 Endpoint",
         "a":  "OS",
-        "desc":  "Software che gestisce le risorse hardware e software del computer."
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Operating System: Software che gestisce le risorse hardware e software del computer."
     },
     {
         "a":  "OSI",
         "cat":  "Networking \u0026 Protocolli",
-        "desc":  "Modello a 7 livelli che standardizza le funzioni di rete[cite: 79]."
+        "desc":  "Open Systems Interconnection: Modello a 7 livelli che standardizza le funzioni di rete."
     },
     {
         "a":  "OSINT",
@@ -980,24 +1030,29 @@
         "desc":  "Operational Technology: Hardware e software che controllano dispositivi fisici industriali come valvole e motori."
     },
     {
-        "cat":  "Hardware \u0026 Endpoint",
         "a":  "OTA",
-        "desc":  "Metodo di distribuzione software o aggiornamenti via wireless."
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Over-the-Air: Metodo di distribuzione software o aggiornamenti via wireless."
     },
     {
-        "cat":  "Governance \u0026 Rischio (GRC)",
+        "a":  "OTG",
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "On-The-Go: Standard che permette a dispositivi USB di funzionare come host o periferica."
+    },
+    {
         "a":  "OVAL",
-        "desc":  "Standard per comunicare dettagli tecnici sulle vulnerabilitÃ ."
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Open Vulnerability and Assessment Language: Standard per comunicare dettagli tecnici sulle vulnerabilitÃ ."
     },
     {
-        "cat":  "Crittografia \u0026 Dati",
         "a":  "P12",
-        "desc":  "Formato di archivio per certificati e chiavi private protetto da password."
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "PKCS #12: Formato di archivio per certificati e chiavi private protetto da password."
     },
     {
-        "cat":  "Networking \u0026 Protocolli",
         "a":  "P2P",
-        "desc":  "Modello di rete dove ogni nodo ha le stesse funzionalitÃ ."
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Peer-to-Peer: Modello di rete dove ogni nodo ha le stesse funzionalitÃ ."
     },
     {
         "a":  "PaaS",
@@ -1005,64 +1060,74 @@
         "desc":  "Platform-as-a-Service: L\u0027utente sviluppa app su una piattaforma gestita. La sicurezza del codice Ã¨ dell\u0027utente."
     },
     {
-        "cat":  "Networking \u0026 Protocolli",
         "a":  "PAC",
-        "desc":  "File di config per proxy o attributo di privilegio in Kerberos."
-    },
-    {
-        "cat":  "Gestione Identità (IAM)",
-        "a":  "PAM",
-        "desc":  "Gestione e monitoraggio degli accessi per utenti privilegiati."
-    },
-    {
-        "cat":  "Gestione Identità (IAM)",
-        "a":  "PAP",
-        "desc":  "Protocollo di autenticazione semplice che invia password in chiaro."
-    },
-    {
         "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Proxy Auto-Configuration: File di config per proxy o attributo di privilegio in Kerberos."
+    },
+    {
+        "a":  "PAC",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Privilege Attribute Certificate: Certificato che contiene attributi di privilegio per un utente in un sistema Kerberos."
+    },
+    {
+        "a":  "PAM",
+        "cat":  "Gestione Identità (IAM)",
+        "desc":  "Privileged Authentication Management: Gestione e monitoraggio degli accessi per utenti privilegiati."
+    },
+    {
+        "a":  "PAM",
+        "cat":  "Gestione Identità (IAM)",
+        "desc":  "Pluggable Authentication Modules: Framework che permette di integrare diversi metodi di autenticazione in un sistema."
+    },
+    {
+        "a":  "PAP",
+        "cat":  "Gestione Identità (IAM)",
+        "desc":  "Password Authentication Protocol: Protocollo di autenticazione semplice che invia password in chiaro."
+    },
+    {
         "a":  "PAT",
-        "desc":  "Estensione del NAT che permette a piÃ¹ host di usare un solo IP pubblico tramite porte."
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Port Address Translation: Estensione del NAT che permette a piÃ¹ host di usare un solo IP pubblico tramite porte."
     },
     {
         "a":  "PBKDF2",
         "cat":  "Crittografia \u0026 Dati",
-        "desc":  "Metodo per derivare chiavi sicure da password, rendendo difficili gli attacchi a forza bruta[cite: 32]."
+        "desc":  "Password-Based Key Derivation Function 2: Metodo per derivare chiavi sicure da password, rendendo difficili gli attacchi a forza bruta[cite: 32]."
     },
     {
-        "cat":  "Networking \u0026 Protocolli",
         "a":  "PCAP",
-        "desc":  "Interfaccia e formato file per catturare e analizzare il traffico di rete."
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Packet Capture: Interfaccia e formato file per catturare e analizzare il traffico di rete."
     },
     {
-        "cat":  "Governance \u0026 Rischio (GRC)",
         "a":  "PCI DSS",
-        "desc":  "Standard di sicurezza per organizzazioni che gestiscono carte di credito."
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Payment Card Industry Data Security Standard: Standard di sicurezza per organizzazioni che gestiscono carte di credito."
     },
     {
-        "cat":  "Sviluppo",
         "a":  "PE",
-        "desc":  "Formato file per eseguibili e librerie sui sistemi Windows."
+        "cat":  "Sviluppo",
+        "desc":  "Portable Executable: Formato file per eseguibili e librerie sui sistemi Windows."
     },
     {
-        "cat":  "Wireless Security",
         "a":  "PEAP",
-        "desc":  "Protocollo che incapsula EAP dentro un tunnel TLS sicuro."
+        "cat":  "Wireless Security",
+        "desc":  "Protected Extensible Authentication Protocol: Protocollo che incapsula EAP dentro un tunnel TLS sicuro."
     },
     {
-        "cat":  "Crittografia \u0026 Dati",
         "a":  "PEM",
-        "desc":  "Formato file Base64 per certificati e chiavi crittografiche."
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Privacy-Enhanced Electronic Mail: Formato file Base64 per certificati e chiavi crittografiche."
     },
     {
-        "cat":  "Crittografia \u0026 Dati",
         "a":  "PFS",
-        "desc":  "ProprietÃ  che impedisce la decifrazione di sessioni passate se la chiave privata viene rubata."
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Perfect Forward Secrecy: Proprietà che impedisce la decifrazione di sessioni passate se la chiave privata viene rubata."
     },
     {
-        "cat":  "Crittografia \u0026 Dati",
         "a":  "PFX",
-        "desc":  "Precursore del formato P12 usato per certificati Windows."
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Personal Information Exchange: Formato file per certificati e chiavi crittografiche, precursore del formato P12 usato per certificati Windows."
     },
     {
         "a":  "PGP",
@@ -1070,19 +1135,19 @@
         "desc":  "Pretty Good Privacy: Programma per cifrare email e file usando crittografia asimmetrica[cite: 33]."
     },
     {
-        "cat":  "Governance \u0026 Rischio (GRC)",
         "a":  "PHI",
-        "desc":  "Informazioni sanitarie protette relative allo stato di salute di un individuo."
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Protected Health Information: Informazioni sanitarie protette relative allo stato di salute di un individuo."
     },
     {
-        "cat":  "Governance \u0026 Rischio (GRC)",
         "a":  "PII",
-        "desc":  "Qualsiasi dato che possa identificare univocamente una persona."
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Personally Identifiable Information: Qualsiasi dato che possa identificare univocamente una persona."
     },
     {
         "a":  "PIN/PIV/CAC",
         "cat":  "Gestione Identità (IAM)",
-        "desc":  "Metodi fisici o numerici di identificazione (Smart Card o codici personali)."
+        "desc":  "Personal Identification Number / Personal Identity Verification / Common Access Card: Metodi fisici o numerici di identificazione (Smart Card o codici personali)."
     },
     {
         "a":  "PKCS",
@@ -1100,34 +1165,39 @@
         "desc":  "Programmable Logic Controller: Computer industriale robusto usato nei sistemi SCADA."
     },
     {
-        "cat":  "Hardware \u0026 Endpoint",
+        "a":  "PoC",
+        "cat":  "OpSec \u0026 Incident Response",
+        "desc":  "Proof of Concept: Dimostrazione pratica di un concetto o di una vulnerabilità."
+    },
+    {
         "a":  "PoE",
-        "desc":  "Tecnologia che invia alimentazione elettrica tramite cavo di rete."
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Power over Ethernet: Tecnologia che invia alimentazione elettrica tramite cavo di rete."
     },
     {
         "cat":  "OpSec \u0026 Incident Response",
         "a":  "POODLE",
-        "desc":  "VulnerabilitÃ  che colpisce il protocollo SSL 3.0."
+        "desc":  "Padding Oracle On Downgraded Legacy Encryption: Vulnerabilità che colpisce il protocollo SSL 3.0."
     },
     {
         "a":  "POP/IMAP4",
         "cat":  "Networking \u0026 Protocolli",
-        "desc":  "Protocolli per la ricezione delle email; IMAP4 mantiene i messaggi sul server[cite: 70]."
+        "desc":  "Post Office Protocol / Internet Message Access Protocol: Protocolli per la ricezione delle email; IMAP4 mantiene i messaggi sul server[cite: 70]."
     },
     {
-        "cat":  "Networking \u0026 Protocolli",
         "a":  "POTS",
-        "desc":  "Rete telefonica analogica tradizionale."
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Plain Old Telephone Service: Rete telefonica analogica tradizionale."
     },
     {
-        "cat":  "Networking \u0026 Protocolli",
         "a":  "PPP",
-        "desc":  "Protocollo per stabilire una connessione diretta tra due nodi."
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Point-to-Point Protocol: Protocollo per stabilire una connessione diretta tra due nodi."
     },
     {
-        "cat":  "Networking \u0026 Protocolli",
         "a":  "PPTP",
-        "desc":  "Protocollo VPN datato e considerato insicuro."
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Point-to-Point Tunneling Protocol: Protocollo VPN datato e considerato insicuro."
     },
     {
         "a":  "PSK",
@@ -1135,34 +1205,39 @@
         "desc":  "Pre-Shared Key: Chiave condivisa usata solitamente per l\u0027autenticazione Wi-Fi domestica."
     },
     {
-        "cat":  "Hardware \u0026 Endpoint",
         "a":  "PTZ",
-        "desc":  "Telecamere che possono essere controllate da remoto in movimento e zoom."
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Pan-Tilt-Zoom: Telecamere che possono essere controllate da remoto in movimento e zoom."
     },
     {
-        "cat":  "OpSec \u0026 Incident Response",
         "a":  "PUP",
-        "desc":  "Software non necessariamente malware ma spesso fastidioso o invasivo."
+        "cat":  "OpSec \u0026 Incident Response",
+        "desc":  "Potentially Unwanted Program: Software non necessariamente malware ma spesso fastidioso o invasivo."
     },
     {
-        "cat":  "Sviluppo",
         "a":  "QA",
-        "desc":  "Insieme di attivitÃ  per garantire la qualitÃ  del software prodotto."
-    },
-    {
-        "cat":  "Networking \u0026 Protocolli",
-        "a":  "QoS",
-        "desc":  "Gestione delle prioritÃ  del traffico per garantire prestazioni stabili."
-    },
-    {
-        "cat":  "Crittografia \u0026 Dati",
-        "a":  "RA",
-        "desc":  "EntitÃ  che verifica le Identità per una CA o processo di valutazione rischi."
-    },
-    {
         "cat":  "Sviluppo",
+        "desc":  "Quality Assurance: Insieme di attività per garantire la qualità del software prodotto."
+    },
+    {
+        "a":  "QoS",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Quality of Service: Gestione delle priorità del traffico per garantire prestazioni stabili."
+    },
+    {
+        "a":  "RA",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Registration Authority: Entità che verifica le Identità per una CA o processo di valutazione rischi."
+    },
+    {
+        "a":  "RA",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Recovery Agent: Entità che può recuperare dati crittografati in caso di perdita delle chiavi."
+    },
+    {
         "a":  "RAD",
-        "desc":  "Metodologia di sviluppo software che enfatizza la prototipazione rapida."
+        "cat":  "Sviluppo",
+        "desc":  "Rapid Application Development: Metodologia di sviluppo software che enfatizza la prototipazione rapida."
     },
     {
         "a":  "RADIUS",
@@ -1170,13 +1245,13 @@
         "desc":  "Protocollo per l\u0027autenticazione centralizzata di utenti remoti (es. VPN o Wi-Fi aziendale)."
     },
     {
-        "cat":  "Gestione Identità (IAM)",
         "a":  "RADIUS",
+        "cat":  "Gestione Identità (IAM)",
         "desc":  "Protocollo AAA per la gestione centralizzata degli accessi."
     },
     {
-        "cat":  "Hardware \u0026 Endpoint",
         "a":  "RAID",
+        "cat":  "Hardware \u0026 Endpoint",
         "desc":  "Sistema di ridondanza dati su piÃ¹ dischi rigidi."
     },
     {

@@ -1242,32 +1242,22 @@
     {
         "a":  "RADIUS",
         "cat":  "Gestione Identità (IAM)",
-        "desc":  "Protocollo per l\u0027autenticazione centralizzata di utenti remoti (es. VPN o Wi-Fi aziendale)."
-    },
-    {
-        "a":  "RADIUS",
-        "cat":  "Gestione Identità (IAM)",
-        "desc":  "Protocollo AAA per la gestione centralizzata degli accessi."
+        "desc":  "Remote Authentication Dial-In User Service: Protocollo per l\u0027autenticazione centralizzata di utenti remoti (es. VPN o Wi-Fi aziendale)."
     },
     {
         "a":  "RAID",
         "cat":  "Hardware \u0026 Endpoint",
-        "desc":  "Sistema di ridondanza dati su piÃ¹ dischi rigidi."
+        "desc":  "Redundant Array of Independent Disks: Sistema di ridondanza dati su più dischi rigidi."
     },
     {
         "a":  "RAM",
         "cat":  "Hardware \u0026 Endpoint",
-        "desc":  "Random Access Memory: Memoria volatile che puÃ² contenere dati sensibili in chiaro durante l\u0027uso."
-    },
-    {
-        "cat":  "Hardware \u0026 Endpoint",
-        "a":  "RAM",
-        "desc":  "Memoria di lavoro volatile del computer."
+        "desc":  "Random Access Memory: Memoria volatile che può contenere dati sensibili in chiaro durante l'uso."
     },
     {
         "cat":  "Networking \u0026 Protocolli",
         "a":  "RAS",
-        "desc":  "Servizio che permette agli utenti di accedere a una rete da remoto."
+        "desc":  "Remote Access Service (Server): Servizio (o Server) che permette agli utenti di accedere a una rete da remoto."
     },
     {
         "a":  "RAT",
@@ -1280,29 +1270,34 @@
         "desc":  "Role-Based Access Control: L\u0027accesso Ã¨ basato sul ruolo aziendale (es. \u0027Manager\u0027, \u0027Analista\u0027). Semplifica la gestione."
     },
     {
+        "a":  "RBAC",
+        "cat":  "Gestione Identità (IAM)",
+        "desc":  "Rule-Based Access Control: L\u0027accesso Ã¨ basato su regole predefinite (es. \u0027Manager\u0027, \u0027Analista\u0027). Semplifica la gestione."
+    },
+    {
         "a":  "RC4",
         "cat":  "Crittografia \u0026 Dati",
-        "desc":  "Algoritmo a flussi un tempo usato in WEP e SSL, oggi considerato vulnerabile[cite: 36]."
+        "desc":  "Rivest Cipher 4: Algoritmo a flussi un tempo usato in WEP e SSL, oggi considerato vulnerabile[cite: 36]."
     },
     {
         "cat":  "Hardware \u0026 Endpoint",
         "a":  "RCS",
-        "desc":  "Protocollo di messaggistica avanzato per cellulari (erede degli SMS)."
+        "desc":  "Revision Control System: Sistema per il controllo delle versioni del software."
     },
     {
-        "cat":  "Networking \u0026 Protocolli",
         "a":  "RDP",
-        "desc":  "Protocollo Microsoft per il controllo remoto grafico di un PC."
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Remote Desktop Protocol: Protocollo Microsoft per il controllo remoto grafico di un PC."
     },
     {
-        "cat":  "Sviluppo",
         "a":  "REST",
-        "desc":  "Stile architetturale per lo sviluppo di servizi web API."
+        "cat":  "Sviluppo",
+        "desc":  "Representational State Transfer: Stile architetturale per lo sviluppo di servizi web API."
     },
     {
-        "cat":  "Governance \u0026 Rischio (GRC)",
         "a":  "RFC",
-        "desc":  "Documenti tecnici che definiscono gli standard di Internet."
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Request for Comments: Documenti tecnici che definiscono gli standard di Internet."
     },
     {
         "a":  "RFID",
@@ -1312,7 +1307,7 @@
     {
         "a":  "RIPEMD",
         "cat":  "Crittografia \u0026 Dati",
-        "desc":  "Famiglia di funzioni di hash sviluppate in Europa, alternativa a SHA[cite: 37]."
+        "desc":  "RACE Integrity Primitives Evaluation Message Digest: Famiglia di funzioni di hash sviluppate in Europa, alternativa a SHA[cite: 37]."
     },
     {
         "a":  "RMF",
@@ -1332,7 +1327,7 @@
     {
         "a":  "RSA",
         "cat":  "Crittografia \u0026 Dati",
-        "desc":  "L\u0027algoritmo a chiave pubblica piÃ¹ famoso per cifratura e firme digitali[cite: 38]."
+        "desc":  "Rivest-Shamir-Adleman: L\u0027algoritmo a chiave pubblica piÃ¹ famoso per cifratura e firme digitali[cite: 38]."
     },
     {
         "a":  "RTBH",
@@ -1345,19 +1340,19 @@
         "desc":  "Recovery Time Objective: Il tempo massimo entro il quale un servizio deve essere ripristinato dopo un guasto."
     },
     {
-        "cat":  "Hardware \u0026 Endpoint",
         "a":  "RTOS",
-        "desc":  "Sistema operativo progettato per elaborare dati senza ritardi di buffering."
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Real-Time Operating System: Sistema operativo progettato per elaborare dati senza ritardi di buffering."
     },
     {
-        "cat":  "Networking \u0026 Protocolli",
         "a":  "RTP",
-        "desc":  "Protocollo per la trasmissione di audio e video su reti IP."
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Real-time Transport Protocol: Protocollo per la trasmissione di audio e video su reti IP."
     },
     {
         "a":  "S/MIME",
         "cat":  "Crittografia \u0026 Dati",
-        "desc":  "Protocollo per firmare e cifrare email via PKI[cite: 40]."
+        "desc":  "Secure/Multipurpose Internet Mail Extensions: Protocollo per firmare e cifrare email via PKI."
     },
     {
         "a":  "SaaS",
@@ -1367,7 +1362,7 @@
     {
         "cat":  "Wireless Security",
         "a":  "SAE",
-        "desc":  "Metodo di autenticazione sicuro usato in WPA3."
+        "desc":  "Simultaneous Authentication of Equals: Metodo di autenticazione sicuro usato in WPA3."
     },
     {
         "a":  "SAML",
@@ -1375,9 +1370,14 @@
         "desc":  "Security Assertions Markup Language: Protocollo basato su XML per scambiare dati di autenticazione tra un IdP (Identity Provider) e un servizio."
     },
     {
-        "cat":  "Hardware \u0026 Endpoint",
         "a":  "SAN",
-        "desc":  "Rete dedicata allo storage o campo in un certificato SSL."
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Storage Area Network: Rete dedicata allo storage o campo in un certificato SSL."
+    },
+    {
+        "a":  "SAN",
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Subject Alternative Name: Campo in un certificato SSL che permette di specificare nomi alternativi per il soggetto."
     },
     {
         "a":  "SCADA",
@@ -1385,24 +1385,24 @@
         "desc":  "Supervisory Control and Data Acquisition: Architettura di controllo per processi industriali su larga scala."
     },
     {
-        "cat":  "Governance \u0026 Rischio (GRC)",
         "a":  "SCAP",
-        "desc":  "Insieme di standard per automatizzare la gestione delle vulnerabilitÃ ."
+        "cat":  "Governance \u0026 Rischio (GRC)",
+        "desc":  "Security Content Automation Protocol: Insieme di standard per automatizzare la gestione delle vulnerabilitÃ ."
     },
     {
-        "cat":  "Crittografia \u0026 Dati",
         "a":  "SCEP",
-        "desc":  "Protocollo per il rilascio scalabile di certificati digitali."
+        "cat":  "Crittografia \u0026 Dati",
+        "desc":  "Simple Certificate Enrollment Protocol: Protocollo per il rilascio scalabile di certificati digitali."
     },
     {
         "cat":  "Networking \u0026 Protocolli",
         "a":  "SCP",
-        "desc":  "Metodo per trasferire file in modo sicuro tramite SSH."
+        "desc":  "Secure Copy Protocol: Metodo per trasferire file in modo sicuro tramite SSH."
     },
     {
         "cat":  "Hardware \u0026 Endpoint",
         "a":  "SCSI",
-        "desc":  "Standard di interfaccia per il collegamento di periferiche (dischi)."
+        "desc":  "Small Computer System Interface: Standard di interfaccia per il collegamento di periferiche (dischi)."
     },
     {
         "a":  "SDK",
@@ -1432,7 +1432,7 @@
     {
         "cat":  "Hardware \u0026 Endpoint",
         "a":  "SDV",
-        "desc":  "Veicolo le cui funzionalitÃ  sono abilitate principalmente dal software."
+        "desc":  "Software-Defined Visibility: Tecnologia che consente di monitorare e analizzare il traffico di rete tramite software."
     },
     {
         "a":  "SED",

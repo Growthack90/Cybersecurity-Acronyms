@@ -502,7 +502,7 @@
     {
         "cat":  "Networking \u0026 Protocolli",
         "a":  "ESP",
-        "desc":  "Encapsulating Security Payload: Protocollo IPsec che fornisce riservatezza, autenticazione e integrità ."
+        "desc":  "Encapsulating Security Payload: Protocollo IPsec che fornisce riservatezza, autenticazione e integrità."
     },
     {
         "cat":  "Governance \u0026 Rischio (GRC)",
@@ -522,7 +522,7 @@
     {
         "a":  "FDE",
         "cat":  "Crittografia \u0026 Dati",
-        "desc":  "Full Disk Encryption: Cifratura dell\u0027intero disco rigido (es. BitLocker). Correlato al modulo TPM[cite: 24]."
+        "desc":  "Full Disk Encryption: Cifratura dell\u0027intero disco rigido (es. BitLocker). Correlato al modulo TPM."
     },
     {
         "cat":  "Hardware \u0026 Endpoint",
@@ -542,12 +542,12 @@
     {
         "a":  "FTP/FTPS/SFTP",
         "cat":  "Networking \u0026 Protocolli",
-        "desc":  "File Transfer Protocol / Secure FTP / SSH File Transfer Protocol: Trasferimento file. FTPS usa TLS; SFTP usa il protocollo SSH[cite: 68]."
+        "desc":  "File Transfer Protocol / Secure FTP / SSH File Transfer Protocol: Trasferimento file. FTPS usa TLS; SFTP usa il protocollo SSH."
     },
     {
         "a":  "GCM",
         "cat":  "Crittografia \u0026 Dati",
-        "desc":  "Galois/Counter Mode: ModalitÃ  di cifratura moderna che fornisce sia riservatezza che integrità dei dati[cite: 25]."
+        "desc":  "Galois/Counter Mode: ModalitÃ  di cifratura moderna che fornisce sia riservatezza che integrità dei dati."
     },
     {
         "a":  "GDPR",
@@ -1387,7 +1387,7 @@
     {
         "a":  "SCAP",
         "cat":  "Governance \u0026 Rischio (GRC)",
-        "desc":  "Security Content Automation Protocol: Insieme di standard per automatizzare la gestione delle vulnerabilitÃ ."
+        "desc":  "Security Content Automation Protocol: Insieme di standard per automatizzare la gestione delle vulnerabilitÃ."
     },
     {
         "a":  "SCEP",
@@ -1395,13 +1395,13 @@
         "desc":  "Simple Certificate Enrollment Protocol: Protocollo per il rilascio scalabile di certificati digitali."
     },
     {
-        "cat":  "Networking \u0026 Protocolli",
         "a":  "SCP",
+        "cat":  "Networking \u0026 Protocolli",
         "desc":  "Secure Copy Protocol: Metodo per trasferire file in modo sicuro tramite SSH."
     },
     {
-        "cat":  "Hardware \u0026 Endpoint",
         "a":  "SCSI",
+        "cat":  "Hardware \u0026 Endpoint",
         "desc":  "Small Computer System Interface: Standard di interfaccia per il collegamento di periferiche (dischi)."
     },
     {
@@ -1442,7 +1442,7 @@
     {
         "cat":  "Sviluppo",
         "a":  "SEH",
-        "desc":  "Meccanismo Windows per la gestione degli errori software."
+        "desc":  "Structured Exception Handling: Meccanismo Windows per la gestione degli errori software."
     },
     {
         "a":  "SHA",
@@ -1455,19 +1455,19 @@
         "desc":  "Security Information and Event Management: Piattaforma che raccoglie e analizza i log di tutta l\u0027infrastruttura per identificare anomalie in tempo reale."
     },
     {
-        "cat":  "Hardware \u0026 Endpoint",
         "a":  "SIM",
-        "desc":  "Scheda rimovibile per l\u0027identificazione dell\u0027abbonato in rete mobile."
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Subscriber Identity Module: Scheda rimovibile per l\u0027identificazione dell\u0027abbonato in rete mobile."
     },
     {
-        "cat":  "Networking \u0026 Protocolli",
         "a":  "SIP",
-        "desc":  "Protocollo per avviare e terminare sessioni multimediali (VoIP)."
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Session Initiation Protocol: Protocollo per avviare e terminare sessioni multimediali (VoIP)."
     },
     {
-        "cat":  "Networking \u0026 Protocolli",
         "a":  "SIPS",
-        "desc":  "Versione sicura e cifrata del protocollo SIP."
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Session Initiation Protocol Secure: Versione sicura e cifrata del protocollo SIP."
     },
     {
         "a":  "SLA",
@@ -1480,29 +1480,29 @@
         "desc":  "Single Loss Expectancy: La perdita economica prevista per un singolo evento negativo. Si calcola come AV x EF (Exposure Factor)."
     },
     {
-        "cat":  "Networking \u0026 Protocolli",
         "a":  "SMB",
-        "desc":  "Protocollo per la condivisione di file e stampanti in rete Windows."
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Server Message Block: Protocollo per la condivisione di file e stampanti in rete Windows."
     },
     {
-        "cat":  "Hardware \u0026 Endpoint",
         "a":  "SMS",
-        "desc":  "Servizio di messaggistica testuale breve per cellulari."
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Short Message Service: Servizio di messaggistica testuale breve per cellulari."
     },
     {
         "a":  "SMTP/SMTPS",
         "cat":  "Networking \u0026 Protocolli",
-        "desc":  "Invio email. La versione S Ã¨ protetta da TLS[cite: 69]."
-    },
+        "desc":  "Simple Mail Transfer Protocol: Invio email. La versione S Ã¨ protetta da TLS. SMTP Secure è essenziale per prevenire lo spoofing e garantire la riservatezza delle email."
+    }, 
     {
         "a":  "SNMP",
         "cat":  "Networking \u0026 Protocolli",
-        "desc":  "Simple Network Management Protocol: Monitoraggio dei dispositivi di rete. La versione v3 Ã¨ l\u0027unica sicura[cite: 71]."
+        "desc":  "Simple Network Management Protocol: Monitoraggio dei dispositivi di rete. La versione v3 Ã¨ l\u0027unica sicura."
     },
     {
-        "cat":  "Sviluppo",
         "a":  "SOAP",
-        "desc":  "Protocollo basato su XML per lo scambio di messaggi tra web service."
+        "cat":  "Sviluppo",
+        "desc":  "Simple Object Access Protocol: Protocollo basato su XML per lo scambio di messaggi tra web service."
     },
     {
         "a":  "SOAR",
@@ -1515,19 +1515,19 @@
         "desc":  "Security Operations Center: Il team e la struttura dedicata al monitoraggio costante della sicurezza aziendale."
     },
     {
-        "cat":  "Hardware \u0026 Endpoint",
         "a":  "SoC",
-        "desc":  "Circuito integrato che racchiude tutti i componenti di un computer."
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "System on Chip: Circuito integrato che racchiude tutti i componenti di un computer."
     },
     {
         "cat":  "Networking \u0026 Protocolli",
         "a":  "SPF",
-        "desc":  "Record DNS usato per validare i server autorizzati a inviare email."
+        "desc":  "Sender Policy Framework: Record DNS usato per validare i server autorizzati a inviare email."
     },
     {
         "cat":  "OpSec \u0026 Incident Response",
         "a":  "SPIM",
-        "desc":  "Messaggi pubblicitari indesiderati inviati tramite chat istantanee."
+        "desc":  "Spam over Instant Messaging: Messaggi pubblicitari indesiderati inviati tramite chat istantanee."
     },
     {
         "a":  "SPOF",
@@ -1537,7 +1537,7 @@
     {
         "cat":  "Sviluppo",
         "a":  "SQL",
-        "desc":  "Linguaggio standard per la gestione di database relazionali."
+        "desc":  "Structured Query Language: Linguaggio standard per la gestione di database relazionali."
     },
     {
         "a":  "SQLI",
@@ -1547,7 +1547,7 @@
     {
         "cat":  "Networking \u0026 Protocolli",
         "a":  "SRTP",
-        "desc":  "Versione cifrata e sicura del protocollo RTP."
+        "desc":  "Secure Real-time Transport Protocol: Versione cifrata e sicura del protocollo RTP."
     },
     {
         "a":  "SSH",
@@ -1555,14 +1555,14 @@
         "desc":  "Secure Shell: Accesso remoto sicuro a riga di comando. Sostituisce il vecchio Telnet[cite: 58]."
     },
     {
-        "cat":  "Wireless Security",
         "a":  "SSID",
-        "desc":  "Il nome che identifica univocamente una rete Wi-Fi."
+        "cat":  "Wireless Security",
+        "desc":  "Service Set Identifier: Il nome che identifica univocamente una rete Wi-Fi."
     },
     {
         "cat":  "Crittografia \u0026 Dati",
         "a":  "SSL",
-        "desc":  "Protocollo di sicurezza per proteggere le comunicazioni web (oggi TLS)."
+        "desc":  "Secure Sockets Layer: Protocollo di sicurezza per proteggere le comunicazioni web (oggi TLS)."
     },
     {
         "a":  "SSO",
@@ -1572,7 +1572,7 @@
     {
         "a":  "STIX / TAXII",
         "cat":  "OpSec \u0026 Incident Response",
-        "desc":  "Standard per lo scambio di informazioni sulle minacce (Threat Intelligence). STIX definisce il formato, TAXII il protocollo di trasporto."
+        "desc":  "Structured Threat Information eXpression / Trusted Automated eXchange of Indicator Information: Standard per lo scambio di informazioni sulle minacce (Threat Intelligence). STIX definisce il formato, TAXII il protocollo di trasporto."
     },
     {
         "a":  "STP",
@@ -1580,29 +1580,29 @@
         "desc":  "Spanning Tree Protocol: Impedisce la creazione di loop infiniti nei collegamenti tra switch[cite: 77]."
     },
     {
-        "cat":  "Networking \u0026 Protocolli",
         "a":  "SWG",
-        "desc":  "Soluzione di sicurezza che filtra il traffico web dannoso."
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Secure Web Gateway: Soluzione di sicurezza che filtra il traffico web dannoso."
     },
     {
         "a":  "TACACS+",
         "cat":  "Gestione Identità (IAM)",
-        "desc":  "Versione di Cisco del protocollo AAA, piÃ¹ sicuro di RADIUS perchÃ© cifra l\u0027intero pacchetto."
+        "desc":  "Terminal Access Controller Access-Control System Plus: Versione di Cisco del protocollo AAA, più sicuro di RADIUS perché cifra l'intero pacchetto."
     },
     {
         "a":  "TCP/IP",
         "cat":  "Networking \u0026 Protocolli",
-        "desc":  "Suite di protocolli su cui si basa Internet; il TCP garantisce che i dati arrivino integri e in ordine[cite: 45, 46]."
+        "desc":  "Transmission Control Protocol / Internet Protocol: Suite di protocolli su cui si basa Internet; il TCP garantisce che i dati arrivino integri e in ordine[cite: 45, 46]."
     },
     {
-        "cat":  "Gestione Identità (IAM)",
         "a":  "TGT",
-        "desc":  "Ticket emesso dal KDC in Kerberos per richiedere altri ticket di servizio."
+        "cat":  "Gestione Identità (IAM)",
+        "desc":  "Ticket Granting Ticket: Ticket emesso dal KDC in Kerberos per richiedere altri ticket di servizio."
     },
     {
         "cat":  "Wireless Security",
         "a":  "TKIP",
-        "desc":  "Protocollo di sicurezza Wi-Fi legacy usato in WPA (insicuro oggi)."
+        "desc":  "Temporal Key Integrity Protocol: Protocollo di sicurezza Wi-Fi legacy usato in WPA (insicuro oggi)."
     },
     {
         "a":  "TLS",
@@ -1612,7 +1612,7 @@
     {
         "a":  "TOTP / HOTP",
         "cat":  "Gestione Identità (IAM)",
-        "desc":  "Password temporanee (OTP). Il primo basato sul tempo, il secondo su un contatore."
+        "desc":  "Time-based One-Time Password / HMAC-based One-Time Password: Password temporanee (OTP). Il primo basato sul tempo, il secondo su un contatore."
     },
     {
         "a":  "TPM",
@@ -1620,44 +1620,44 @@
         "desc":  "Trusted Platform Module: Chip sulla scheda madre che memorizza chiavi crittografiche e verifica l\u0027integrità del boot."
     },
     {
-        "cat":  "Networking \u0026 Protocolli",
         "a":  "TSIG",
-        "desc":  "Meccanismo per autenticare gli aggiornamenti DNS."
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Transaction Signature: Meccanismo per autenticare gli aggiornamenti DNS."
     },
     {
-        "cat":  "OpSec \u0026 Incident Response",
         "a":  "TTP",
-        "desc":  "Analisi dei metodi utilizzati dai criminali informatici."
+        "cat":  "OpSec \u0026 Incident Response",
+        "desc":  "Tactics, Techniques, and Procedures: Analisi dei metodi utilizzati dai criminali informatici."
     },
     {
-        "cat":  "Sviluppo",
         "a":  "UAT",
-        "desc":  "Fase finale del test software eseguita dagli utenti reali."
+        "cat":  "Sviluppo",
+        "desc":  "User Acceptance Testing: Fase finale del test software eseguita dagli utenti reali."
     },
     {
-        "cat":  "Hardware \u0026 Endpoint",
         "a":  "UAV",
-        "desc":  "Veicolo aereo a pilotaggio remoto (drone)."
+        "cat":  "Hardware \u0026 Endpoint",
+        "desc":  "Unmanned Aerial Vehicle: Veicolo aereo a pilotaggio remoto (drone)."
     },
     {
         "a":  "UDP",
         "cat":  "Networking \u0026 Protocolli",
-        "desc":  "User Datagram Protocol: Alternativa al TCP, piÃ¹ veloce ma senza controllo d\u0027errore; usato per streaming e gaming[cite: 47]."
+        "desc":  "User Datagram Protocol: Alternativa al TCP, più veloce ma senza controllo d'errore; usato per streaming e gaming[cite: 47]."
     },
     {
         "cat":  "OpSec \u0026 Incident Response",
         "a":  "UEBA",
-        "desc":  "Analisi del comportamento di utenti e dispositivi per rilevare anomalie."
+        "desc":  "User and Entity Behavior Analytics: Analisi del comportamento di utenti e dispositivi per rilevare anomalie."
     },
     {
         "cat":  "Hardware \u0026 Endpoint",
         "a":  "UEFI",
-        "desc":  "Interfaccia firmware moderna che sostituisce il vecchio BIOS."
+        "desc":  "Unified Extensible Firmware Interface: Interfaccia firmware moderna che sostituisce il vecchio BIOS."
     },
     {
         "cat":  "Hardware \u0026 Endpoint",
         "a":  "UEM",
-        "desc":  "Gestione centralizzata di tutti i dispositivi (PC e mobili)."
+        "desc":  "Unified Endpoint Management: Gestione centralizzata di tutti i dispositivi (PC e mobili)."
     },
     {
         "a":  "UPS",
@@ -1665,19 +1665,19 @@
         "desc":  "Uninterruptible Power Supply: Batteria di emergenza che garantisce continuitÃ  elettrica in caso di blackout."
     },
     {
-        "cat":  "Sviluppo",
         "a":  "URI",
-        "desc":  "Stringa di caratteri che identifica univocamente una risorsa."
+        "cat":  "Sviluppo",
+        "desc":  "Uniform Resource Identifier: Stringa di caratteri che identifica univocamente una risorsa."
     },
     {
-        "cat":  "Sviluppo",
         "a":  "URL",
-        "desc":  "Tipo specifico di URI che indica dove si trova una risorsa web."
+        "cat":  "Sviluppo",
+        "desc":  "Uniform Resource Locator: Tipo specifico di URI che indica dove si trova una risorsa web."
     },
     {
         "cat":  "Hardware \u0026 Endpoint",
         "a":  "USB",
-        "desc":  "Standard di comunicazione per il collegamento di periferiche."
+        "desc":  "Universal Serial Bus: Standard di comunicazione per il collegamento di periferiche."
     },
     {
         "a":  "USB OTG",
@@ -1685,19 +1685,19 @@
         "desc":  "On-The-Go: Standard che permette a un dispositivo USB di agire come host per altri dispositivi."
     },
     {
-        "cat":  "Networking \u0026 Protocolli",
         "a":  "UTM",
-        "desc":  "Dispositivo che integra piÃ¹ funzioni di sicurezza in una sola appliance."
-    },
-    {
         "cat":  "Networking \u0026 Protocolli",
-        "a":  "UTP",
-        "desc":  "Cavo di rete in rame a coppie intrecciate non schermato."
+        "desc":  "Unified Threat Management: Dispositivo che integra più funzioni di sicurezza in una sola appliance."
     },
     {
-        "cat":  "Sviluppo",
+        "a":  "UTP",
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Unshielded Twisted Pair: Cavo di rete in rame a coppie intrecciate non schermato."
+    },
+    {
         "a":  "VBA",
-        "desc":  "Linguaggio macro per le applicazioni Microsoft Office."
+        "cat":  "Sviluppo",
+        "desc":  "Visual Basic for Applications: Linguaggio macro per le applicazioni Microsoft Office."
     },
     {
         "a":  "VDE",
@@ -1717,7 +1717,7 @@
     {
         "cat":  "Networking \u0026 Protocolli",
         "a":  "VLSM",
-        "desc":  "Tecnica per suddividere una rete in sottoreti di dimensioni diverse."
+        "desc":  "Variable Length Subnet Mask: Tecnica per suddividere una rete in sottoreti di dimensioni diverse."
     },
     {
         "a":  "VM",
@@ -1727,7 +1727,7 @@
     {
         "cat":  "Networking \u0026 Protocolli",
         "a":  "VoIP",
-        "desc":  "Tecnologia per effettuare chiamate vocali tramite rete internet."
+        "desc":  "Voice over IP: Tecnologia per effettuare chiamate vocali tramite rete internet."
     },
     {
         "a":  "VPC",
@@ -1740,9 +1740,9 @@
         "desc":  "Virtual Private Network: Crea un \u0027tunnel\u0027 sicuro su una rete pubblica. Spesso usa IPsec o SSL/TLS[cite: 55]."
     },
     {
-        "cat":  "Networking \u0026 Protocolli",
         "a":  "VTC",
-        "desc":  "Tecnologia per la comunicazione audio e video a distanza."
+        "cat":  "Networking \u0026 Protocolli",
+        "desc":  "Video Teleconferencing: Tecnologia per la comunicazione audio e video a distanza."
     },
     {
         "a":  "WAF",
@@ -1772,7 +1772,7 @@
     {
         "cat":  "Hardware \u0026 Endpoint",
         "a":  "WORM",
-        "desc":  "Supporto di memoria che puÃ² essere scritto una volta sola."
+        "desc":  "Write Once Read Many: Supporto di memoria che puÃ² essere scritto una volta sola."
     },
     {
         "a":  "WPA",
@@ -1782,12 +1782,12 @@
     {
         "a":  "WPA2",
         "cat":  "Wireless Security",
-        "desc":  "Lo standard piÃ¹ diffuso per anni; usa AES e il protocollo CCMP per la cifratura."
+        "desc":  "Wi-Fi Protected Access 2: Lo standard piÃ¹ diffuso per anni; usa AES e il protocollo CCMP per la cifratura."
     },
     {
         "a":  "WPA3",
         "cat":  "Wireless Security",
-        "desc":  "Lo standard piÃ¹ recente e sicuro; introduce il protocollo SAE per proteggere dai tentativi di indovinare le password (brute-force)."
+        "desc":  "Wi-Fi Protected Access 3: Lo standard piÃ¹ recente e sicuro; introduce il protocollo SAE per proteggere dai tentativi di indovinare le password (brute-force)."
     },
     {
         "a":  "WPS",
@@ -1812,12 +1812,12 @@
     {
         "cat":  "Sviluppo",
         "a":  "XOR",
-        "desc":  "Operazione logica binaria usata spesso in crittografia."
+        "desc":  "Exclusive OR: Operazione logica binaria usata spesso in crittografia."
     },
     {
         "cat":  "OpSec \u0026 Incident Response",
         "a":  "XSRF",
-        "desc":  "Acronimo alternativo per CSRF; un attacco che forza un utente autenticato a compiere azioni indesiderate."
+        "desc":  "Cross-Site Request Forgery: Acronimo alternativo per CSRF; un attacco che forza un utente autenticato a compiere azioni indesiderate."
     },
     {
         "a":  "XSS",

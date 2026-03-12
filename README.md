@@ -15,6 +15,9 @@ Il progetto nasce dall'esigenza di avere un riferimento rapido per le centinaia 
 * **So / Non So Tracking**: Ogni carta può essere marcata come conosciuta o da ripassare, con conteggio della sessione.
 * **Shuffle Per Sessione**: Ogni nuova sessione di studio o quiz mescola automaticamente tutte le carte del set filtrato.
 * **Quiz Mode**: Modalità verifica con risposta nascosta, rivelazione manuale e avanzamento automatico dopo la valutazione.
+* **Review Filter**: Possibilità di visualizzare e ripassare solo le carte segnate come non sapute.
+* **Local Persistence**: Lo stato di apprendimento viene salvato in `localStorage`, così i progressi restano disponibili tra una visita e l'altra.
+* **Session Summary**: Barra di avanzamento e riepilogo finale con percentuale di risposte corrette e accesso rapido al ripasso degli errori.
 * **Responsive Design**: Ottimizzato per desktop e mobile.
 * **Data-Driven**: Tutti i contenuti sono gestiti tramite un file JSON esterno, facilitando gli aggiornamenti.
 * **Open Source**: Chiunque può contribuire aggiungendo nuovi termini.

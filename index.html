@@ -172,6 +172,11 @@
             color: var(--highlight);
         }
 
+        .stats-neutral {
+            background: #ede9fe;
+            color: #5b21b6;
+        }
+
         .table-wrap {
             overflow: hidden;
             border-radius: 24px;
@@ -341,6 +346,27 @@
             gap: 10px;
         }
 
+        .progress-block {
+            display: grid;
+            gap: 12px;
+        }
+
+        .progress-track {
+            width: min(320px, 100%);
+            height: 12px;
+            border-radius: 999px;
+            background: #f2e8dc;
+            overflow: hidden;
+            border: 1px solid #ead9c5;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--accent) 0%, var(--highlight) 100%);
+            transition: width 0.25s ease;
+        }
+
         .score-actions {
             display: flex;
             flex-wrap: wrap;
@@ -366,6 +392,26 @@
             text-align: center;
             color: var(--muted);
             font-weight: 700;
+        }
+
+        .summary-panel {
+            display: grid;
+            gap: 14px;
+            border-radius: 22px;
+            background: #fcf7f0;
+            border: 1px solid #eadbc8;
+            padding: 22px;
+        }
+
+        .summary-title {
+            margin: 0;
+            font-size: 1.35rem;
+        }
+
+        .summary-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .hidden {
@@ -428,9 +474,11 @@
             </div>
             <div class="toolbar-actions">
                 <span class="stats" id="results-count">0 termini</span>
+                <span class="stats stats-neutral" id="review-count">Da ripassare: 0</span>
                 <div class="toolbar-actions-group">
                     <button class="button button-primary" id="study-btn" onclick="startStudySession('flashcard')">Avvia flashcard</button>
                     <button class="button button-secondary" id="quiz-btn" onclick="startStudySession('quiz')">Avvia quiz</button>
+                    <button class="button button-secondary" id="review-filter-btn" onclick="toggleUnknownFilter()">Solo non sapute: off</button>
                 </div>
             </div>
         </div>
@@ -467,10 +515,15 @@
                     <h2 id="study-mode-title">Ripasso attivo</h2>
                     <p class="flashcard-help" id="study-mode-help">La carta usa il set filtrato corrente. Premi spazio per girarla, freccia sinistra o destra per navigare.</p>
                 </div>
-                <div class="flashcard-meta">
-                    <span class="stats" id="flashcard-progress">0 / 0</span>
-                    <span class="stats" id="known-count">So: 0</span>
-                    <span class="stats stats-warm" id="unknown-count">Non so: 0</span>
+                <div class="progress-block">
+                    <div class="flashcard-meta">
+                        <span class="stats" id="flashcard-progress">0 / 0</span>
+                        <span class="stats" id="known-count">So: 0</span>
+                        <span class="stats stats-warm" id="unknown-count">Non so: 0</span>
+                    </div>
+                    <div class="progress-track" aria-hidden="true">
+                        <div class="progress-bar" id="study-progress-bar"></div>
+                    </div>
                 </div>
             </div>
 
@@ -496,11 +549,26 @@
             </div>
 
             <p class="flashcard-status" id="study-status"></p>
+
+            <div class="summary-panel hidden" id="study-summary">
+                <h3 class="summary-title">Riepilogo sessione</h3>
+                <p id="study-summary-text" style="margin: 0; color: var(--muted);"></p>
+                <div class="summary-grid">
+                    <span class="stats" id="summary-known">So: 0</span>
+                    <span class="stats stats-warm" id="summary-unknown">Non so: 0</span>
+                    <span class="stats stats-neutral" id="summary-score">Precisione: 0%</span>
+                </div>
+                <div class="flashcard-actions" style="margin-top: 6px;">
+                    <button class="button button-primary" onclick="restartCurrentSession()">Ripeti sessione</button>
+                    <button class="button button-secondary" id="retry-unknown-btn" onclick="startUnknownRetrySession()">Ripassa errori</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
 <script>
+    const STORAGE_KEY = 'acronimiSecurityStudyProgressV1';
     let acronymsData = [];
     let filteredData = [];
     let sessionData = [];
@@ -509,14 +577,14 @@
     let studyMode = 'flashcard';
     let studyScore = { known: 0, unknown: 0 };
     let ratedCards = new Map();
+    let onlyUnknownFilter = false;
+    let studyProgress = loadStudyProgress();
 
     async function loadData() {
         try {
             const response = await fetch('dati.json');
             acronymsData = await response.json();
-            filteredData = [...acronymsData];
-            renderTable(filteredData);
-            updateStudyState();
+            applyFilters();
         } catch (error) {
             console.error('Errore nel caricamento dei dati:', error);
             document.getElementById('table-body').innerHTML = "<tr><td colspan='2'>Errore nel caricamento dei dati JSON.</td></tr>";
@@ -542,11 +610,16 @@
     }
 
     function filterTable() {
+        applyFilters();
+    }
+
+    function applyFilters() {
         const query = document.getElementById('search-input').value.trim().toLowerCase();
         filteredData = acronymsData.filter(item =>
-            item.a.toLowerCase().includes(query) ||
+            (item.a.toLowerCase().includes(query) ||
             item.cat.toLowerCase().includes(query) ||
-            item.desc.toLowerCase().includes(query)
+            item.desc.toLowerCase().includes(query)) &&
+            (!onlyUnknownFilter || isUnknownCard(item))
         );
         renderTable(filteredData);
         updateStudyState();
@@ -555,18 +628,28 @@
     function updateStudyState() {
         const total = filteredData.length;
         const resultsCount = document.getElementById('results-count');
+        const reviewCount = document.getElementById('review-count');
         const studyBtn = document.getElementById('study-btn');
         const quizBtn = document.getElementById('quiz-btn');
+        const reviewFilterBtn = document.getElementById('review-filter-btn');
+        const reviewPool = acronymsData.filter(item => isUnknownCard(item)).length;
 
         resultsCount.innerText = `${total} ${total === 1 ? 'termine' : 'termini'}`;
+        reviewCount.innerText = `Da ripassare: ${reviewPool}`;
         studyBtn.disabled = total === 0;
         quizBtn.disabled = total === 0;
         studyBtn.innerText = total > 0 ? 'Avvia flashcard' : 'Nessun risultato';
         quizBtn.innerText = total > 0 ? 'Avvia quiz' : 'Nessun risultato';
+        reviewFilterBtn.innerText = `Solo non sapute: ${onlyUnknownFilter ? 'on' : 'off'}`;
 
         if (flashcardIndex >= total) {
             flashcardIndex = Math.max(total - 1, 0);
         }
+    }
+
+    function toggleUnknownFilter() {
+        onlyUnknownFilter = !onlyUnknownFilter;
+        applyFilters();
     }
 
     function setView(viewId) {
@@ -584,6 +667,8 @@
 
     function showHome() {
         setView('home-view');
+        hideSummary();
+        applyFilters();
     }
 
     function startStudySession(mode) {
@@ -591,6 +676,7 @@
             return;
         }
 
+        hideSummary();
         studyMode = mode;
         sessionData = shuffleArray(filteredData);
         flashcardIndex = 0;
@@ -612,14 +698,14 @@
         if (studyMode === 'quiz') {
             label.innerText = 'Quiz';
             title.innerText = 'Verifica rapida';
-            help.innerText = 'Le carte vengono mescolate a ogni sessione. Rivela la risposta, poi segna se la sapevi: il quiz avanza automaticamente.';
+            help.innerText = 'Le carte vengono mescolate a ogni sessione. Rivela la risposta, poi segna se la sapevi: il quiz avanza automaticamente e salva i risultati in locale.';
             flipButton.innerText = 'Rivela risposta';
             return;
         }
 
         label.innerText = 'Flashcard';
         title.innerText = 'Ripasso attivo';
-        help.innerText = 'La carta usa il set filtrato corrente, mescolato a ogni sessione. Premi spazio per girarla, freccia sinistra o destra per navigare.';
+        help.innerText = 'La carta usa il set filtrato corrente, mescolato a ogni sessione. Premi spazio per girarla, freccia sinistra o destra per navigare. I risultati vengono salvati in locale.';
         flipButton.innerText = 'Gira carta';
     }
 
@@ -640,6 +726,8 @@
         const status = document.getElementById('study-status');
         const cardKey = getCardKey(item);
         const alreadyRated = ratedCards.has(cardKey);
+        const completedCards = ratedCards.size;
+        const progressPercent = sessionData.length ? Math.round((completedCards / sessionData.length) * 100) : 0;
 
         flashcard.classList.toggle('flipped', flashcardFlipped);
         side.innerText = flashcardFlipped ? 'Risposta' : (studyMode === 'quiz' ? 'Domanda' : 'Fronte');
@@ -658,6 +746,7 @@
         status.innerText = alreadyRated
             ? `Valutazione registrata: ${ratedCards.get(cardKey) ? 'So' : 'Non so'}`
             : (flashcardFlipped ? 'Segna se conoscevi questa carta.' : 'Rivela prima la risposta.');
+        document.getElementById('study-progress-bar').style.width = `${progressPercent}%`;
 
         document.getElementById('prev-btn').disabled = sessionData.length <= 1;
         document.getElementById('next-btn').disabled = sessionData.length <= 1;
@@ -730,11 +819,12 @@
         } else {
             studyScore.unknown += 1;
         }
+        updateStoredProgress(currentKey, knowsIt);
 
         updateFlashcard();
 
         if (ratedCards.size === sessionData.length) {
-            document.getElementById('study-status').innerText = 'Sessione completata. Puoi ripartire dalla home per avere un nuovo ordine mescolato.';
+            showSummary();
             return;
         }
 
@@ -774,6 +864,78 @@
 
     function getCardKey(item) {
         return `${item.a}::${item.cat}::${item.desc}`;
+    }
+
+    function isUnknownCard(item) {
+        const saved = studyProgress[getCardKey(item)];
+        return Boolean(saved && saved.lastResult === false);
+    }
+
+    function loadStudyProgress() {
+        try {
+            return JSON.parse(window.localStorage.getItem(STORAGE_KEY) || '{}');
+        } catch (error) {
+            console.warn('Impossibile leggere lo stato locale di studio.', error);
+            return {};
+        }
+    }
+
+    function saveStudyProgress() {
+        try {
+            window.localStorage.setItem(STORAGE_KEY, JSON.stringify(studyProgress));
+        } catch (error) {
+            console.warn('Impossibile salvare lo stato locale di studio.', error);
+        }
+    }
+
+    function updateStoredProgress(cardKey, knowsIt) {
+        const current = studyProgress[cardKey] || { known: 0, unknown: 0, lastResult: null };
+        current.known += knowsIt ? 1 : 0;
+        current.unknown += knowsIt ? 0 : 1;
+        current.lastResult = knowsIt;
+        studyProgress[cardKey] = current;
+        saveStudyProgress();
+        updateStudyState();
+    }
+
+    function hideSummary() {
+        document.getElementById('study-summary').classList.add('hidden');
+    }
+
+    function showSummary() {
+        const total = sessionData.length;
+        const scorePercent = total ? Math.round((studyScore.known / total) * 100) : 0;
+        const unknownCards = sessionData.filter(item => ratedCards.get(getCardKey(item)) === false);
+        const summary = document.getElementById('study-summary');
+
+        document.getElementById('study-status').innerText = 'Sessione completata. Puoi ripetere il set oppure ripassare solo gli errori.';
+        document.getElementById('study-summary-text').innerText = `Hai completato ${total} carte in modalita ${studyMode === 'quiz' ? 'quiz' : 'flashcard'}.`;
+        document.getElementById('summary-known').innerText = `So: ${studyScore.known}`;
+        document.getElementById('summary-unknown').innerText = `Non so: ${studyScore.unknown}`;
+        document.getElementById('summary-score').innerText = `Precisione: ${scorePercent}%`;
+        document.getElementById('retry-unknown-btn').disabled = unknownCards.length === 0;
+        document.getElementById('study-progress-bar').style.width = '100%';
+        summary.classList.remove('hidden');
+    }
+
+    function restartCurrentSession() {
+        startStudySession(studyMode);
+    }
+
+    function startUnknownRetrySession() {
+        const unknownCards = sessionData.filter(item => ratedCards.get(getCardKey(item)) === false);
+        if (!unknownCards.length) {
+            return;
+        }
+
+        hideSummary();
+        sessionData = shuffleArray(unknownCards);
+        flashcardIndex = 0;
+        flashcardFlipped = false;
+        ratedCards = new Map();
+        studyScore = { known: 0, unknown: 0 };
+        updateFlashcard();
+        document.getElementById('flashcard').focus();
     }
 
     document.addEventListener('keydown', event => {

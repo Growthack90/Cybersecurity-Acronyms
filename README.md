@@ -11,6 +11,7 @@ Il progetto nasce dall'esigenza di avere un riferimento rapido per le centinaia 
 
 ### ✨ Caratteristiche
 * **Fast Search**: Ricerca istantanea per acronimo o parola chiave.
+* **Flashcard Mode**: Modalità di ripasso attivo per studiare gli acronimi uno alla volta usando i risultati filtrati.
 * **Responsive Design**: Ottimizzato per desktop e mobile.
 * **Data-Driven**: Tutti i contenuti sono gestiti tramite un file JSON esterno, facilitando gli aggiornamenti.
 * **Open Source**: Chiunque può contribuire aggiungendo nuovi termini.

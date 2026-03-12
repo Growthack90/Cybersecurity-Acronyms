@@ -94,6 +94,12 @@
             gap: 12px;
         }
 
+        .toolbar-actions-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
         .search-container {
             flex: 1 1 340px;
         }
@@ -159,6 +165,11 @@
             background: var(--accent-soft);
             color: var(--accent-strong);
             font-weight: 700;
+        }
+
+        .stats-warm {
+            background: #ffedd5;
+            color: var(--highlight);
         }
 
         .table-wrap {
@@ -324,6 +335,39 @@
             justify-content: center;
         }
 
+        .flashcard-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .score-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .button-know {
+            background: #14532d;
+            color: #f7fff9;
+            box-shadow: 0 12px 24px rgba(20, 83, 45, 0.18);
+        }
+
+        .button-dont-know {
+            background: #9a3412;
+            color: #fffaf6;
+            box-shadow: 0 12px 24px rgba(154, 52, 18, 0.18);
+        }
+
+        .flashcard-status {
+            margin: 0;
+            min-height: 1.6em;
+            text-align: center;
+            color: var(--muted);
+            font-weight: 700;
+        }
+
         .hidden {
             display: none !important;
         }
@@ -384,7 +428,10 @@
             </div>
             <div class="toolbar-actions">
                 <span class="stats" id="results-count">0 termini</span>
-                <button class="button button-primary" id="study-btn" onclick="showFlashcards()">Avvia flashcard</button>
+                <div class="toolbar-actions-group">
+                    <button class="button button-primary" id="study-btn" onclick="startStudySession('flashcard')">Avvia flashcard</button>
+                    <button class="button button-secondary" id="quiz-btn" onclick="startStudySession('quiz')">Avvia quiz</button>
+                </div>
             </div>
         </div>
 
@@ -416,11 +463,15 @@
         <div class="flashcard-shell">
             <div class="flashcard-header">
                 <div>
-                    <p class="eyebrow" style="margin-bottom: 6px;">Flashcard</p>
-                    <h2>Ripasso attivo</h2>
-                    <p class="flashcard-help">La carta usa il set filtrato corrente. Premi spazio per girarla, freccia sinistra o destra per navigare.</p>
+                    <p class="eyebrow" style="margin-bottom: 6px;" id="study-mode-label">Flashcard</p>
+                    <h2 id="study-mode-title">Ripasso attivo</h2>
+                    <p class="flashcard-help" id="study-mode-help">La carta usa il set filtrato corrente. Premi spazio per girarla, freccia sinistra o destra per navigare.</p>
                 </div>
-                <span class="stats" id="flashcard-progress">0 / 0</span>
+                <div class="flashcard-meta">
+                    <span class="stats" id="flashcard-progress">0 / 0</span>
+                    <span class="stats" id="known-count">So: 0</span>
+                    <span class="stats stats-warm" id="unknown-count">Non so: 0</span>
+                </div>
             </div>
 
             <div class="flashcard" id="flashcard" onclick="flipFlashcard()" role="button" tabindex="0" aria-label="Flashcard interattiva">
@@ -434,10 +485,17 @@
 
             <div class="flashcard-actions">
                 <button class="button button-secondary" id="prev-btn" onclick="previousFlashcard()">Precedente</button>
-                <button class="button button-primary" onclick="flipFlashcard()">Gira carta</button>
+                <button class="button button-primary" id="flip-btn" onclick="flipFlashcard()">Gira carta</button>
                 <button class="button button-secondary" id="next-btn" onclick="nextFlashcard()">Successiva</button>
                 <button class="button button-secondary" id="random-btn" onclick="randomFlashcard()">Casuale</button>
             </div>
+
+            <div class="score-actions">
+                <button class="button button-know" id="know-btn" onclick="rateCurrentCard(true)" disabled>So</button>
+                <button class="button button-dont-know" id="dont-know-btn" onclick="rateCurrentCard(false)" disabled>Non so</button>
+            </div>
+
+            <p class="flashcard-status" id="study-status"></p>
         </div>
     </div>
 </div>
@@ -445,8 +503,12 @@
 <script>
     let acronymsData = [];
     let filteredData = [];
+    let sessionData = [];
     let flashcardIndex = 0;
     let flashcardFlipped = false;
+    let studyMode = 'flashcard';
+    let studyScore = { known: 0, unknown: 0 };
+    let ratedCards = new Map();
 
     async function loadData() {
         try {
@@ -494,17 +556,16 @@
         const total = filteredData.length;
         const resultsCount = document.getElementById('results-count');
         const studyBtn = document.getElementById('study-btn');
+        const quizBtn = document.getElementById('quiz-btn');
 
         resultsCount.innerText = `${total} ${total === 1 ? 'termine' : 'termini'}`;
         studyBtn.disabled = total === 0;
+        quizBtn.disabled = total === 0;
         studyBtn.innerText = total > 0 ? 'Avvia flashcard' : 'Nessun risultato';
+        quizBtn.innerText = total > 0 ? 'Avvia quiz' : 'Nessun risultato';
 
         if (flashcardIndex >= total) {
             flashcardIndex = Math.max(total - 1, 0);
-        }
-
-        if (document.getElementById('flashcard-view').style.display === 'block' && total > 0) {
-            updateFlashcard();
         }
     }
 
@@ -525,46 +586,92 @@
         setView('home-view');
     }
 
-    function showFlashcards() {
+    function startStudySession(mode) {
         if (!filteredData.length) {
             return;
         }
 
-        flashcardIndex = Math.min(flashcardIndex, filteredData.length - 1);
+        studyMode = mode;
+        sessionData = shuffleArray(filteredData);
+        flashcardIndex = 0;
         flashcardFlipped = false;
+        ratedCards = new Map();
+        studyScore = { known: 0, unknown: 0 };
+        updateStudyHeader();
         updateFlashcard();
         setView('flashcard-view');
         document.getElementById('flashcard').focus();
     }
 
-    function updateFlashcard() {
-        if (!filteredData.length) {
+    function updateStudyHeader() {
+        const label = document.getElementById('study-mode-label');
+        const title = document.getElementById('study-mode-title');
+        const help = document.getElementById('study-mode-help');
+        const flipButton = document.getElementById('flip-btn');
+
+        if (studyMode === 'quiz') {
+            label.innerText = 'Quiz';
+            title.innerText = 'Verifica rapida';
+            help.innerText = 'Le carte vengono mescolate a ogni sessione. Rivela la risposta, poi segna se la sapevi: il quiz avanza automaticamente.';
+            flipButton.innerText = 'Rivela risposta';
             return;
         }
 
-        const item = filteredData[flashcardIndex];
+        label.innerText = 'Flashcard';
+        title.innerText = 'Ripasso attivo';
+        help.innerText = 'La carta usa il set filtrato corrente, mescolato a ogni sessione. Premi spazio per girarla, freccia sinistra o destra per navigare.';
+        flipButton.innerText = 'Gira carta';
+    }
+
+    function updateFlashcard() {
+        if (!sessionData.length) {
+            return;
+        }
+
+        const item = sessionData[flashcardIndex];
         const flashcard = document.getElementById('flashcard');
         const side = document.getElementById('flashcard-side');
         const term = document.getElementById('flashcard-term');
         const category = document.getElementById('flashcard-category');
         const description = document.getElementById('flashcard-description');
         const progress = document.getElementById('flashcard-progress');
+        const knowButton = document.getElementById('know-btn');
+        const dontKnowButton = document.getElementById('dont-know-btn');
+        const status = document.getElementById('study-status');
+        const cardKey = getCardKey(item);
+        const alreadyRated = ratedCards.has(cardKey);
 
         flashcard.classList.toggle('flipped', flashcardFlipped);
-        side.innerText = flashcardFlipped ? 'Retro' : 'Fronte';
+        side.innerText = flashcardFlipped ? 'Risposta' : (studyMode === 'quiz' ? 'Domanda' : 'Fronte');
         term.innerText = item.a;
         category.innerText = item.cat;
         description.innerText = item.desc;
         description.classList.toggle('hidden', !flashcardFlipped);
-        progress.innerText = `${flashcardIndex + 1} / ${filteredData.length}`;
+        progress.innerText = `${flashcardIndex + 1} / ${sessionData.length}`;
 
-        document.getElementById('prev-btn').disabled = filteredData.length <= 1;
-        document.getElementById('next-btn').disabled = filteredData.length <= 1;
-        document.getElementById('random-btn').disabled = filteredData.length <= 1;
+        if (studyMode === 'quiz') {
+            category.innerText = flashcardFlipped ? item.cat : 'Prova a definire questo acronimo prima di rivelare la risposta';
+        }
+
+        knowButton.disabled = !flashcardFlipped || alreadyRated;
+        dontKnowButton.disabled = !flashcardFlipped || alreadyRated;
+        status.innerText = alreadyRated
+            ? `Valutazione registrata: ${ratedCards.get(cardKey) ? 'So' : 'Non so'}`
+            : (flashcardFlipped ? 'Segna se conoscevi questa carta.' : 'Rivela prima la risposta.');
+
+        document.getElementById('prev-btn').disabled = sessionData.length <= 1;
+        document.getElementById('next-btn').disabled = sessionData.length <= 1;
+        document.getElementById('random-btn').disabled = sessionData.length <= 1;
+        document.getElementById('known-count').innerText = `So: ${studyScore.known}`;
+        document.getElementById('unknown-count').innerText = `Non so: ${studyScore.unknown}`;
     }
 
     function flipFlashcard() {
-        if (!filteredData.length) {
+        if (!sessionData.length) {
+            return;
+        }
+
+        if (studyMode === 'quiz' && flashcardFlipped) {
             return;
         }
 
@@ -573,38 +680,100 @@
     }
 
     function nextFlashcard() {
-        if (!filteredData.length) {
+        if (!sessionData.length) {
             return;
         }
 
-        flashcardIndex = (flashcardIndex + 1) % filteredData.length;
+        flashcardIndex = (flashcardIndex + 1) % sessionData.length;
         flashcardFlipped = false;
         updateFlashcard();
     }
 
     function previousFlashcard() {
-        if (!filteredData.length) {
+        if (!sessionData.length) {
             return;
         }
 
-        flashcardIndex = (flashcardIndex - 1 + filteredData.length) % filteredData.length;
+        flashcardIndex = (flashcardIndex - 1 + sessionData.length) % sessionData.length;
         flashcardFlipped = false;
         updateFlashcard();
     }
 
     function randomFlashcard() {
-        if (filteredData.length <= 1) {
+        if (sessionData.length <= 1) {
             return;
         }
 
         let nextIndex = flashcardIndex;
         while (nextIndex === flashcardIndex) {
-            nextIndex = Math.floor(Math.random() * filteredData.length);
+            nextIndex = Math.floor(Math.random() * sessionData.length);
         }
 
         flashcardIndex = nextIndex;
         flashcardFlipped = false;
         updateFlashcard();
+    }
+
+    function rateCurrentCard(knowsIt) {
+        if (!sessionData.length || !flashcardFlipped) {
+            return;
+        }
+
+        const currentKey = getCardKey(sessionData[flashcardIndex]);
+        if (ratedCards.has(currentKey)) {
+            return;
+        }
+
+        ratedCards.set(currentKey, knowsIt);
+        if (knowsIt) {
+            studyScore.known += 1;
+        } else {
+            studyScore.unknown += 1;
+        }
+
+        updateFlashcard();
+
+        if (ratedCards.size === sessionData.length) {
+            document.getElementById('study-status').innerText = 'Sessione completata. Puoi ripartire dalla home per avere un nuovo ordine mescolato.';
+            return;
+        }
+
+        window.setTimeout(() => {
+            nextUnratedFlashcard();
+        }, studyMode === 'quiz' ? 450 : 250);
+    }
+
+    function nextUnratedFlashcard() {
+        if (!sessionData.length) {
+            return;
+        }
+
+        for (let offset = 1; offset <= sessionData.length; offset += 1) {
+            const nextIndex = (flashcardIndex + offset) % sessionData.length;
+            if (!ratedCards.has(getCardKey(sessionData[nextIndex]))) {
+                flashcardIndex = nextIndex;
+                flashcardFlipped = false;
+                updateFlashcard();
+                return;
+            }
+        }
+
+        updateFlashcard();
+    }
+
+    function shuffleArray(list) {
+        const copy = [...list];
+
+        for (let index = copy.length - 1; index > 0; index -= 1) {
+            const randomIndex = Math.floor(Math.random() * (index + 1));
+            [copy[index], copy[randomIndex]] = [copy[randomIndex], copy[index]];
+        }
+
+        return copy;
+    }
+
+    function getCardKey(item) {
+        return `${item.a}::${item.cat}::${item.desc}`;
     }
 
     document.addEventListener('keydown', event => {
@@ -615,6 +784,14 @@
         if (event.key === ' ' || event.key === 'Enter') {
             event.preventDefault();
             flipFlashcard();
+        }
+
+        if (event.key.toLowerCase() === 's') {
+            rateCurrentCard(true);
+        }
+
+        if (event.key.toLowerCase() === 'n') {
+            rateCurrentCard(false);
         }
 
         if (event.key === 'ArrowRight') {
